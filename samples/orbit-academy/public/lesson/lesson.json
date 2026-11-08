@@ -1,0 +1,1174 @@
+{
+  "lesson": {
+    "id": "d36a0311-9e95-4045-884d-c4e96603d0b6",
+    "fonts": {},
+    "title": "Example Embedded Lesson",
+    "custom_css": "@import url(\"https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap\");\n\n/* Space Explorers theme: friendly, bright, readable for grades 6-8 */\n.teacharium-player {\n  --se-ink: #1e1b4b;\n  --se-muted: #5b5893;\n  --se-violet: #7c3aed;\n  --se-pink: #ec4899;\n  font-family: \"Nunito\", system-ui, sans-serif;\n  color: var(--se-ink);\n}\n\n/* Starry pastel backdrop on every step */\n.teacharium-player .teacharium-step-wrapper {\n  min-height: 100%;\n  background-image:\n    radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.9) 0 2px, transparent 3px),\n    radial-gradient(circle at 82% 12%, rgba(255, 255, 255, 0.8) 0 2px, transparent 3px),\n    radial-gradient(circle at 70% 78%, rgba(255, 255, 255, 0.7) 0 2px, transparent 3px),\n    radial-gradient(circle at 25% 85%, rgba(255, 255, 255, 0.8) 0 1.5px, transparent 2.5px),\n    radial-gradient(ellipse at top left, #e0e7ff 0%, transparent 55%),\n    radial-gradient(ellipse at bottom right, #fce7f3 0%, transparent 55%),\n    linear-gradient(160deg, #eef2ff 0%, #f5f3ff 50%, #fdf2f8 100%);\n}\n\n/* Prompt: mission eyebrow + big friendly question */\n.teacharium-player [data-teacharium-cell=\"prompt\"] .rich-text-display h6 {\n  display: inline-block;\n  margin: 0 0 0.5rem;\n  padding: 0.3rem 0.9rem;\n  border-radius: 999px;\n  background: linear-gradient(90deg, var(--se-violet), var(--se-pink));\n  color: #fff;\n  font-family: \"Nunito\", sans-serif;\n  font-size: 0.8rem;\n  font-weight: 800;\n  letter-spacing: 0.06em;\n  text-transform: uppercase;\n  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);\n}\n\n.teacharium-player [data-teacharium-cell=\"prompt\"] .rich-text-display h2 {\n  margin: 0.25rem 0 0;\n  font-family: \"Fredoka\", \"Nunito\", sans-serif;\n  font-weight: 600;\n  font-size: clamp(1.5rem, 3.2vw, 2.25rem);\n  line-height: 1.2;\n  color: var(--se-ink);\n}\n\n.teacharium-player [data-teacharium-cell=\"prompt\"] .rich-text-display h2 strong {\n  color: var(--se-violet);\n}\n\n.teacharium-player [data-teacharium-cell=\"prompt\"] .rich-text-display p {\n  color: var(--se-muted);\n  font-size: 1.05rem;\n  font-weight: 600;\n}\n\n/* Answer area sits on a soft glassy card */\n.teacharium-player [data-teacharium-cell=\"answer\"] {\n  padding: 1.25rem;\n  border-radius: 24px;\n  background: rgba(255, 255, 255, 0.72);\n  border: 2px solid rgba(124, 58, 237, 0.12);\n  box-shadow: 0 12px 32px rgba(30, 27, 75, 0.08);\n}\n\n.teacharium-player [data-teacharium-cell=\"answer\"] .rich-text-display {\n  font-size: 1.1rem;\n}\n\n.teacharium-player [data-teacharium-cell=\"answer\"] .rich-text-display h3 {\n  margin: 0;\n  font-size: 2rem;\n  line-height: 1.1;\n}\n\n/* Chunky, friendly Check Answer buttons inside every question type */\n.teacharium-player [data-teacharium-cell=\"answer\"] :is(.tp-button--default, .tp-button--primary, button.bg-primary) {\n  min-height: 48px;\n  padding: 0.7rem 1.6rem;\n  border: none;\n  border-radius: 999px;\n  background: linear-gradient(90deg, var(--se-violet), var(--se-pink));\n  color: #fff;\n  font-family: \"Fredoka\", \"Nunito\", sans-serif;\n  font-size: 1.05rem;\n  font-weight: 600;\n  box-shadow: 0 6px 0 #5b21b6, 0 10px 20px rgba(124, 58, 237, 0.25);\n  transition: transform 0.12s ease, box-shadow 0.12s ease;\n}\n\n.teacharium-player [data-teacharium-cell=\"answer\"] :is(.tp-button--default, .tp-button--primary, button.bg-primary):not(:disabled):active {\n  transform: translateY(4px);\n  box-shadow: 0 2px 0 #5b21b6, 0 4px 10px rgba(124, 58, 237, 0.25);\n}\n\n.teacharium-player [data-teacharium-cell=\"answer\"] :is(.tp-button--default, .tp-button--primary, button.bg-primary):disabled {\n  opacity: 0.45;\n  box-shadow: none;\n}\n\n.teacharium-player [data-teacharium-cell=\"answer\"] .tp-choice-actions {\n  display: flex;\n  justify-content: center;\n  margin-top: 1rem;\n}\n\n@media (max-width: 768px) {\n  .teacharium-player [data-teacharium-cell=\"answer\"] {\n    padding: 0.75rem;\n    border-radius: 18px;\n  }\n}\n",
+    "show_navbar": true,
+    "history_mode": "truncate",
+    "step_transition": "fade",
+    "widget_settings": {
+      "overrides": {}
+    },
+    "color_palette_id": "default",
+    "start_image_media_id": null,
+    "variable_definitions": [],
+    "show_table_of_contents": false
+  },
+  "sections": [
+    {
+      "id": "e44b6ef6-4f02-40ad-a634-2970a5d82682",
+      "name": "Mission Quiz",
+      "steps": [
+        {
+          "id": "489e30b6-7018-4fd0-90c1-811d0583954e",
+          "name": "Closest to the Sun",
+          "puck_data": {
+            "root": {
+              "props": {
+                "gap": 16,
+                "cells": [
+                  {
+                    "id": "prompt",
+                    "col": 2,
+                    "row": 1,
+                    "colSpan": 10,
+                    "rowSpan": 3
+                  },
+                  {
+                    "id": "answer",
+                    "col": 2,
+                    "row": 4,
+                    "colSpan": 10,
+                    "rowSpan": 9
+                  }
+                ],
+                "items": [
+                  {
+                    "id": "prompt",
+                    "content": [
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-ukPN8p-Xm3",
+                          "name": "Prompt",
+                          "content": "###### 🚀 Mission 1 · Multiple Choice\n\n## Which planet zooms around **closest to the Sun**?",
+                          "textAlign": "center",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer",
+                    "content": [
+                      {
+                        "type": "MultipleChoice",
+                        "props": {
+                          "id": "MultipleChoice-MV89R2-edr",
+                          "name": "Closest planet",
+                          "choices": [
+                            {
+                              "id": "mGUpMN5ClHEBJHZQeU8z7",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "Hkq0jKX-1UIYwh8Bv0YVK",
+                                    "content": "### ☿️\n**Mercury**",
+                                    "textAlign": "center",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "feedback": "Correct! Mercury is the closest planet to the Sun. A year there is only 88 Earth days!",
+                              "isCorrect": true
+                            },
+                            {
+                              "id": "dbn-Vy9KzMhUcmciXe6Ii",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "rcYB1oO8FEIS2QjkCspEs",
+                                    "content": "### ♀️\n**Venus**",
+                                    "textAlign": "center",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "feedback": "Close! Venus is the second planet from the Sun. Look for the tiny, speedy one.",
+                              "isCorrect": false
+                            },
+                            {
+                              "id": "fusa6c0DxW56MhP_eojmb",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "i4uFXs1zSS0geULhEdMQZ",
+                                    "content": "### 🌍\n**Earth**",
+                                    "textAlign": "center",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "feedback": "Earth is our home, the third planet from the Sun.",
+                              "isCorrect": false
+                            },
+                            {
+                              "id": "_NSzGkFRa9_fn4rO486GS",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "fxBxD7YIDv-FhTwXWRsVi",
+                                    "content": "### ♂️\n**Mars**",
+                                    "textAlign": "center",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "feedback": "Mars is the fourth planet, the Red Planet. Try one closer in!",
+                              "isCorrect": false
+                            }
+                          ],
+                          "maxScore": 1,
+                          "itemWidth": "200px",
+                          "layoutMode": "horizontal",
+                          "buttonStyle": "toggle",
+                          "selectedColor": "#3b82f6",
+                          "selectionMode": "single",
+                          "randomizeOrder": false,
+                          "checkButtonText": "Check Answer",
+                          "showCheckButton": true,
+                          "horizontalAlignment": "center"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "border": {
+                  "color": "#e5e7eb",
+                  "style": "none",
+                  "width": 1
+                },
+                "margin": 8,
+                "backgroundSize": "cover",
+                "backgroundColor": "#ffffff",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+              }
+            },
+            "content": []
+          },
+          "created_at": "2026-11-08T20:54:14.133099+00:00",
+          "section_id": "e44b6ef6-4f02-40ad-a634-2970a5d82682",
+          "updated_at": "2026-11-08T20:55:20.021619+00:00",
+          "order_index": 0
+        },
+        {
+          "id": "536ba48a-12c1-4f07-9c9a-a1b4e1a12062",
+          "name": "Gas Giants",
+          "puck_data": {
+            "root": {
+              "props": {
+                "gap": 16,
+                "cells": [
+                  {
+                    "id": "prompt",
+                    "col": 2,
+                    "row": 1,
+                    "colSpan": 10,
+                    "rowSpan": 3
+                  },
+                  {
+                    "id": "answer",
+                    "col": 2,
+                    "row": 4,
+                    "colSpan": 10,
+                    "rowSpan": 9
+                  }
+                ],
+                "items": [
+                  {
+                    "id": "prompt",
+                    "content": [
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-VeHXoOBG9j",
+                          "name": "Prompt",
+                          "content": "###### 🪐 Mission 2 · Select All That Apply\n\n## Which of these planets are **gas giants**?\n\nPick every one you think is right, then check your answer.",
+                          "textAlign": "center",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer",
+                    "content": [
+                      {
+                        "type": "MultipleChoice",
+                        "props": {
+                          "id": "MultipleChoice-mNr_1O9T1F",
+                          "name": "Gas giants",
+                          "choices": [
+                            {
+                              "id": "Y7pgHKDVveSLvbSTjfKBY",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "AQTeRn5_txpTQMHqZN69H",
+                                    "content": "### 🪐\n**Saturn**",
+                                    "textAlign": "center",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "feedback": "Yes! Saturn is a gas giant wrapped in beautiful rings.",
+                              "isCorrect": true
+                            },
+                            {
+                              "id": "QahWCLGuUJbBIBN2eDT0T",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "qWktPu0qBcCj5J0bwYDNC",
+                                    "content": "### 🔴\n**Mars**",
+                                    "textAlign": "center",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "feedback": "Mars is rocky and dusty, not a gas giant.",
+                              "isCorrect": false
+                            },
+                            {
+                              "id": "XGUAGrwLYemClsor_yI8V",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "Z_gAdtFgTqgORBDtIMIcB",
+                                    "content": "### 🟠\n**Jupiter**",
+                                    "textAlign": "center",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "feedback": "Yes! Jupiter is the biggest gas giant of all.",
+                              "isCorrect": true
+                            },
+                            {
+                              "id": "-eTuTN55M2BcL6yTSqpyz",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "VR9n6jzZ2eOad8XF1nUPP",
+                                    "content": "### 🌍\n**Earth**",
+                                    "textAlign": "center",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "feedback": "Earth is a rocky planet. You can stand on it!",
+                              "isCorrect": false
+                            }
+                          ],
+                          "maxScore": 1,
+                          "itemWidth": "200px",
+                          "layoutMode": "horizontal",
+                          "buttonStyle": "toggle",
+                          "selectedColor": "#3b82f6",
+                          "selectionMode": "multi",
+                          "randomizeOrder": false,
+                          "checkButtonText": "Check Answer",
+                          "showCheckButton": true,
+                          "horizontalAlignment": "center"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "border": {
+                  "color": "#e5e7eb",
+                  "style": "none",
+                  "width": 1
+                },
+                "margin": 8,
+                "backgroundSize": "cover",
+                "backgroundColor": "#ffffff",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+              }
+            },
+            "content": []
+          },
+          "created_at": "2026-11-08T20:54:59.737568+00:00",
+          "section_id": "e44b6ef6-4f02-40ad-a634-2970a5d82682",
+          "updated_at": "2026-11-08T20:57:29.044439+00:00",
+          "order_index": 1
+        },
+        {
+          "id": "1dac9bbf-d937-4676-89a6-fbd54c734a4d",
+          "name": "The Giant",
+          "puck_data": {
+            "root": {
+              "props": {
+                "gap": 16,
+                "cells": [
+                  {
+                    "id": "prompt",
+                    "col": 2,
+                    "row": 1,
+                    "colSpan": 10,
+                    "rowSpan": 3
+                  },
+                  {
+                    "id": "answer",
+                    "col": 2,
+                    "row": 4,
+                    "colSpan": 10,
+                    "rowSpan": 9
+                  }
+                ],
+                "items": [
+                  {
+                    "id": "prompt",
+                    "content": [
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-W7i0LqWTfN",
+                          "name": "Prompt",
+                          "content": "###### ✨ Mission 3 · Fill in the Blank\n\n## Name the **biggest planet** in our solar system\n\nIt's so big that all the other planets could fit inside it!",
+                          "textAlign": "center",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer",
+                    "content": [
+                      {
+                        "type": "FillInTheBlank",
+                        "props": {
+                          "id": "FillInTheBlank-eqLobIwvlZ",
+                          "name": "Largest planet",
+                          "stem": [
+                            {
+                              "type": "Text",
+                              "props": {
+                                "id": "IAaw_zsknCE27NhvrZFMP",
+                                "content": "**The largest planet is:**",
+                                "textAlign": "center",
+                                "voiceover": {
+                                  "voice": "alloy",
+                                  "enabled": false,
+                                  "showPlayButton": false
+                                }
+                              }
+                            }
+                          ],
+                          "maxScore": 1,
+                          "maxValue": 1000000,
+                          "minValue": 0,
+                          "inputMode": "text",
+                          "inputSize": "md",
+                          "maxLength": 500,
+                          "minLength": 0,
+                          "answerType": "text",
+                          "placeholder": "Type a planet name",
+                          "allowDecimal": true,
+                          "displayStyle": "card",
+                          "caseSensitive": false,
+                          "correctAnswer": "Jupiter",
+                          "trimWhitespace": true,
+                          "acceptedAnswers": [],
+                          "checkButtonText": "Check Answer",
+                          "correctFeedback": "Out of this world! Jupiter is the largest planet.",
+                          "dropdownOptions": [
+                            {
+                              "id": "opt-1",
+                              "label": "Option A"
+                            },
+                            {
+                              "id": "opt-2",
+                              "label": "Option B"
+                            },
+                            {
+                              "id": "opt-3",
+                              "label": "Option C"
+                            }
+                          ],
+                          "showCheckButton": true,
+                          "numericTolerance": 0,
+                          "incorrectFeedback": "Not quite. Hint: it has a Great Red Spot, a storm bigger than Earth.",
+                          "horizontalAlignment": "center"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "border": {
+                  "color": "#e5e7eb",
+                  "style": "none",
+                  "width": 1
+                },
+                "margin": 8,
+                "backgroundSize": "cover",
+                "backgroundColor": "#ffffff",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+              }
+            },
+            "content": []
+          },
+          "created_at": "2026-11-08T20:55:00.525697+00:00",
+          "section_id": "e44b6ef6-4f02-40ad-a634-2970a5d82682",
+          "updated_at": "2026-11-08T20:57:29.982882+00:00",
+          "order_index": 2
+        },
+        {
+          "id": "8c547908-942c-40be-9b07-3f4efb292d99",
+          "name": "Line Them Up",
+          "puck_data": {
+            "root": {
+              "props": {
+                "gap": 16,
+                "cells": [
+                  {
+                    "id": "prompt",
+                    "col": 2,
+                    "row": 1,
+                    "colSpan": 10,
+                    "rowSpan": 3
+                  },
+                  {
+                    "id": "answer",
+                    "col": 2,
+                    "row": 4,
+                    "colSpan": 10,
+                    "rowSpan": 9
+                  }
+                ],
+                "items": [
+                  {
+                    "id": "prompt",
+                    "content": [
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-115_c5X5cr",
+                          "name": "Prompt",
+                          "content": "###### ☀️ Mission 4 · Put in Order\n\n## Line up the **inner planets** from the Sun outward\n\nDrag the cards so the closest planet is on top.",
+                          "textAlign": "center",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer",
+                    "content": [
+                      {
+                        "type": "Ordering",
+                        "props": {
+                          "id": "Ordering-gPvxtgsBwc",
+                          "name": "Inner planets order",
+                          "items": [
+                            {
+                              "id": "v1ukeyF00_xsV-txinIbV",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "fYsHCbeQvTJ9lXTvOsIsF",
+                                    "content": "☿️ **Mercury**",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "fSn2qam4bDJC-iklwWs5a",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "zVhW0aYPR527umxXxt8rf",
+                                    "content": "♀️ **Venus**",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "XHkFVaEWhNe2b7lE5mC8G",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "DHkMBc8k15wbz6tsMJrcy",
+                                    "content": "🌍 **Earth**",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "bcbPo2brQNCchUvHzLC6Y",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "TTgbX2HtEPd6JKBtwZ_uL",
+                                    "content": "♂️ **Mars**",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "style": "card",
+                          "maxScore": 1,
+                          "checkButtonText": "Check Answer",
+                          "correctFeedback": "Perfect lineup! Mercury, Venus, Earth, Mars.",
+                          "showCheckButton": true,
+                          "incorrectFeedback": "Almost! Remember: Mercury is closest and Mars is the farthest inner planet.",
+                          "horizontalAlignment": "center",
+                          "randomizeInitialOrder": true
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "border": {
+                  "color": "#e5e7eb",
+                  "style": "none",
+                  "width": 1
+                },
+                "margin": 8,
+                "backgroundSize": "cover",
+                "backgroundColor": "#ffffff",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+              }
+            },
+            "content": []
+          },
+          "created_at": "2026-11-08T20:55:01.298367+00:00",
+          "section_id": "e44b6ef6-4f02-40ad-a634-2970a5d82682",
+          "updated_at": "2026-11-08T20:57:30.897521+00:00",
+          "order_index": 3
+        },
+        {
+          "id": "c49430a8-f1bb-4ce9-b23e-703e8b500903",
+          "name": "Planet Facts",
+          "puck_data": {
+            "root": {
+              "props": {
+                "gap": 16,
+                "cells": [
+                  {
+                    "id": "prompt",
+                    "col": 2,
+                    "row": 1,
+                    "colSpan": 10,
+                    "rowSpan": 3
+                  },
+                  {
+                    "id": "answer",
+                    "col": 2,
+                    "row": 4,
+                    "colSpan": 10,
+                    "rowSpan": 9
+                  }
+                ],
+                "items": [
+                  {
+                    "id": "prompt",
+                    "content": [
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-CDEB-YTVXW",
+                          "name": "Prompt",
+                          "content": "###### 🔭 Mission 5 · Matching\n\n## Match each planet to its **fun fact**\n\nDrag a fact onto the planet it describes.",
+                          "textAlign": "center",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer",
+                    "content": [
+                      {
+                        "type": "Matching",
+                        "props": {
+                          "id": "Matching-DzrhUec-tq",
+                          "name": "Planet facts",
+                          "pairs": [
+                            {
+                              "id": "lxzPFpwg6pIAPKqL8Qr-e",
+                              "stem": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "enfXqrsEgD3MAtFIN21GU",
+                                    "content": "🪐 **Saturn**",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "answer": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "Ohkck3QgfFlIo5Tipxwzt",
+                                    "content": "Has the most famous rings",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "abcWwmvyR-taVPkP41ufG",
+                              "stem": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "Wplmd-tLJPdo3aRj43zWd",
+                                    "content": "🔴 **Mars**",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "answer": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "noMx6EShPgMkwxxVB8g7q",
+                                    "content": "Called the Red Planet",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "_MLreGePHPkPFJIRlAtst",
+                              "stem": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "2Y4SSwRJyvjBQU9ZL1h3I",
+                                    "content": "🥵 **Venus**",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "answer": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "Ve67SVgynyQymdjMp_wEf",
+                                    "content": "The hottest planet",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "maxScore": 1,
+                          "distractors": [
+                            {
+                              "id": "M-H0pMomGGsEMdwigZQBd",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "_vOkxoWTAfaoUztyGSASd",
+                                    "content": "Has a giant ocean of lava",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "checkButtonText": "Check Answer",
+                          "correctFeedback": "Super sleuth! You matched every fact.",
+                          "showCheckButton": true,
+                          "incorrectFeedback": "Some facts are in the wrong place. Try moving them around!",
+                          "horizontalAlignment": "center"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "border": {
+                  "color": "#e5e7eb",
+                  "style": "none",
+                  "width": 1
+                },
+                "margin": 8,
+                "backgroundSize": "cover",
+                "backgroundColor": "#ffffff",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+              }
+            },
+            "content": []
+          },
+          "created_at": "2026-11-08T20:55:02.003219+00:00",
+          "section_id": "e44b6ef6-4f02-40ad-a634-2970a5d82682",
+          "updated_at": "2026-11-08T20:59:17.686047+00:00",
+          "order_index": 4
+        },
+        {
+          "id": "14977eee-32f6-40e0-9b15-184e868954ff",
+          "name": "Rocky or Gassy",
+          "puck_data": {
+            "root": {
+              "props": {
+                "gap": 16,
+                "cells": [
+                  {
+                    "id": "prompt",
+                    "col": 2,
+                    "row": 1,
+                    "colSpan": 10,
+                    "rowSpan": 3
+                  },
+                  {
+                    "id": "answer",
+                    "col": 2,
+                    "row": 4,
+                    "colSpan": 10,
+                    "rowSpan": 9
+                  }
+                ],
+                "items": [
+                  {
+                    "id": "prompt",
+                    "content": [
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-XzBpYEhA4n",
+                          "name": "Prompt",
+                          "content": "###### 🪨 Mission 6 · Sort It Out\n\n## Is each planet **rocky** or a **giant**?\n\nChoose one column for every planet.",
+                          "textAlign": "center",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer",
+                    "content": [
+                      {
+                        "type": "MatrixChoice",
+                        "props": {
+                          "id": "MatrixChoice-rw0AEuOjdh",
+                          "name": "Rocky or giant",
+                          "rows": [
+                            {
+                              "id": "mercury",
+                              "stem": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "4Tix5-7L2pYzCITxa2C5B",
+                                    "content": "☿️ Mercury",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "correctColumnId": "rocky",
+                              "incorrectFeedback": "Mercury is small and rocky."
+                            },
+                            {
+                              "id": "jupiter",
+                              "stem": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "94uWGlCqfX2auid6ImEq6",
+                                    "content": "🟠 Jupiter",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "correctColumnId": "giant",
+                              "incorrectFeedback": "Jupiter is a gas giant."
+                            },
+                            {
+                              "id": "earth",
+                              "stem": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "c0-lUPwJd8nbpf2D0Uzni",
+                                    "content": "🌍 Earth",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "correctColumnId": "rocky",
+                              "incorrectFeedback": "Earth is rocky. We live on its surface!"
+                            },
+                            {
+                              "id": "uranus",
+                              "stem": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "nFnmOpMM50BYP5gvSPgLc",
+                                    "content": "🥶 Uranus",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "correctColumnId": "giant",
+                              "incorrectFeedback": "Uranus is an ice giant."
+                            }
+                          ],
+                          "columns": [
+                            {
+                              "id": "rocky",
+                              "score": 0,
+                              "header": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "z3ehc-uYngnBPkOnU-1og",
+                                    "content": "🪨 **Rocky**",
+                                    "textAlign": "center",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "giant",
+                              "score": 0,
+                              "header": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "La9sIvaXsSFdH784F9wV0",
+                                    "content": "🌪️ **Giant**",
+                                    "textAlign": "center",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "surveyMode": false,
+                          "questionType": "correctIncorrect",
+                          "maxScorePerRow": 1,
+                          "checkButtonText": "Check Answer",
+                          "showCheckButton": true,
+                          "horizontalAlignment": "center",
+                          "overallCorrectFeedback": "Stellar sorting! You know your planets.",
+                          "overallIncorrectFeedback": "A few planets are in the wrong column. Rocky planets are the four closest to the Sun."
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "border": {
+                  "color": "#e5e7eb",
+                  "style": "none",
+                  "width": 1
+                },
+                "margin": 8,
+                "backgroundSize": "cover",
+                "backgroundColor": "#ffffff",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+              }
+            },
+            "content": []
+          },
+          "created_at": "2026-11-08T20:55:02.803304+00:00",
+          "section_id": "e44b6ef6-4f02-40ad-a634-2970a5d82682",
+          "updated_at": "2026-11-08T20:57:32.699227+00:00",
+          "order_index": 5
+        },
+        {
+          "id": "f9c58190-0910-41cd-b358-88f11107fd68",
+          "name": "Home Sweet Home",
+          "puck_data": {
+            "root": {
+              "props": {
+                "gap": 16,
+                "cells": [
+                  {
+                    "id": "prompt",
+                    "col": 2,
+                    "row": 1,
+                    "colSpan": 10,
+                    "rowSpan": 3
+                  },
+                  {
+                    "id": "answer",
+                    "col": 2,
+                    "row": 4,
+                    "colSpan": 10,
+                    "rowSpan": 9
+                  }
+                ],
+                "items": [
+                  {
+                    "id": "prompt",
+                    "content": [
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-EzsiI6KMIo",
+                          "name": "Prompt",
+                          "content": "###### 🌍 Mission 7 · Complete the Sentence\n\n## Finish this message about **home sweet home**\n\nPick the right word for each blank.",
+                          "textAlign": "center",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer",
+                    "content": [
+                      {
+                        "type": "ClozeQuestion",
+                        "props": {
+                          "id": "ClozeQuestion-yKbS6_Xl8_",
+                          "name": "Earth and Moon",
+                          "blanks": [
+                            {
+                              "id": "bLyWxLvXqlqiZZkq435mb",
+                              "size": "sm",
+                              "distractors": [
+                                {
+                                  "id": "d1",
+                                  "text": "first"
+                                },
+                                {
+                                  "id": "d2",
+                                  "text": "fifth"
+                                }
+                              ],
+                              "correctAnswer": "third"
+                            },
+                            {
+                              "id": "bEdqapI7dcWo9aXb6QWT2",
+                              "size": "sm",
+                              "distractors": [
+                                {
+                                  "id": "d1",
+                                  "text": "30"
+                                },
+                                {
+                                  "id": "d2",
+                                  "text": "100"
+                                }
+                              ],
+                              "correctAnswer": "365"
+                            },
+                            {
+                              "id": "MfleTmp-xUiHnIdrG4DOm",
+                              "size": "sm",
+                              "distractors": [
+                                {
+                                  "id": "d1",
+                                  "text": "Sun"
+                                },
+                                {
+                                  "id": "d2",
+                                  "text": "comet"
+                                }
+                              ],
+                              "correctAnswer": "Moon"
+                            }
+                          ],
+                          "passage": "Earth is the [[1]] planet from the Sun. It takes about [[2]] days to travel once around the Sun, and our [[3]] orbits Earth about once a month.",
+                          "fontSize": "lg",
+                          "maxScore": 1,
+                          "blankMode": "dropdown",
+                          "caseSensitive": false,
+                          "trimWhitespace": true,
+                          "checkButtonText": "Check Answer",
+                          "correctFeedback": "Mission complete! You really know your home planet.",
+                          "showCheckButton": true,
+                          "incorrectFeedback": "Check each blank again. You've got this!",
+                          "horizontalAlignment": "center"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "border": {
+                  "color": "#e5e7eb",
+                  "style": "none",
+                  "width": 1
+                },
+                "margin": 8,
+                "backgroundSize": "cover",
+                "backgroundColor": "#ffffff",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+              }
+            },
+            "content": []
+          },
+          "created_at": "2026-11-08T20:55:03.545748+00:00",
+          "section_id": "e44b6ef6-4f02-40ad-a634-2970a5d82682",
+          "updated_at": "2026-11-08T20:57:33.57241+00:00",
+          "order_index": 6
+        }
+      ],
+      "lesson_id": "d36a0311-9e95-4045-884d-c4e96603d0b6",
+      "created_at": "2026-11-08T20:54:14.0778+00:00",
+      "updated_at": "2026-11-08T20:54:51.244662+00:00",
+      "order_index": 0,
+      "data_driven_config": null
+    }
+  ],
+  "totalSteps": 7,
+  "totalSections": 1
+}

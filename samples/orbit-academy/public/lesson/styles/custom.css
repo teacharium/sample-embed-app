@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap");
+
+/* Space Explorers theme: friendly, bright, readable for grades 6-8 */
+.teacharium-player {
+  --se-ink: #1e1b4b;
+  --se-muted: #5b5893;
+  --se-violet: #7c3aed;
+  --se-pink: #ec4899;
+  font-family: "Nunito", system-ui, sans-serif;
+  color: var(--se-ink);
+}
+
+/* Starry pastel backdrop on every step */
+.teacharium-player .teacharium-step-wrapper {
+  min-height: 100%;
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.9) 0 2px, transparent 3px),
+    radial-gradient(circle at 82% 12%, rgba(255, 255, 255, 0.8) 0 2px, transparent 3px),
+    radial-gradient(circle at 70% 78%, rgba(255, 255, 255, 0.7) 0 2px, transparent 3px),
+    radial-gradient(circle at 25% 85%, rgba(255, 255, 255, 0.8) 0 1.5px, transparent 2.5px),
+    radial-gradient(ellipse at top left, #e0e7ff 0%, transparent 55%),
+    radial-gradient(ellipse at bottom right, #fce7f3 0%, transparent 55%),
+    linear-gradient(160deg, #eef2ff 0%, #f5f3ff 50%, #fdf2f8 100%);
+}
+
+/* Prompt: mission eyebrow + big friendly question */
+.teacharium-player [data-teacharium-cell="prompt"] .rich-text-display h6 {
+  display: inline-block;
+  margin: 0 0 0.5rem;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--se-violet), var(--se-pink));
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+.teacharium-player [data-teacharium-cell="prompt"] .rich-text-display h2 {
+  margin: 0.25rem 0 0;
+  font-family: "Fredoka", "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 3.2vw, 2.25rem);
+  line-height: 1.2;
+  color: var(--se-ink);
+}
+
+.teacharium-player [data-teacharium-cell="prompt"] .rich-text-display h2 strong {
+  color: var(--se-violet);
+}
+
+.teacharium-player [data-teacharium-cell="prompt"] .rich-text-display p {
+  color: var(--se-muted);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+/* Answer area sits on a soft glassy card */
+.teacharium-player [data-teacharium-cell="answer"] {
+  padding: 1.25rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 2px solid rgba(124, 58, 237, 0.12);
+  box-shadow: 0 12px 32px rgba(30, 27, 75, 0.08);
+}
+
+.teacharium-player [data-teacharium-cell="answer"] .rich-text-display {
+  font-size: 1.1rem;
+}
+
+.teacharium-player [data-teacharium-cell="answer"] .rich-text-display h3 {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+/* Chunky, friendly Check Answer buttons inside every question type */
+.teacharium-player [data-teacharium-cell="answer"] :is(.tp-button--default, .tp-button--primary, button.bg-primary) {
+  min-height: 48px;
+  padding: 0.7rem 1.6rem;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--se-violet), var(--se-pink));
+  color: #fff;
+  font-family: "Fredoka", "Nunito", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  box-shadow: 0 6px 0 #5b21b6, 0 10px 20px rgba(124, 58, 237, 0.25);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.teacharium-player [data-teacharium-cell="answer"] :is(.tp-button--default, .tp-button--primary, button.bg-primary):not(:disabled):active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #5b21b6, 0 4px 10px rgba(124, 58, 237, 0.25);
+}
+
+.teacharium-player [data-teacharium-cell="answer"] :is(.tp-button--default, .tp-button--primary, button.bg-primary):disabled {
+  opacity: 0.45;
+  box-shadow: none;
+}
+
+.teacharium-player [data-teacharium-cell="answer"] .tp-choice-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .teacharium-player [data-teacharium-cell="answer"] {
+    padding: 0.75rem;
+    border-radius: 18px;
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "teacharium-sample-apps",
+  "private": true,
+  "description": "Sample apps showing how to host exported Teacharium lessons with @teacharium/player",
+  "workspaces": [
+    "samples/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace samples/orbit-academy",
+    "build": "npm run build --workspaces",
+    "type-check": "npm run type-check --workspaces",
+    "build:site": "node scripts/build-site.mjs"
+  }
+}
