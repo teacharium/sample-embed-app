@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "@measured/puck": "^0.20.2",
-    "@teacharium/player": "^0.2.0",
-    "@teacharium/widget": "^0.6.0",
+    "@teacharium/player": "^0.2.1",
+    "@teacharium/widget": "^0.6.1",
     "lucide-react": "^0.511.0",
     "motion": "^12.23.12",
     "react": "^19.1.2",
