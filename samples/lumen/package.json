@@ -1,0 +1,30 @@
+{
+  "name": "@teacharium-samples/lumen",
+  "private": true,
+  "version": "1.0.0",
+  "description": "High school sample: a dark-mode study app that hosts an exported Teacharium lesson with @teacharium/player",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@measured/puck": "^0.20.2",
+    "@teacharium/player": "^0.2.0",
+    "@teacharium/widget": "^0.6.0",
+    "lucide-react": "^0.511.0",
+    "motion": "^12.23.12",
+    "react": "^19.1.2",
+    "react-dom": "^19.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.2",
+    "typescript": "~5.8.3",
+    "vite": "^7.1.5"
+  }
+}

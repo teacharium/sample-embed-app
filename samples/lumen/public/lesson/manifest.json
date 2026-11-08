@@ -1,0 +1,43 @@
+{
+  "lessonId": "558b98a7-5813-446a-aa59-b7b2ffa5c664",
+  "title": "Example Embedded Lesson (High School)",
+  "versionNumber": 2,
+  "versionId": "69970b4c-a8b4-4fa8-8def-c57ebd15cd79",
+  "publishedAt": "2026-11-08T22:00:18.578136+00:00",
+  "exportedAt": "2026-11-08T22:00:40.471Z",
+  "formatVersion": "1.0.0",
+  "files": {
+    "lesson": "./lesson.json",
+    "media": [],
+    "videos": [],
+    "widgets": [
+      {
+        "widgetType": "Interactive Widgets",
+        "localPath": "./widgets/751c6714-c8db-4d42-8f1c-d659a3115c5c.js",
+        "cssLocalPath": "./widgets/751c6714-c8db-4d42-8f1c-d659a3115c5c.css"
+      },
+      {
+        "widgetType": "Math Widgets",
+        "localPath": "./widgets/fcf6ba96-005c-423b-b881-09aa64c06d6d.js",
+        "cssLocalPath": "./widgets/fcf6ba96-005c-423b-b881-09aa64c06d6d.css"
+      },
+      {
+        "widgetType": "Default Widgets",
+        "localPath": "./widgets/1638f0f3-e8e2-41c9-87ee-db234579d486.js",
+        "cssLocalPath": "./widgets/1638f0f3-e8e2-41c9-87ee-db234579d486.css"
+      },
+      {
+        "widgetType": "Charting Widgets",
+        "localPath": "./widgets/8e5d2604-f098-49df-b56c-39268c77ffb8.js"
+      }
+    ],
+    "customCss": {
+      "localPath": "./styles/custom.css",
+      "contentLength": 3463
+    }
+  },
+  "failedMedia": [],
+  "failedVideos": [],
+  "failedWidgets": [],
+  "attributions": []
+}

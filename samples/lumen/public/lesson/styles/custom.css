@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap");
+
+/* Lumen theme: dark, focused, a little neon. Grades 9-12. */
+.teacharium-player {
+  --lu-bg: #0c0c14;
+  --lu-ink: #f4f4f8;
+  --lu-muted: #a3a3b8;
+  --lu-lime: #c6f432;
+  --lu-violet: #8b5cf6;
+  --lu-card: #fbfbfd;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* Paint the whole player dark, not just the step (the player defaults to white) */
+.teacharium-player .tp-main,
+.teacharium-player .tp-content {
+  background-color: var(--lu-bg) !important;
+}
+
+.teacharium-player .teacharium-step-wrapper {
+  min-height: 100%;
+  background-color: var(--lu-bg) !important;
+  background-image:
+    radial-gradient(600px 300px at 85% -10%, rgba(139, 92, 246, 0.35), transparent 70%),
+    radial-gradient(500px 260px at -10% 110%, rgba(198, 244, 50, 0.16), transparent 70%),
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: auto, auto, 32px 32px, 32px 32px;
+}
+
+/* Prompt: mono eyebrow + big grotesk headline */
+.teacharium-player [data-teacharium-cell="prompt"] .rich-text-display h6 {
+  margin: 0 0 0.75rem;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--lu-lime);
+}
+
+.teacharium-player [data-teacharium-cell="prompt"] .rich-text-display h2 {
+  margin: 0;
+  font-family: "Space Grotesk", "Inter", sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--lu-ink);
+}
+
+.teacharium-player [data-teacharium-cell="prompt"] .rich-text-display h2 strong {
+  background: linear-gradient(90deg, var(--lu-lime), #7dd3fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.teacharium-player [data-teacharium-cell="prompt"] .rich-text-display p {
+  margin-top: 0.6rem;
+  color: var(--lu-muted);
+  font-size: 1rem;
+}
+
+/* Answer card */
+.teacharium-player [data-teacharium-cell="answer"] {
+  padding: 1.25rem;
+  border-radius: 20px;
+  background: var(--lu-card);
+  color: #14141f;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+.teacharium-player [data-teacharium-cell="answer"] .rich-text-display h3 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.8rem;
+}
+
+/* Check buttons: lime pill, black text */
+.teacharium-player [data-teacharium-cell="answer"] :is(.tp-button--default, .tp-button--primary, button.bg-primary) {
+  min-height: 44px;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 999px;
+  background: var(--lu-lime);
+  color: #0c0c14;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.teacharium-player [data-teacharium-cell="answer"] :is(.tp-button--default, .tp-button--primary, button.bg-primary):not(:disabled):hover {
+  box-shadow: 0 0 0 4px rgba(198, 244, 50, 0.3);
+}
+
+.teacharium-player [data-teacharium-cell="answer"] :is(.tp-button--default, .tp-button--primary, button.bg-primary):disabled {
+  background: #d4d4dc;
+  color: #6b6b7b;
+}
+
+@media (max-width: 768px) {
+  .teacharium-player [data-teacharium-cell="answer"] {
+    padding: 0.85rem;
+    border-radius: 16px;
+  }
+}

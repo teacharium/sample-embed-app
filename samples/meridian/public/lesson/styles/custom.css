@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Inter:wght@400;500;600&display=swap");
+
+/* Meridian theme: calm, academic, readable. Undergraduate. */
+.teacharium-player {
+  --me-ink: #1c1f26;
+  --me-muted: #5d6270;
+  --me-navy: #1f3a5f;
+  --me-crimson: #9b2335;
+  --me-paper: #f7f5f0;
+  --me-rule: #e3ded3;
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--me-ink);
+}
+
+/* Paint the whole player, not just the step (the player defaults to white) */
+.teacharium-player .tp-main,
+.teacharium-player .tp-content {
+  background-color: var(--me-paper) !important;
+}
+
+.teacharium-player .teacharium-step-wrapper {
+  min-height: 100%;
+  background-color: var(--me-paper) !important;
+}
+
+/* Prompt: small-caps label, serif title, body copy */
+.teacharium-player [data-teacharium-cell="prompt"] .rich-text-display {
+  max-width: 72ch;
+}
+
+.teacharium-player [data-teacharium-cell="prompt"] .rich-text-display h6 {
+  margin: 0 0 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--me-crimson);
+}
+
+.teacharium-player [data-teacharium-cell="prompt"] .rich-text-display h2 {
+  margin: 0 0 0.5rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--me-rule);
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(1.45rem, 2.6vw, 1.9rem);
+  line-height: 1.2;
+  color: var(--me-navy);
+}
+
+.teacharium-player [data-teacharium-cell="prompt"] .rich-text-display p {
+  margin: 0.5rem 0 0;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--me-ink);
+}
+
+/* Answer area: a quiet white sheet */
+.teacharium-player [data-teacharium-cell="answer"] {
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--me-rule);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.teacharium-player [data-teacharium-cell="answer"] .rich-text-display {
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+/* Submit buttons: navy, squared, understated */
+.teacharium-player [data-teacharium-cell="answer"] :is(.tp-button--default, .tp-button--primary, button.bg-primary) {
+  min-height: 40px;
+  padding: 0.55rem 1.25rem;
+  border: 1px solid var(--me-navy);
+  border-radius: 6px;
+  background: var(--me-navy);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+}
+
+.teacharium-player [data-teacharium-cell="answer"] :is(.tp-button--default, .tp-button--primary, button.bg-primary):not(:disabled):hover {
+  background: #17304f;
+}
+
+.teacharium-player [data-teacharium-cell="answer"] :is(.tp-button--default, .tp-button--primary, button.bg-primary):disabled {
+  opacity: 0.4;
+}
+
+@media (max-width: 768px) {
+  .teacharium-player [data-teacharium-cell="answer"] {
+    padding: 0.85rem;
+  }
+}

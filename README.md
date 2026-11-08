@@ -19,9 +19,15 @@ The samples in this repo use the **self-hosted** option. To get started with the
 
 ## Samples
 
-| Sample                                 | What it shows                                                                                                                                                                    | Live demo                                                 |
-| -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
-| [Orbit Academy](samples/orbit-academy) | React + Vite. A self-hosted lesson in a custom app frame, with a custom Previous/Next footer, custom start and end screens, saved results, and play new / resume / review modes. | [Open](https://docs.teacharium.io/samples/orbit-academy/) |
+Three versions of the same integration, each with its own lesson and a design for a different age group:
+
+| Sample | Audience | Lesson | What it shows | Live demo |
+| --- | --- | --- | --- | --- |
+| [Orbit Academy](samples/orbit-academy) | Middle school | Space Explorers (solar system) | A playful, bright learning app: custom frame, Previous/Next footer with a rocket progress track, custom start and end screens, stars and badges. | [Open](https://docs.teacharium.io/samples/orbit-academy/) |
+| [Lumen](samples/lumen) | High school | Atomic Structure & the Periodic Table | A dark-mode study app: focus-mode frame, segmented progress bar, arrow-key navigation, streaks and an accuracy ring. | [Open](https://docs.teacharium.io/samples/lumen/) |
+| [Meridian](samples/meridian) | College | Supply, Demand & Market Equilibrium | A university course portal: assignment overview, attempts table, question pager and a gradebook-style submission receipt. | [Open](https://docs.teacharium.io/samples/meridian/) |
+
+Every sample has the same integration features: it loads an exported lesson, shares React with the exported widgets, renders its own footer through `renderFooter`, shows its own start and end screens, saves progress and results to `localStorage`, offers play new / resume / review, and includes a saved-data viewer and a reset button.
 
 ## Run a sample
 
@@ -29,7 +35,9 @@ The repo is an npm workspace. Install once at the root, then run a sample:
 
 ```bash
 npm install
-npm run dev --workspace samples/orbit-academy
+npm run dev:orbit-academy   # http://localhost:5175
+npm run dev:lumen           # http://localhost:5176
+npm run dev:meridian        # http://localhost:5177
 ```
 
 Or work inside the sample's own folder:

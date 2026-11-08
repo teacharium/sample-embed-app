@@ -1,0 +1,1158 @@
+{
+  "lesson": {
+    "id": "558b98a7-5813-446a-aa59-b7b2ffa5c664",
+    "fonts": {},
+    "title": "Example Embedded Lesson (High School)",
+    "custom_css": "@import url(\"https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap\");\n\n/* Lumen theme: dark, focused, a little neon. Grades 9-12. */\n.teacharium-player {\n  --lu-bg: #0c0c14;\n  --lu-ink: #f4f4f8;\n  --lu-muted: #a3a3b8;\n  --lu-lime: #c6f432;\n  --lu-violet: #8b5cf6;\n  --lu-card: #fbfbfd;\n  font-family: \"Inter\", system-ui, sans-serif;\n}\n\n/* Paint the whole player dark, not just the step (the player defaults to white) */\n.teacharium-player .tp-main,\n.teacharium-player .tp-content {\n  background-color: var(--lu-bg) !important;\n}\n\n.teacharium-player .teacharium-step-wrapper {\n  min-height: 100%;\n  background-color: var(--lu-bg) !important;\n  background-image:\n    radial-gradient(600px 300px at 85% -10%, rgba(139, 92, 246, 0.35), transparent 70%),\n    radial-gradient(500px 260px at -10% 110%, rgba(198, 244, 50, 0.16), transparent 70%),\n    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),\n    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);\n  background-size: auto, auto, 32px 32px, 32px 32px;\n}\n\n/* Prompt: mono eyebrow + big grotesk headline */\n.teacharium-player [data-teacharium-cell=\"prompt\"] .rich-text-display h6 {\n  margin: 0 0 0.75rem;\n  font-family: \"JetBrains Mono\", ui-monospace, monospace;\n  font-size: 0.78rem;\n  font-weight: 500;\n  letter-spacing: 0.12em;\n  text-transform: uppercase;\n  color: var(--lu-lime);\n}\n\n.teacharium-player [data-teacharium-cell=\"prompt\"] .rich-text-display h2 {\n  margin: 0;\n  font-family: \"Space Grotesk\", \"Inter\", sans-serif;\n  font-weight: 600;\n  font-size: clamp(1.5rem, 3vw, 2.2rem);\n  line-height: 1.15;\n  letter-spacing: -0.02em;\n  color: var(--lu-ink);\n}\n\n.teacharium-player [data-teacharium-cell=\"prompt\"] .rich-text-display h2 strong {\n  background: linear-gradient(90deg, var(--lu-lime), #7dd3fc);\n  -webkit-background-clip: text;\n  background-clip: text;\n  color: transparent;\n}\n\n.teacharium-player [data-teacharium-cell=\"prompt\"] .rich-text-display p {\n  margin-top: 0.6rem;\n  color: var(--lu-muted);\n  font-size: 1rem;\n}\n\n/* Answer card */\n.teacharium-player [data-teacharium-cell=\"answer\"] {\n  padding: 1.25rem;\n  border-radius: 20px;\n  background: var(--lu-card);\n  color: #14141f;\n  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 20px 50px rgba(0, 0, 0, 0.45);\n}\n\n.teacharium-player [data-teacharium-cell=\"answer\"] .rich-text-display h3 {\n  margin: 0;\n  font-family: \"Space Grotesk\", sans-serif;\n  font-size: 1.8rem;\n}\n\n/* Check buttons: lime pill, black text */\n.teacharium-player [data-teacharium-cell=\"answer\"] :is(.tp-button--default, .tp-button--primary, button.bg-primary) {\n  min-height: 44px;\n  padding: 0.6rem 1.5rem;\n  border: none;\n  border-radius: 999px;\n  background: var(--lu-lime);\n  color: #0c0c14;\n  font-family: \"Space Grotesk\", sans-serif;\n  font-weight: 700;\n  letter-spacing: 0.01em;\n  transition: transform 0.12s ease, box-shadow 0.12s ease;\n}\n\n.teacharium-player [data-teacharium-cell=\"answer\"] :is(.tp-button--default, .tp-button--primary, button.bg-primary):not(:disabled):hover {\n  box-shadow: 0 0 0 4px rgba(198, 244, 50, 0.3);\n}\n\n.teacharium-player [data-teacharium-cell=\"answer\"] :is(.tp-button--default, .tp-button--primary, button.bg-primary):disabled {\n  background: #d4d4dc;\n  color: #6b6b7b;\n}\n\n@media (max-width: 768px) {\n  .teacharium-player [data-teacharium-cell=\"answer\"] {\n    padding: 0.85rem;\n    border-radius: 16px;\n  }\n}\n",
+    "show_navbar": true,
+    "history_mode": "truncate",
+    "step_transition": "fade",
+    "widget_settings": {
+      "overrides": {}
+    },
+    "color_palette_id": "default",
+    "start_image_media_id": null,
+    "variable_definitions": [],
+    "show_table_of_contents": false
+  },
+  "sections": [
+    {
+      "id": "ea51edc9-5637-4dde-a20d-6a2b4b7ceaa9",
+      "name": "Checkpoint",
+      "steps": [
+        {
+          "id": "24d0ba78-d59a-4ef1-adfe-89779c2a5ea7",
+          "name": "The Nucleus",
+          "puck_data": {
+            "root": {
+              "props": {
+                "gap": 16,
+                "cells": [
+                  {
+                    "id": "prompt",
+                    "col": 2,
+                    "row": 1,
+                    "colSpan": 10,
+                    "rowSpan": 3
+                  },
+                  {
+                    "id": "answer",
+                    "col": 2,
+                    "row": 4,
+                    "colSpan": 10,
+                    "rowSpan": 9
+                  }
+                ],
+                "items": [
+                  {
+                    "id": "prompt",
+                    "content": [
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-Y3MlAjxiQJ",
+                          "name": "Prompt",
+                          "content": "###### 01 — Multiple choice\n\n## Which particles are packed into an atom's **nucleus**?",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer",
+                    "content": [
+                      {
+                        "type": "MultipleChoice",
+                        "props": {
+                          "id": "MultipleChoice-EN0vDi1IUw",
+                          "name": "Nucleus particles",
+                          "choices": [
+                            {
+                              "id": "6z_8h8xZrz7to-PXF21K1",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "zpjKfyiVe-WYfg7H-v2me",
+                                    "content": "Protons and electrons",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "feedback": "Electrons live in the electron cloud around the nucleus, not inside it.",
+                              "isCorrect": false
+                            },
+                            {
+                              "id": "fU_eoA6IlbPwzH945SiPm",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "2_KojE5I6TAZ1UlS_6JjD",
+                                    "content": "Protons and neutrons",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "feedback": "Correct. Protons and neutrons (nucleons) make up nearly all of an atom's mass.",
+                              "isCorrect": true
+                            },
+                            {
+                              "id": "tI_HsOpVFctr0C9gA276C",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "fl1gQcMN1nhWfdIBMhDwj",
+                                    "content": "Neutrons and electrons",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "feedback": "Neutrons, yes. Electrons, no: they orbit outside the nucleus.",
+                              "isCorrect": false
+                            },
+                            {
+                              "id": "KaIhXDUcktvhGEDRKf-Ek",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "8tVfYqAYsVPOPB-9BtM3H",
+                                    "content": "Only electrons",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "feedback": "The nucleus has no electrons at all. Think about what carries positive charge.",
+                              "isCorrect": false
+                            }
+                          ],
+                          "maxScore": 1,
+                          "itemWidth": "200px",
+                          "layoutMode": "vertical",
+                          "buttonStyle": "toggle",
+                          "selectedColor": "#3b82f6",
+                          "selectionMode": "single",
+                          "randomizeOrder": false,
+                          "checkButtonText": "Check",
+                          "showCheckButton": true
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "border": {
+                  "color": "#e5e7eb",
+                  "style": "none",
+                  "width": 1
+                },
+                "margin": 8,
+                "backgroundSize": "cover",
+                "backgroundColor": "#ffffff",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+              }
+            },
+            "content": []
+          },
+          "created_at": "2026-11-08T21:47:56.339377+00:00",
+          "section_id": "ea51edc9-5637-4dde-a20d-6a2b4b7ceaa9",
+          "updated_at": "2026-11-08T21:50:23.77221+00:00",
+          "order_index": 0
+        },
+        {
+          "id": "35877df7-b261-46fd-825c-dc381057a991",
+          "name": "Noble Gases",
+          "puck_data": {
+            "root": {
+              "props": {
+                "gap": 16,
+                "cells": [
+                  {
+                    "id": "prompt",
+                    "col": 2,
+                    "row": 1,
+                    "colSpan": 10,
+                    "rowSpan": 3
+                  },
+                  {
+                    "id": "answer",
+                    "col": 2,
+                    "row": 4,
+                    "colSpan": 10,
+                    "rowSpan": 9
+                  }
+                ],
+                "items": [
+                  {
+                    "id": "prompt",
+                    "content": [
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-ZO8Rg8VG4U",
+                          "name": "Prompt",
+                          "content": "###### 02 — Select all that apply\n\n## Which of these are **noble gases**?\n\nThey sit in group 18 and barely react with anything.",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer",
+                    "content": [
+                      {
+                        "type": "MultipleChoice",
+                        "props": {
+                          "id": "MultipleChoice-Lqoruy3L7V",
+                          "name": "Noble gases",
+                          "choices": [
+                            {
+                              "id": "Dlto44R4xT2PR8bbRK9y_",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "2EE1x8B1hM5MBLFsBzrDR",
+                                    "content": "### Ne\nNeon",
+                                    "textAlign": "center",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "feedback": "Neon: group 18, full outer shell.",
+                              "isCorrect": true
+                            },
+                            {
+                              "id": "L-CH3vTPurotXofNzBk0W",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "AJp35ew-hk-HfYBNuB5Ws",
+                                    "content": "### Cl\nChlorine",
+                                    "textAlign": "center",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "feedback": "Chlorine is a halogen (group 17) and very reactive.",
+                              "isCorrect": false
+                            },
+                            {
+                              "id": "_zi8praJhuwqdltONCNrn",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "syX30JLCRAOIgVEX-UOBt",
+                                    "content": "### Ar\nArgon",
+                                    "textAlign": "center",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "feedback": "Argon: group 18, and about 1% of the air you breathe.",
+                              "isCorrect": true
+                            },
+                            {
+                              "id": "eLnw3ZygE_4Wg2hDvgGUw",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "7abrnchw6PvFKLbPDkYQb",
+                                    "content": "### N\nNitrogen",
+                                    "textAlign": "center",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "feedback": "Nitrogen is in group 15. It's unreactive as N₂ but it isn't a noble gas.",
+                              "isCorrect": false
+                            }
+                          ],
+                          "maxScore": 1,
+                          "itemWidth": "200px",
+                          "layoutMode": "horizontal",
+                          "buttonStyle": "toggle",
+                          "selectedColor": "#3b82f6",
+                          "selectionMode": "multi",
+                          "randomizeOrder": false,
+                          "checkButtonText": "Check",
+                          "showCheckButton": true,
+                          "horizontalAlignment": "center"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "border": {
+                  "color": "#e5e7eb",
+                  "style": "none",
+                  "width": 1
+                },
+                "margin": 8,
+                "backgroundSize": "cover",
+                "backgroundColor": "#ffffff",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+              }
+            },
+            "content": []
+          },
+          "created_at": "2026-11-08T21:48:22.563561+00:00",
+          "section_id": "ea51edc9-5637-4dde-a20d-6a2b4b7ceaa9",
+          "updated_at": "2026-11-08T21:50:24.984424+00:00",
+          "order_index": 1
+        },
+        {
+          "id": "79cf758d-ecbd-46b0-9c34-c9503231eab3",
+          "name": "Atomic Number",
+          "puck_data": {
+            "root": {
+              "props": {
+                "gap": 16,
+                "cells": [
+                  {
+                    "id": "prompt",
+                    "col": 2,
+                    "row": 1,
+                    "colSpan": 10,
+                    "rowSpan": 3
+                  },
+                  {
+                    "id": "answer",
+                    "col": 2,
+                    "row": 4,
+                    "colSpan": 10,
+                    "rowSpan": 9
+                  }
+                ],
+                "items": [
+                  {
+                    "id": "prompt",
+                    "content": [
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-iTmDkwX-dc",
+                          "name": "Prompt",
+                          "content": "###### 03 — Fill in the blank\n\n## Carbon's atomic number is 6. How many **protons** does every carbon atom have?",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer",
+                    "content": [
+                      {
+                        "type": "FillInTheBlank",
+                        "props": {
+                          "id": "FillInTheBlank-oi-8qpc18P",
+                          "name": "Carbon protons",
+                          "stem": [
+                            {
+                              "type": "Text",
+                              "props": {
+                                "id": "LHsLLqtmMFmTvTDxZqWti",
+                                "content": "**Protons in one carbon atom:**",
+                                "textAlign": "center",
+                                "voiceover": {
+                                  "voice": "alloy",
+                                  "enabled": false,
+                                  "showPlayButton": false
+                                }
+                              }
+                            }
+                          ],
+                          "maxScore": 1,
+                          "maxValue": 1000000,
+                          "minValue": 0,
+                          "inputMode": "text",
+                          "inputSize": "sm",
+                          "maxLength": 500,
+                          "minLength": 0,
+                          "answerType": "numeric",
+                          "placeholder": "#",
+                          "allowDecimal": false,
+                          "displayStyle": "card",
+                          "caseSensitive": false,
+                          "correctAnswer": "6",
+                          "trimWhitespace": true,
+                          "acceptedAnswers": [],
+                          "checkButtonText": "Check",
+                          "correctFeedback": "Yes. Atomic number = number of protons, so every carbon atom has 6.",
+                          "dropdownOptions": [
+                            {
+                              "id": "opt-1",
+                              "label": "Option A"
+                            },
+                            {
+                              "id": "opt-2",
+                              "label": "Option B"
+                            },
+                            {
+                              "id": "opt-3",
+                              "label": "Option C"
+                            }
+                          ],
+                          "showCheckButton": true,
+                          "numericTolerance": 0,
+                          "incorrectFeedback": "The atomic number tells you exactly how many protons an element has.",
+                          "horizontalAlignment": "center"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "border": {
+                  "color": "#e5e7eb",
+                  "style": "none",
+                  "width": 1
+                },
+                "margin": 8,
+                "backgroundSize": "cover",
+                "backgroundColor": "#ffffff",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+              }
+            },
+            "content": []
+          },
+          "created_at": "2026-11-08T21:48:23.452773+00:00",
+          "section_id": "ea51edc9-5637-4dde-a20d-6a2b4b7ceaa9",
+          "updated_at": "2026-11-08T21:50:25.917048+00:00",
+          "order_index": 2
+        },
+        {
+          "id": "e1d88fef-14bb-4229-845e-af5761857594",
+          "name": "Smallest to Largest",
+          "puck_data": {
+            "root": {
+              "props": {
+                "gap": 16,
+                "cells": [
+                  {
+                    "id": "prompt",
+                    "col": 2,
+                    "row": 1,
+                    "colSpan": 10,
+                    "rowSpan": 3
+                  },
+                  {
+                    "id": "answer",
+                    "col": 2,
+                    "row": 4,
+                    "colSpan": 10,
+                    "rowSpan": 9
+                  }
+                ],
+                "items": [
+                  {
+                    "id": "prompt",
+                    "content": [
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-cSfz3l85So",
+                          "name": "Prompt",
+                          "content": "###### 04 — Put in order\n\n## Rank these from **smallest to largest**\n\nDrag the smallest to the top.",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer",
+                    "content": [
+                      {
+                        "type": "Ordering",
+                        "props": {
+                          "id": "Ordering-q9m-sEylds",
+                          "name": "Size order",
+                          "items": [
+                            {
+                              "id": "YQN9gj4iF-hJ3TqyenM9P",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "TjP7dcCM7XZG5qK-IhOqj",
+                                    "content": "**Electron**",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "N3EBmNkQPrfN98HdwNG_6",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "-GRPR6mzezwkAI6rVqAgk",
+                                    "content": "**Atom**",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "Sv0etoI_pZzT7QysK6G9Q",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "_x_-Ied5xR01sc5hGXmpg",
+                                    "content": "**Water molecule**",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "cKJNKqCEKyZTdc24rSTQr",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "-VPtl_dGSeepvuU44qj4k",
+                                    "content": "**Red blood cell**",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "style": "card",
+                          "maxScore": 1,
+                          "checkButtonText": "Check",
+                          "correctFeedback": "Nailed it: electron → atom → molecule → cell.",
+                          "showCheckButton": true,
+                          "incorrectFeedback": "Not quite. Molecules are made of atoms, and cells are made of trillions of molecules.",
+                          "randomizeInitialOrder": true
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "border": {
+                  "color": "#e5e7eb",
+                  "style": "none",
+                  "width": 1
+                },
+                "margin": 8,
+                "backgroundSize": "cover",
+                "backgroundColor": "#ffffff",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+              }
+            },
+            "content": []
+          },
+          "created_at": "2026-11-08T21:48:24.246656+00:00",
+          "section_id": "ea51edc9-5637-4dde-a20d-6a2b4b7ceaa9",
+          "updated_at": "2026-11-08T21:50:26.913843+00:00",
+          "order_index": 3
+        },
+        {
+          "id": "daa2714a-bb62-4493-aedb-2f53f1320db9",
+          "name": "Element Symbols",
+          "puck_data": {
+            "root": {
+              "props": {
+                "gap": 16,
+                "cells": [
+                  {
+                    "id": "prompt",
+                    "col": 2,
+                    "row": 1,
+                    "colSpan": 10,
+                    "rowSpan": 3
+                  },
+                  {
+                    "id": "answer",
+                    "col": 2,
+                    "row": 4,
+                    "colSpan": 10,
+                    "rowSpan": 9
+                  }
+                ],
+                "items": [
+                  {
+                    "id": "prompt",
+                    "content": [
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-zDKbw5vZc5",
+                          "name": "Prompt",
+                          "content": "###### 05 — Matching\n\n## Match each element to its **symbol**\n\nSome symbols come from Latin names, so don't trust your first guess.",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer",
+                    "content": [
+                      {
+                        "type": "Matching",
+                        "props": {
+                          "id": "Matching-gcuY0X2YgP",
+                          "name": "Element symbols",
+                          "pairs": [
+                            {
+                              "id": "xPElyon0ynbu1vIo4zvv5",
+                              "stem": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "pBYr3Bn8VJ7TD5DAfPW_q",
+                                    "content": "**Sodium**",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "answer": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "lkFiAQpn-V2Wsh1j7y7na",
+                                    "content": "Na",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "U-xeDs5CO4FTNjJWceXgi",
+                              "stem": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "-W_eLl1dTlZ3OHawBpbH-",
+                                    "content": "**Iron**",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "answer": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "2p9xqtjnr6hZxYlLy6yiM",
+                                    "content": "Fe",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "nrVxRP0uQapfc8S4rcOoi",
+                              "stem": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "63ay39BV3uugjiPOFeS1u",
+                                    "content": "**Potassium**",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "answer": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "gNwhpmcjPUk1kY0MlZ66a",
+                                    "content": "K",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "maxScore": 1,
+                          "distractors": [
+                            {
+                              "id": "CRhQZ25u8TPebqSowkhI4",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "7MNL8y5jzVBbTaIwmdMnT",
+                                    "content": "Ir",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "checkButtonText": "Check",
+                          "correctFeedback": "All matched. Latin names explain Na (natrium), Fe (ferrum) and K (kalium).",
+                          "showCheckButton": true,
+                          "incorrectFeedback": "Some are off. Hint: sodium's symbol comes from 'natrium'."
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "border": {
+                  "color": "#e5e7eb",
+                  "style": "none",
+                  "width": 1
+                },
+                "margin": 8,
+                "backgroundSize": "cover",
+                "backgroundColor": "#ffffff",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+              }
+            },
+            "content": []
+          },
+          "created_at": "2026-11-08T21:48:25.049849+00:00",
+          "section_id": "ea51edc9-5637-4dde-a20d-6a2b4b7ceaa9",
+          "updated_at": "2026-11-08T21:50:27.816653+00:00",
+          "order_index": 4
+        },
+        {
+          "id": "6c765b8b-4dff-41f9-9ce4-3bde38072d0f",
+          "name": "Metal or Nonmetal",
+          "puck_data": {
+            "root": {
+              "props": {
+                "gap": 16,
+                "cells": [
+                  {
+                    "id": "prompt",
+                    "col": 2,
+                    "row": 1,
+                    "colSpan": 10,
+                    "rowSpan": 3
+                  },
+                  {
+                    "id": "answer",
+                    "col": 2,
+                    "row": 4,
+                    "colSpan": 10,
+                    "rowSpan": 9
+                  }
+                ],
+                "items": [
+                  {
+                    "id": "prompt",
+                    "content": [
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-GSTW62VmHM",
+                          "name": "Prompt",
+                          "content": "###### 06 — Classify\n\n## **Metal** or **nonmetal**?\n\nPick one for each element.",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer",
+                    "content": [
+                      {
+                        "type": "MatrixChoice",
+                        "props": {
+                          "id": "MatrixChoice-8vm4jL3v7j",
+                          "name": "Metal or nonmetal",
+                          "rows": [
+                            {
+                              "id": "sodium",
+                              "stem": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "5NNdYwAL5A-dLSWYxIMA6",
+                                    "content": "Sodium (Na)",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "correctColumnId": "metal",
+                              "incorrectFeedback": "Sodium is an alkali metal."
+                            },
+                            {
+                              "id": "oxygen",
+                              "stem": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "KBpk1rddYwRFeN7GOgOJG",
+                                    "content": "Oxygen (O)",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "correctColumnId": "nonmetal",
+                              "incorrectFeedback": "Oxygen is a nonmetal gas."
+                            },
+                            {
+                              "id": "copper",
+                              "stem": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "wIwWclel2syRsoKjWnlN8",
+                                    "content": "Copper (Cu)",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "correctColumnId": "metal",
+                              "incorrectFeedback": "Copper is a transition metal, which is why it's used in wiring."
+                            },
+                            {
+                              "id": "sulfur",
+                              "stem": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "il15L0jQ_v3CaI_SH83G-",
+                                    "content": "Sulfur (S)",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "correctColumnId": "nonmetal",
+                              "incorrectFeedback": "Sulfur is a brittle yellow nonmetal."
+                            }
+                          ],
+                          "columns": [
+                            {
+                              "id": "metal",
+                              "score": 0,
+                              "header": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "b6vvMhFmRweyGzHeyOyAW",
+                                    "content": "**Metal**",
+                                    "textAlign": "center",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "nonmetal",
+                              "score": 0,
+                              "header": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "7ZksXdX6QchxTnTntPcBX",
+                                    "content": "**Nonmetal**",
+                                    "textAlign": "center",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "surveyMode": false,
+                          "questionType": "correctIncorrect",
+                          "maxScorePerRow": 1,
+                          "checkButtonText": "Check",
+                          "showCheckButton": true,
+                          "overallCorrectFeedback": "Clean sweep. Metals are on the left of the staircase line, nonmetals on the right.",
+                          "overallIncorrectFeedback": "A few are off. Metals conduct and are shiny; nonmetals tend to be brittle or gases."
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "border": {
+                  "color": "#e5e7eb",
+                  "style": "none",
+                  "width": 1
+                },
+                "margin": 8,
+                "backgroundSize": "cover",
+                "backgroundColor": "#ffffff",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+              }
+            },
+            "content": []
+          },
+          "created_at": "2026-11-08T21:48:25.771525+00:00",
+          "section_id": "ea51edc9-5637-4dde-a20d-6a2b4b7ceaa9",
+          "updated_at": "2026-11-08T21:50:28.768152+00:00",
+          "order_index": 5
+        },
+        {
+          "id": "db88054e-e08a-4b68-bb4f-fca607729cf3",
+          "name": "Isotopes",
+          "puck_data": {
+            "root": {
+              "props": {
+                "gap": 16,
+                "cells": [
+                  {
+                    "id": "prompt",
+                    "col": 2,
+                    "row": 1,
+                    "colSpan": 10,
+                    "rowSpan": 3
+                  },
+                  {
+                    "id": "answer",
+                    "col": 2,
+                    "row": 4,
+                    "colSpan": 10,
+                    "rowSpan": 9
+                  }
+                ],
+                "items": [
+                  {
+                    "id": "prompt",
+                    "content": [
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-G8oMFZnQxG",
+                          "name": "Prompt",
+                          "content": "###### 07 — Complete the passage\n\n## Fill in the gaps about **isotopes**",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer",
+                    "content": [
+                      {
+                        "type": "ClozeQuestion",
+                        "props": {
+                          "id": "ClozeQuestion-zMEK_scBTe",
+                          "name": "Isotopes passage",
+                          "blanks": [
+                            {
+                              "id": "y0AdRia4t0pvmtlMRTLzy",
+                              "size": "md",
+                              "distractors": [
+                                {
+                                  "id": "d1",
+                                  "text": "neutrons"
+                                },
+                                {
+                                  "id": "d2",
+                                  "text": "electrons"
+                                }
+                              ],
+                              "correctAnswer": "protons"
+                            },
+                            {
+                              "id": "QchsuhTg-GXOirexsFXgR",
+                              "size": "md",
+                              "distractors": [
+                                {
+                                  "id": "d1",
+                                  "text": "protons"
+                                },
+                                {
+                                  "id": "d2",
+                                  "text": "electrons"
+                                }
+                              ],
+                              "correctAnswer": "neutrons"
+                            },
+                            {
+                              "id": "19RqEHO7r0LAN6ZLy6Q5i",
+                              "size": "md",
+                              "distractors": [
+                                {
+                                  "id": "d1",
+                                  "text": "atomic number"
+                                },
+                                {
+                                  "id": "d2",
+                                  "text": "charge"
+                                }
+                              ],
+                              "correctAnswer": "mass number"
+                            }
+                          ],
+                          "passage": "Isotopes of an element have the same number of [[1]] but a different number of [[2]]. That's why carbon-14 has a larger [[3]] than carbon-12.",
+                          "fontSize": "lg",
+                          "maxScore": 1,
+                          "blankMode": "dropdown",
+                          "caseSensitive": false,
+                          "trimWhitespace": true,
+                          "checkButtonText": "Check",
+                          "correctFeedback": "Exactly. Carbon-12 and carbon-14 are both carbon; they just weigh differently.",
+                          "showCheckButton": true,
+                          "incorrectFeedback": "Check again: isotopes keep the same proton count but change something else."
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "border": {
+                  "color": "#e5e7eb",
+                  "style": "none",
+                  "width": 1
+                },
+                "margin": 8,
+                "backgroundSize": "cover",
+                "backgroundColor": "#ffffff",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+              }
+            },
+            "content": []
+          },
+          "created_at": "2026-11-08T21:48:26.526575+00:00",
+          "section_id": "ea51edc9-5637-4dde-a20d-6a2b4b7ceaa9",
+          "updated_at": "2026-11-08T21:50:29.604912+00:00",
+          "order_index": 6
+        }
+      ],
+      "lesson_id": "558b98a7-5813-446a-aa59-b7b2ffa5c664",
+      "created_at": "2026-11-08T21:47:56.265926+00:00",
+      "updated_at": "2026-11-08T21:48:05.773586+00:00",
+      "order_index": 0,
+      "data_driven_config": null
+    }
+  ],
+  "totalSteps": 7,
+  "totalSections": 1
+}

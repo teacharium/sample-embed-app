@@ -1,0 +1,1151 @@
+{
+  "lesson": {
+    "id": "6a6dbb3d-302a-4e61-8f87-2435c924756f",
+    "fonts": {},
+    "title": "Example Embedded Lesson (College)",
+    "custom_css": "@import url(\"https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Inter:wght@400;500;600&display=swap\");\n\n/* Meridian theme: calm, academic, readable. Undergraduate. */\n.teacharium-player {\n  --me-ink: #1c1f26;\n  --me-muted: #5d6270;\n  --me-navy: #1f3a5f;\n  --me-crimson: #9b2335;\n  --me-paper: #f7f5f0;\n  --me-rule: #e3ded3;\n  font-family: \"Inter\", system-ui, sans-serif;\n  color: var(--me-ink);\n}\n\n/* Paint the whole player, not just the step (the player defaults to white) */\n.teacharium-player .tp-main,\n.teacharium-player .tp-content {\n  background-color: var(--me-paper) !important;\n}\n\n.teacharium-player .teacharium-step-wrapper {\n  min-height: 100%;\n  background-color: var(--me-paper) !important;\n}\n\n/* Prompt: small-caps label, serif title, body copy */\n.teacharium-player [data-teacharium-cell=\"prompt\"] .rich-text-display {\n  max-width: 72ch;\n}\n\n.teacharium-player [data-teacharium-cell=\"prompt\"] .rich-text-display h6 {\n  margin: 0 0 0.5rem;\n  font-size: 0.75rem;\n  font-weight: 600;\n  letter-spacing: 0.1em;\n  text-transform: uppercase;\n  color: var(--me-crimson);\n}\n\n.teacharium-player [data-teacharium-cell=\"prompt\"] .rich-text-display h2 {\n  margin: 0 0 0.5rem;\n  padding-bottom: 0.6rem;\n  border-bottom: 1px solid var(--me-rule);\n  font-family: \"Source Serif 4\", Georgia, serif;\n  font-weight: 600;\n  font-size: clamp(1.45rem, 2.6vw, 1.9rem);\n  line-height: 1.2;\n  color: var(--me-navy);\n}\n\n.teacharium-player [data-teacharium-cell=\"prompt\"] .rich-text-display p {\n  margin: 0.5rem 0 0;\n  font-size: 1.02rem;\n  line-height: 1.6;\n  color: var(--me-ink);\n}\n\n/* Answer area: a quiet white sheet */\n.teacharium-player [data-teacharium-cell=\"answer\"] {\n  padding: 1.25rem 1.5rem;\n  border: 1px solid var(--me-rule);\n  border-radius: 8px;\n  background: #ffffff;\n}\n\n.teacharium-player [data-teacharium-cell=\"answer\"] .rich-text-display {\n  font-size: 1rem;\n  line-height: 1.55;\n}\n\n/* Submit buttons: navy, squared, understated */\n.teacharium-player [data-teacharium-cell=\"answer\"] :is(.tp-button--default, .tp-button--primary, button.bg-primary) {\n  min-height: 40px;\n  padding: 0.55rem 1.25rem;\n  border: 1px solid var(--me-navy);\n  border-radius: 6px;\n  background: var(--me-navy);\n  color: #ffffff;\n  font-weight: 600;\n  font-size: 0.95rem;\n  letter-spacing: 0.01em;\n}\n\n.teacharium-player [data-teacharium-cell=\"answer\"] :is(.tp-button--default, .tp-button--primary, button.bg-primary):not(:disabled):hover {\n  background: #17304f;\n}\n\n.teacharium-player [data-teacharium-cell=\"answer\"] :is(.tp-button--default, .tp-button--primary, button.bg-primary):disabled {\n  opacity: 0.4;\n}\n\n@media (max-width: 768px) {\n  .teacharium-player [data-teacharium-cell=\"answer\"] {\n    padding: 0.85rem;\n  }\n}\n",
+    "show_navbar": true,
+    "history_mode": "truncate",
+    "step_transition": "fade",
+    "widget_settings": {
+      "overrides": {}
+    },
+    "color_palette_id": "default",
+    "start_image_media_id": null,
+    "variable_definitions": [],
+    "show_table_of_contents": false
+  },
+  "sections": [
+    {
+      "id": "009b20da-3d93-4960-a6b9-5226baff3c16",
+      "name": "Problem Set",
+      "steps": [
+        {
+          "id": "233d64d4-2db9-47e2-a962-d2e749342584",
+          "name": "Law of Demand",
+          "puck_data": {
+            "root": {
+              "props": {
+                "gap": 16,
+                "cells": [
+                  {
+                    "id": "prompt",
+                    "col": 2,
+                    "row": 1,
+                    "colSpan": 10,
+                    "rowSpan": 3
+                  },
+                  {
+                    "id": "answer",
+                    "col": 2,
+                    "row": 4,
+                    "colSpan": 10,
+                    "rowSpan": 9
+                  }
+                ],
+                "items": [
+                  {
+                    "id": "prompt",
+                    "content": [
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-ani_ztp-Oq",
+                          "name": "Prompt",
+                          "content": "###### Question 1 · Multiple choice\n\n## The law of demand\n\nHolding all else constant (*ceteris paribus*), what happens to the **quantity demanded** of a good when its price rises?",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer",
+                    "content": [
+                      {
+                        "type": "MultipleChoice",
+                        "props": {
+                          "id": "MultipleChoice-F7_TQg6F4d",
+                          "name": "Law of demand",
+                          "choices": [
+                            {
+                              "id": "SdyKGs14zrz8SicRJdqvO",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "z_WXODbrgUOpZRE-Y7xrg",
+                                    "content": "Quantity demanded increases",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "feedback": "That would be an upward-sloping demand curve, which violates the law of demand (except for rare Giffen goods).",
+                              "isCorrect": false
+                            },
+                            {
+                              "id": "N_aJkvaDVgIkzp7BdMQSF",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "1L_JwiVD6Hji5dSSa6fOg",
+                                    "content": "Quantity demanded decreases",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "feedback": "Correct. A higher price moves consumers up and to the left along a downward-sloping demand curve.",
+                              "isCorrect": true
+                            },
+                            {
+                              "id": "n-SKLdVVb74n3AynnCpq1",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "-rfuKiPJiRiyaLgyZ19-P",
+                                    "content": "The demand curve shifts to the left",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "feedback": "A change in the good's own price causes a movement along the curve, not a shift of it.",
+                              "isCorrect": false
+                            },
+                            {
+                              "id": "LsIrkOXrdWrWcM4JC0pQE",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "keM7fgN6bZvZJrUM71_LZ",
+                                    "content": "Quantity demanded is unchanged",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "feedback": "Only with perfectly inelastic demand, which is a special case rather than the general law.",
+                              "isCorrect": false
+                            }
+                          ],
+                          "maxScore": 1,
+                          "itemWidth": "200px",
+                          "layoutMode": "vertical",
+                          "buttonStyle": "default",
+                          "selectedColor": "#3b82f6",
+                          "selectionMode": "single",
+                          "randomizeOrder": false,
+                          "checkButtonText": "Submit answer",
+                          "showCheckButton": true
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "border": {
+                  "color": "#e5e7eb",
+                  "style": "none",
+                  "width": 1
+                },
+                "margin": 8,
+                "backgroundSize": "cover",
+                "backgroundColor": "#ffffff",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+              }
+            },
+            "content": []
+          },
+          "created_at": "2026-11-08T21:47:57.191952+00:00",
+          "section_id": "009b20da-3d93-4960-a6b9-5226baff3c16",
+          "updated_at": "2026-11-08T21:51:03.722504+00:00",
+          "order_index": 0
+        },
+        {
+          "id": "5cd2c1dd-44e6-40b9-b988-e9ad98cf4ba7",
+          "name": "Demand Shifters",
+          "puck_data": {
+            "root": {
+              "props": {
+                "gap": 16,
+                "cells": [
+                  {
+                    "id": "prompt",
+                    "col": 2,
+                    "row": 1,
+                    "colSpan": 10,
+                    "rowSpan": 3
+                  },
+                  {
+                    "id": "answer",
+                    "col": 2,
+                    "row": 4,
+                    "colSpan": 10,
+                    "rowSpan": 9
+                  }
+                ],
+                "items": [
+                  {
+                    "id": "prompt",
+                    "content": [
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-nxguJFQpbl",
+                          "name": "Prompt",
+                          "content": "###### Question 2 · Select all that apply\n\n## Shifts versus movements\n\nWhich events **shift the demand curve** for coffee, rather than causing a movement along it?",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer",
+                    "content": [
+                      {
+                        "type": "MultipleChoice",
+                        "props": {
+                          "id": "MultipleChoice-xdHvjr2fVB",
+                          "name": "Demand shifters",
+                          "choices": [
+                            {
+                              "id": "g8LneoulAl2gRk0jb8CV5",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "JlDbUCi6dipD695Mp6YK5",
+                                    "content": "Consumers' incomes rise",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "feedback": "Income is a non-price determinant of demand, so it shifts the curve (right, for a normal good).",
+                              "isCorrect": true
+                            },
+                            {
+                              "id": "mzloATJqM2P-x0a5rDHFa",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "2X0V3B4LBPbiWd5obOccU",
+                                    "content": "The price of coffee falls",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "feedback": "A change in coffee's own price moves along the existing demand curve.",
+                              "isCorrect": false
+                            },
+                            {
+                              "id": "YKbpMVedkoKcEA4OieLGG",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "WErw8rbNhr2pLcL9c5BHX",
+                                    "content": "The price of tea (a substitute) rises",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "feedback": "A pricier substitute pushes consumers toward coffee, shifting its demand curve right.",
+                              "isCorrect": true
+                            },
+                            {
+                              "id": "Xj_MNPQwWdh4Yja4T0hrn",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "mo8zqE6jahGZOBuqF50QF",
+                                    "content": "A frost raises coffee growers' costs",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "feedback": "Higher production costs shift supply, not demand.",
+                              "isCorrect": false
+                            }
+                          ],
+                          "maxScore": 1,
+                          "itemWidth": "200px",
+                          "layoutMode": "vertical",
+                          "buttonStyle": "default",
+                          "selectedColor": "#3b82f6",
+                          "selectionMode": "multi",
+                          "randomizeOrder": false,
+                          "checkButtonText": "Submit answer",
+                          "showCheckButton": true
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "border": {
+                  "color": "#e5e7eb",
+                  "style": "none",
+                  "width": 1
+                },
+                "margin": 8,
+                "backgroundSize": "cover",
+                "backgroundColor": "#ffffff",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+              }
+            },
+            "content": []
+          },
+          "created_at": "2026-11-08T21:48:27.204649+00:00",
+          "section_id": "009b20da-3d93-4960-a6b9-5226baff3c16",
+          "updated_at": "2026-11-08T21:51:04.613262+00:00",
+          "order_index": 1
+        },
+        {
+          "id": "0e094770-e6b2-4747-afc4-9d79183c1909",
+          "name": "Equilibrium Price",
+          "puck_data": {
+            "root": {
+              "props": {
+                "gap": 16,
+                "cells": [
+                  {
+                    "id": "prompt",
+                    "col": 2,
+                    "row": 1,
+                    "colSpan": 10,
+                    "rowSpan": 3
+                  },
+                  {
+                    "id": "answer",
+                    "col": 2,
+                    "row": 4,
+                    "colSpan": 10,
+                    "rowSpan": 9
+                  }
+                ],
+                "items": [
+                  {
+                    "id": "prompt",
+                    "content": [
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-DTj6wcSSUe",
+                          "name": "Prompt",
+                          "content": "###### Question 3 · Numeric response\n\n## Solving for equilibrium\n\nA market has demand **Qd = 100 − 2P** and supply **Qs = 20 + 2P**. What is the equilibrium price **P\\***?",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer",
+                    "content": [
+                      {
+                        "type": "FillInTheBlank",
+                        "props": {
+                          "id": "FillInTheBlank-BLy4QKW4HS",
+                          "name": "Equilibrium price",
+                          "stem": [
+                            {
+                              "type": "Text",
+                              "props": {
+                                "id": "YCukdVrDTnYPzeiDnfi6R",
+                                "content": "**P\\* =**",
+                                "voiceover": {
+                                  "voice": "alloy",
+                                  "enabled": false,
+                                  "showPlayButton": false
+                                }
+                              }
+                            }
+                          ],
+                          "maxScore": 1,
+                          "maxValue": 1000000,
+                          "minValue": 0,
+                          "inputMode": "text",
+                          "inputSize": "sm",
+                          "maxLength": 500,
+                          "minLength": 0,
+                          "answerType": "numeric",
+                          "placeholder": "P*",
+                          "allowDecimal": true,
+                          "displayStyle": "underline",
+                          "caseSensitive": false,
+                          "correctAnswer": "20",
+                          "trimWhitespace": true,
+                          "acceptedAnswers": [],
+                          "checkButtonText": "Submit answer",
+                          "correctFeedback": "Correct. Setting 100 − 2P = 20 + 2P gives 4P = 80, so P* = 20 and Q* = 60.",
+                          "dropdownOptions": [
+                            {
+                              "id": "opt-1",
+                              "label": "Option A"
+                            },
+                            {
+                              "id": "opt-2",
+                              "label": "Option B"
+                            },
+                            {
+                              "id": "opt-3",
+                              "label": "Option C"
+                            }
+                          ],
+                          "showCheckButton": true,
+                          "numericTolerance": 0,
+                          "incorrectFeedback": "Set quantity demanded equal to quantity supplied and solve for P."
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "border": {
+                  "color": "#e5e7eb",
+                  "style": "none",
+                  "width": 1
+                },
+                "margin": 8,
+                "backgroundSize": "cover",
+                "backgroundColor": "#ffffff",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+              }
+            },
+            "content": []
+          },
+          "created_at": "2026-11-08T21:48:27.909637+00:00",
+          "section_id": "009b20da-3d93-4960-a6b9-5226baff3c16",
+          "updated_at": "2026-11-08T21:51:05.525733+00:00",
+          "order_index": 2
+        },
+        {
+          "id": "4604e24b-bc63-4700-b0e9-9667d4f55c6f",
+          "name": "Price Ceiling Chain",
+          "puck_data": {
+            "root": {
+              "props": {
+                "gap": 16,
+                "cells": [
+                  {
+                    "id": "prompt",
+                    "col": 2,
+                    "row": 1,
+                    "colSpan": 10,
+                    "rowSpan": 3
+                  },
+                  {
+                    "id": "answer",
+                    "col": 2,
+                    "row": 4,
+                    "colSpan": 10,
+                    "rowSpan": 9
+                  }
+                ],
+                "items": [
+                  {
+                    "id": "prompt",
+                    "content": [
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-ATRFAiMs-r",
+                          "name": "Prompt",
+                          "content": "###### Question 4 · Sequencing\n\n## A binding price ceiling\n\nThe government caps rent below the market equilibrium. Put the consequences in **causal order**.",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer",
+                    "content": [
+                      {
+                        "type": "Ordering",
+                        "props": {
+                          "id": "Ordering-BYTMh14I1-",
+                          "name": "Price ceiling chain",
+                          "items": [
+                            {
+                              "id": "SfscU5nNBHmb0jJ3mDz0U",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "vcewxx8Lp-OvfXocUxLEP",
+                                    "content": "A maximum rent is set below equilibrium",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "IO-88mBEHhwqjDO7M7ck9",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "kZr-fCaJrlDewMCrN4gAo",
+                                    "content": "Quantity demanded rises while quantity supplied falls",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "asYwngo2eF42kufVx2dCH",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "Zc658RzOpvy59_Xs6L14h",
+                                    "content": "A persistent shortage of apartments develops",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "BCTRZhgBubOx7bElHcDaS",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "p6nlooIb_SDwLsUlc_MWo",
+                                    "content": "Units are rationed by waiting lists and search costs",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "style": "compact",
+                          "maxScore": 1,
+                          "checkButtonText": "Submit answer",
+                          "correctFeedback": "Correct. The ceiling creates excess demand, and non-price rationing fills the gap.",
+                          "showCheckButton": true,
+                          "incorrectFeedback": "Start with the policy, then its effect on price, then the resulting gap between Qd and Qs.",
+                          "randomizeInitialOrder": true
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "border": {
+                  "color": "#e5e7eb",
+                  "style": "none",
+                  "width": 1
+                },
+                "margin": 8,
+                "backgroundSize": "cover",
+                "backgroundColor": "#ffffff",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+              }
+            },
+            "content": []
+          },
+          "created_at": "2026-11-08T21:48:28.652679+00:00",
+          "section_id": "009b20da-3d93-4960-a6b9-5226baff3c16",
+          "updated_at": "2026-11-08T21:51:06.430789+00:00",
+          "order_index": 3
+        },
+        {
+          "id": "f3d6f309-a827-4414-ab39-07b23269d226",
+          "name": "Key Terms",
+          "puck_data": {
+            "root": {
+              "props": {
+                "gap": 16,
+                "cells": [
+                  {
+                    "id": "prompt",
+                    "col": 2,
+                    "row": 1,
+                    "colSpan": 10,
+                    "rowSpan": 3
+                  },
+                  {
+                    "id": "answer",
+                    "col": 2,
+                    "row": 4,
+                    "colSpan": 10,
+                    "rowSpan": 9
+                  }
+                ],
+                "items": [
+                  {
+                    "id": "prompt",
+                    "content": [
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-tRqVf5MdOg",
+                          "name": "Prompt",
+                          "content": "###### Question 5 · Matching\n\n## Key terms\n\nMatch each term to its definition. One definition is a distractor.",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer",
+                    "content": [
+                      {
+                        "type": "Matching",
+                        "props": {
+                          "id": "Matching-O3Ac-oBpjF",
+                          "name": "Key terms",
+                          "pairs": [
+                            {
+                              "id": "kIRZnA0w8VIAQalYZ5xxn",
+                              "stem": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "8SERRfiy6qTwFQ4wqGghw",
+                                    "content": "**Surplus**",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "answer": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "gl9cgY0rha8dOAvE-Te4L",
+                                    "content": "Quantity supplied exceeds quantity demanded at the current price",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "ix4qz3_Oi36c-Sb3fI67d",
+                              "stem": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "CNN1KoHkskmGn6esag2BB",
+                                    "content": "**Shortage**",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "answer": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "K-K237plnlZHlOLmohS7c",
+                                    "content": "Quantity demanded exceeds quantity supplied at the current price",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "CbiDVY6c2mixe_oLWz1VX",
+                              "stem": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "WygvAhIFEVSuwkEYk3RUm",
+                                    "content": "**Price elasticity of demand**",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "answer": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "Oa5MA7LxS1iXm2I623OLz",
+                                    "content": "Percentage change in quantity demanded divided by percentage change in price",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "maxScore": 1,
+                          "distractors": [
+                            {
+                              "id": "-Yr-GocmeDk42-UQm39Za",
+                              "content": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "mdMzWQPtvE4cUqmp7Aefb",
+                                    "content": "The total value of goods produced in an economy in a year",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "checkButtonText": "Submit answer",
+                          "correctFeedback": "All three terms matched correctly.",
+                          "showCheckButton": true,
+                          "incorrectFeedback": "Review the definitions: surplus and shortage are opposite imbalances at a given price."
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "border": {
+                  "color": "#e5e7eb",
+                  "style": "none",
+                  "width": 1
+                },
+                "margin": 8,
+                "backgroundSize": "cover",
+                "backgroundColor": "#ffffff",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+              }
+            },
+            "content": []
+          },
+          "created_at": "2026-11-08T21:48:29.444606+00:00",
+          "section_id": "009b20da-3d93-4960-a6b9-5226baff3c16",
+          "updated_at": "2026-11-08T21:51:07.438084+00:00",
+          "order_index": 4
+        },
+        {
+          "id": "010b08be-1658-40b7-acde-9298fc250c52",
+          "name": "Elastic or Inelastic",
+          "puck_data": {
+            "root": {
+              "props": {
+                "gap": 16,
+                "cells": [
+                  {
+                    "id": "prompt",
+                    "col": 2,
+                    "row": 1,
+                    "colSpan": 10,
+                    "rowSpan": 3
+                  },
+                  {
+                    "id": "answer",
+                    "col": 2,
+                    "row": 4,
+                    "colSpan": 10,
+                    "rowSpan": 9
+                  }
+                ],
+                "items": [
+                  {
+                    "id": "prompt",
+                    "content": [
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-AhqtnzfZVB",
+                          "name": "Prompt",
+                          "content": "###### Question 6 · Classification\n\n## Elastic or inelastic demand?\n\nConsider the availability of substitutes and whether the good is a necessity.",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer",
+                    "content": [
+                      {
+                        "type": "MatrixChoice",
+                        "props": {
+                          "id": "MatrixChoice-myjbHJdnb5",
+                          "name": "Elastic or inelastic",
+                          "rows": [
+                            {
+                              "id": "insulin",
+                              "stem": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "qu071DdcFNe4AlEUfTvou",
+                                    "content": "Insulin for diabetics",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "correctColumnId": "inelastic",
+                              "incorrectFeedback": "Insulin is a medical necessity with no close substitutes."
+                            },
+                            {
+                              "id": "cafe",
+                              "stem": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "QdJjSZUM1pr5wCRt23he8",
+                                    "content": "Coffee from one particular café",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "correctColumnId": "elastic",
+                              "incorrectFeedback": "One café's coffee has many close substitutes nearby."
+                            },
+                            {
+                              "id": "gasoline",
+                              "stem": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "FluxRKDJeGIijc7AA_Skf",
+                                    "content": "Gasoline (short run)",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "correctColumnId": "inelastic",
+                              "incorrectFeedback": "In the short run, commuters can't easily change how much they drive."
+                            },
+                            {
+                              "id": "leisure",
+                              "stem": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "nqXyitqghMlK5xEQjeha0",
+                                    "content": "Airline tickets for leisure travel",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ],
+                              "correctColumnId": "elastic",
+                              "incorrectFeedback": "Leisure trips are discretionary and can be postponed or rerouted."
+                            }
+                          ],
+                          "columns": [
+                            {
+                              "id": "elastic",
+                              "score": 0,
+                              "header": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "QvQYKMUP5ohx5cV04LioS",
+                                    "content": "**Elastic**",
+                                    "textAlign": "center",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "inelastic",
+                              "score": 0,
+                              "header": [
+                                {
+                                  "type": "Text",
+                                  "props": {
+                                    "id": "je-DYgkzYgTeVDu8oD9ow",
+                                    "content": "**Inelastic**",
+                                    "textAlign": "center",
+                                    "voiceover": {
+                                      "voice": "alloy",
+                                      "enabled": false,
+                                      "showPlayButton": false
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "surveyMode": false,
+                          "questionType": "correctIncorrect",
+                          "maxScorePerRow": 1,
+                          "checkButtonText": "Submit answer",
+                          "showCheckButton": true,
+                          "overallCorrectFeedback": "Correct on every item. Necessities without close substitutes tend to be inelastic.",
+                          "overallIncorrectFeedback": "Some classifications are off. Ask: are there close substitutes, and can the purchase be postponed?"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "border": {
+                  "color": "#e5e7eb",
+                  "style": "none",
+                  "width": 1
+                },
+                "margin": 8,
+                "backgroundSize": "cover",
+                "backgroundColor": "#ffffff",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+              }
+            },
+            "content": []
+          },
+          "created_at": "2026-11-08T21:48:30.092932+00:00",
+          "section_id": "009b20da-3d93-4960-a6b9-5226baff3c16",
+          "updated_at": "2026-11-08T21:51:08.253419+00:00",
+          "order_index": 5
+        },
+        {
+          "id": "03395b5e-7ce0-4410-b79c-af4ecf6aaad2",
+          "name": "Elasticity",
+          "puck_data": {
+            "root": {
+              "props": {
+                "gap": 16,
+                "cells": [
+                  {
+                    "id": "prompt",
+                    "col": 2,
+                    "row": 1,
+                    "colSpan": 10,
+                    "rowSpan": 3
+                  },
+                  {
+                    "id": "answer",
+                    "col": 2,
+                    "row": 4,
+                    "colSpan": 10,
+                    "rowSpan": 9
+                  }
+                ],
+                "items": [
+                  {
+                    "id": "prompt",
+                    "content": [
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-vKjsuBx0xX",
+                          "name": "Prompt",
+                          "content": "###### Question 7 · Cloze\n\n## Elasticity and total revenue\n\nComplete the passage.",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer",
+                    "content": [
+                      {
+                        "type": "ClozeQuestion",
+                        "props": {
+                          "id": "ClozeQuestion-IEUQUsPa8V",
+                          "name": "Elasticity passage",
+                          "blanks": [
+                            {
+                              "id": "D_e1Ho03XgqzTi5qbJSqi",
+                              "size": "sm",
+                              "distractors": [
+                                {
+                                  "id": "d1",
+                                  "text": "less"
+                                },
+                                {
+                                  "id": "d2",
+                                  "text": "equal"
+                                }
+                              ],
+                              "correctAnswer": "greater"
+                            },
+                            {
+                              "id": "hfpqn6VlpIF3D4EOazhwZ",
+                              "size": "sm",
+                              "distractors": [
+                                {
+                                  "id": "d1",
+                                  "text": "rise"
+                                },
+                                {
+                                  "id": "d2",
+                                  "text": "stay the same"
+                                }
+                              ],
+                              "correctAnswer": "fall"
+                            },
+                            {
+                              "id": "9Rtu0PyT3slFRBWoZwB-V",
+                              "size": "sm",
+                              "distractors": [
+                                {
+                                  "id": "d1",
+                                  "text": "smaller"
+                                },
+                                {
+                                  "id": "d2",
+                                  "text": "identical"
+                                }
+                              ],
+                              "correctAnswer": "larger"
+                            }
+                          ],
+                          "passage": "When demand is price elastic, the absolute value of elasticity is [[1]] than 1. In that case, a price increase causes total revenue to [[2]], because the percentage fall in quantity demanded is [[3]] than the percentage rise in price.",
+                          "fontSize": "md",
+                          "maxScore": 1,
+                          "blankMode": "dropdown",
+                          "caseSensitive": false,
+                          "trimWhitespace": true,
+                          "checkButtonText": "Submit answer",
+                          "correctFeedback": "Correct. Elastic demand means revenue moves opposite to price.",
+                          "showCheckButton": true,
+                          "incorrectFeedback": "Recall: when |Ed| > 1, the percentage change in quantity outweighs the percentage change in price."
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "border": {
+                  "color": "#e5e7eb",
+                  "style": "none",
+                  "width": 1
+                },
+                "margin": 8,
+                "backgroundSize": "cover",
+                "backgroundColor": "#ffffff",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+              }
+            },
+            "content": []
+          },
+          "created_at": "2026-11-08T21:48:30.860546+00:00",
+          "section_id": "009b20da-3d93-4960-a6b9-5226baff3c16",
+          "updated_at": "2026-11-08T21:51:09.154959+00:00",
+          "order_index": 6
+        }
+      ],
+      "lesson_id": "6a6dbb3d-302a-4e61-8f87-2435c924756f",
+      "created_at": "2026-11-08T21:47:57.162586+00:00",
+      "updated_at": "2026-11-08T21:48:07.199893+00:00",
+      "order_index": 0,
+      "data_driven_config": null
+    }
+  ],
+  "totalSteps": 7,
+  "totalSections": 1
+}
