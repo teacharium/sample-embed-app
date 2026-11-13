@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Nunito:wght@700;800;900&display=swap');
+
+/* =====================================================================
+   Market Climb — H&L MIDDLE SCHOOL look (style-guides/middle-school-style-guide.md)
+   Illustrated "market mountain" world, dark boards with 4px #FFD100 borders,
+   white cards, Nunito display + Montserrat body, chunky pills, springy motion.
+   Cells: board-* = dark board · card-* = white card · board-head = top strip
+   Markdown roles: h6 = gold kicker pill · blockquote = callout
+   ===================================================================== */
+.teacharium-player { --blue: #078dee; --blue-dark: #0351ab; --gold: #ffd100; --spring: cubic-bezier(0.2, 0.9, 0.3, 1.2); }
+.teacharium-step-wrapper {
+  --ink: #1c252e;
+  --muted: #637381;
+  --blue: #078dee;
+  --blue-dark: #0351ab;
+  --gold: #ffd100;
+  --green: #118d57;
+  --pink: #ea1d76;
+  --board: rgba(30, 29, 27, 0.84);
+  --pop: 0 0 2px 0 rgba(0, 0, 0, 0.15), 0 18px 36px -10px rgba(13, 13, 13, 0.5);
+  --spring: cubic-bezier(0.2, 0.9, 0.3, 1.2);
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  color: var(--ink);
+  background: transparent !important;
+  padding: 20px 24px 32px !important;
+}
+
+/* ---------- The world ---------- */
+.teacharium-player {
+  background:
+    linear-gradient(180deg, rgba(1, 41, 114, 0.15) 0%, rgba(13, 13, 13, 0.1) 60%, rgba(13, 13, 13, 0.35) 100%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900' preserveAspectRatio='xMidYMid slice'%3E%3Cdefs%3E%3ClinearGradient id='s' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23012972'/%3E%3Cstop offset='.45' stop-color='%230570C4'/%3E%3Cstop offset='.78' stop-color='%2368CDF9'/%3E%3Cstop offset='1' stop-color='%23FFE9A8'/%3E%3C/linearGradient%3E%3CradialGradient id='g'%3E%3Cstop offset='0' stop-color='%23FFE680'/%3E%3Cstop offset='1' stop-color='%23FFE680' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='1600' height='900' fill='url(%23s)'/%3E%3Cg fill='%23fff'%3E%3Ccircle cx='120' cy='80' r='2'/%3E%3Ccircle cx='340' cy='140' r='1.5'/%3E%3Ccircle cx='560' cy='60' r='2'/%3E%3Ccircle cx='820' cy='110' r='1.5'/%3E%3Ccircle cx='1010' cy='50' r='2'/%3E%3Ccircle cx='1430' cy='90' r='1.5'/%3E%3Ccircle cx='240' cy='220' r='1.2'/%3E%3Ccircle cx='700' cy='200' r='1.2'/%3E%3C/g%3E%3Ccircle cx='1180' cy='560' r='320' fill='url(%23g)' opacity='.8'/%3E%3Ccircle cx='1180' cy='560' r='96' fill='%23FFD100'/%3E%3Cpath d='M0 700 L140 640 L230 668 L360 560 L470 610 L620 470 L730 525 L880 380 L990 430 L1150 260 L1260 310 L1420 150 L1600 120 V900 H0Z' fill='%230351AB' opacity='.75'/%3E%3Cpath d='M0 700 L140 640 L230 668 L360 560 L470 610 L620 470 L730 525 L880 380 L990 430 L1150 260 L1260 310 L1420 150 L1600 120' fill='none' stroke='%23FFD100' stroke-width='7' stroke-linejoin='round' stroke-linecap='round' stroke-dasharray='2 16'/%3E%3Cpath d='M1420 150 V70' stroke='%23fff' stroke-width='5'/%3E%3Cpath d='M1420 72 L1480 90 L1420 110Z' fill='%23EA1D76'/%3E%3Cpath d='M0 780 L180 720 L300 750 L450 660 L580 700 L760 600 L900 640 L1080 540 L1220 590 L1400 470 L1600 430 V900 H0Z' fill='%23012972' opacity='.85'/%3E%3Cg fill='%230D1B3E'%3E%3Crect x='40' y='760' width='70' height='140'/%3E%3Crect x='120' y='720' width='54' height='180'/%3E%3Crect x='185' y='790' width='80' height='110'/%3E%3Crect x='280' y='700' width='46' height='200'/%3E%3Crect x='336' y='750' width='90' height='150'/%3E%3Crect x='1120' y='740' width='60' height='160'/%3E%3Crect x='1190' y='690' width='70' height='210'/%3E%3Crect x='1270' y='770' width='90' height='130'/%3E%3Crect x='1370' y='720' width='50' height='180'/%3E%3Crect x='1430' y='760' width='80' height='140'/%3E%3Crect x='1520' y='700' width='60' height='200'/%3E%3Crect x='0' y='850' width='1600' height='50'/%3E%3C/g%3E%3Cg fill='%23FFD100' opacity='.8'%3E%3Crect x='132' y='740' width='8' height='10'/%3E%3Crect x='152' y='740' width='8' height='10'/%3E%3Crect x='132' y='770' width='8' height='10'/%3E%3Crect x='292' y='720' width='8' height='10'/%3E%3Crect x='308' y='750' width='8' height='10'/%3E%3Crect x='352' y='770' width='8' height='10'/%3E%3Crect x='388' y='800' width='8' height='10'/%3E%3Crect x='1204' y='710' width='8' height='10'/%3E%3Crect x='1228' y='740' width='8' height='10'/%3E%3Crect x='1204' y='770' width='8' height='10'/%3E%3Crect x='1382' y='740' width='8' height='10'/%3E%3Crect x='1534' y='720' width='8' height='10'/%3E%3Crect x='1556' y='760' width='8' height='10'/%3E%3Crect x='1140' y='770' width='8' height='10'/%3E%3C/g%3E%3Cg fill='%2377ED8B' opacity='.55'%3E%3Cpath d='M520 300 l14 -22 l14 22z'/%3E%3Cpath d='M260 420 l10 -16 l10 16z'/%3E%3Cpath d='M960 220 l12 -19 l12 19z'/%3E%3C/g%3E%3Cg fill='%23FF8FB8' opacity='.5'%3E%3Cpath d='M760 290 l12 19 l12 -19z'/%3E%3Cpath d='M80 520 l10 16 l10 -16z'/%3E%3C/g%3E%3C/svg%3E") center bottom / cover no-repeat fixed,
+    #0570c4 !important;
+}
+.teacharium-player .tp-main,
+.teacharium-player .tp-content,
+.teacharium-player .teacharium-step-wrapper { background: transparent !important; }
+
+/* ---------- Surfaces ---------- */
+.teacharium-step-wrapper [data-teacharium-cell^="board"],
+.teacharium-step-wrapper [data-teacharium-cell^="card"] {
+  align-self: stretch;
+  border: 4px solid var(--gold) !important;
+  border-radius: 20px;
+  padding: 20px 24px 22px !important;
+  box-shadow: var(--pop);
+  min-width: 0;
+}
+.teacharium-step-wrapper [data-teacharium-cell^="board"] { background: var(--board); color: #fff; }
+.teacharium-step-wrapper [data-teacharium-cell^="card"] { background: #fff; color: var(--ink); border-radius: 24px; }
+.teacharium-step-wrapper [data-teacharium-cell="board-head"] {
+  align-self: start;
+  padding: 14px 24px 12px !important;
+  background: linear-gradient(100deg, rgba(1, 41, 114, 0.92), rgba(30, 29, 27, 0.86));
+}
+
+/* ---------- Type ---------- */
+.teacharium-step-wrapper .rich-text-display { font-family: 'Montserrat', Helvetica, sans-serif; font-size: 16px; line-height: 1.55; }
+.teacharium-step-wrapper .rich-text-display h1,
+.teacharium-step-wrapper .rich-text-display h2,
+.teacharium-step-wrapper .rich-text-display h3 { font-family: 'Nunito', Helvetica, sans-serif; letter-spacing: -0.01em; }
+.teacharium-step-wrapper .rich-text-display h1 { font-size: clamp(36px, 4vw, 52px); font-weight: 900; line-height: 1.05; margin: 2px 0 14px; }
+.teacharium-step-wrapper .rich-text-display h1::after {
+  content: ""; display: block; width: 190px; height: 14px; margin: 8px 0 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 14'%3E%3Cpath d='M3 9 C 25 2, 40 13, 62 6 S 100 2, 122 8 S 160 11, 177 4' fill='none' stroke='%23FFD100' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat;
+}
+.teacharium-step-wrapper .rich-text-display h2 { font-size: clamp(26px, 2.6vw, 34px); font-weight: 900; line-height: 1.12; margin: 2px 0 6px; }
+.teacharium-step-wrapper .rich-text-display h3 { font-size: 21px; font-weight: 800; margin: 6px 0 4px; }
+.teacharium-step-wrapper .rich-text-display p { margin: 0 0 10px; }
+.teacharium-step-wrapper .rich-text-display ul { padding-left: 1.1em; margin: 4px 0 10px; }
+.teacharium-step-wrapper .rich-text-display li { margin: 6px 0; }
+
+/* on boards */
+.teacharium-step-wrapper [data-teacharium-cell^="board"] .rich-text-display { color: #dfe3e8; }
+.teacharium-step-wrapper [data-teacharium-cell^="board"] .rich-text-display :is(h1, h2, h3) { color: #fff; }
+.teacharium-step-wrapper [data-teacharium-cell^="board"] .rich-text-display strong { color: var(--gold); font-weight: 800; }
+.teacharium-step-wrapper [data-teacharium-cell^="board"] .rich-text-display em { color: #fff; }
+.teacharium-step-wrapper [data-teacharium-cell="board-head"] .rich-text-display p { font-size: 17px; color: #fff; margin: 0 0 4px; }
+.teacharium-step-wrapper [data-teacharium-cell="board-head"] .rich-text-display strong { color: var(--gold); }
+/* on cards */
+.teacharium-step-wrapper [data-teacharium-cell^="card"] .rich-text-display { color: var(--muted); }
+.teacharium-step-wrapper [data-teacharium-cell^="card"] .rich-text-display :is(h1, h2, h3, strong) { color: var(--ink); }
+.teacharium-step-wrapper [data-teacharium-cell^="card"] .rich-text-display strong { font-weight: 800; }
+
+/* h6 = gold kicker pill */
+.teacharium-step-wrapper .rich-text-display h6 {
+  display: inline-block; margin: 0 0 8px;
+  font: 800 13px/1 'Montserrat', sans-serif; letter-spacing: 0.02em; color: var(--ink);
+  background: var(--gold); padding: 8px 14px; border-radius: 999px;
+  box-shadow: 0 6px 14px -6px rgba(183, 110, 0, 0.6);
+  animation: ms-badge-pop 1.1s var(--spring) both;
+}
+/* blockquote = callout */
+.teacharium-step-wrapper .rich-text-display blockquote {
+  margin: 10px 0 0; padding: 12px 16px; border-radius: 14px; font-style: normal;
+  border: 0; border-left: 6px solid var(--gold);
+}
+.teacharium-step-wrapper .rich-text-display blockquote p { margin: 0; }
+.teacharium-step-wrapper [data-teacharium-cell^="board"] .rich-text-display blockquote { background: rgba(255, 209, 0, 0.12); color: #fff; }
+.teacharium-step-wrapper [data-teacharium-cell^="card"] .rich-text-display blockquote { background: #fff6cc; color: var(--ink); }
+
+/* ---------- Sliders / stepper / switch: tiles on white cards ---------- */
+.teacharium-step-wrapper :is(.tw-var-slider, .tw-var-stepper, .tw-var-switch) {
+  background: #f4f6f8 !important; border: 2px solid #dfe3e8 !important; border-radius: 16px !important;
+  box-shadow: none !important; margin: 0 0 10px !important; font-family: 'Montserrat', sans-serif;
+  transition: border-color 0.2s ease, transform 0.25s var(--spring);
+}
+.teacharium-step-wrapper :is(.tw-var-slider, .tw-var-stepper, .tw-var-switch):hover { border-color: var(--blue) !important; }
+.teacharium-step-wrapper :is(.tw-var-slider__label, .tw-var-stepper__label, .tw-var-switch__label) {
+  font: 800 16px/1.3 'Montserrat', sans-serif !important; color: var(--ink) !important;
+}
+.teacharium-step-wrapper .tw-var-slider { --tw-var-muted: 210 18% 84%; --tw-var-primary: 206 94% 48%; }
+.teacharium-step-wrapper .tw-var-slider__input { accent-color: var(--blue); height: 10px; border-radius: 999px; cursor: pointer; }
+.teacharium-step-wrapper .tw-var-slider__input::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none; width: 26px; height: 26px; border-radius: 50%;
+  background: var(--gold); border: 4px solid #fff; box-shadow: 0 0 0 2px var(--blue), 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+.teacharium-step-wrapper .tw-var-slider__input::-moz-range-thumb {
+  width: 22px; height: 22px; border-radius: 50%; background: var(--gold); border: 4px solid #fff; box-shadow: 0 0 0 2px var(--blue);
+}
+.teacharium-step-wrapper .tw-var-slider__value {
+  min-width: 64px; text-align: center; font: 900 20px/1 'Nunito', sans-serif !important; color: #fff !important;
+  background: var(--blue); border-radius: 999px; padding: 6px 10px; box-shadow: 0 3px 0 var(--blue-dark);
+}
+.teacharium-step-wrapper .tw-var-slider__value::after { content: "%"; }
+.teacharium-step-wrapper .tw-var-slider__range { display: none !important; }
+
+.teacharium-step-wrapper .tw-var-stepper__btn {
+  width: 48px !important; height: 48px !important; border-radius: 50% !important;
+  font: 900 26px/1 'Nunito', sans-serif !important; color: #fff !important;
+  background: var(--blue) !important; border: 0 !important; box-shadow: 0 4px 0 var(--blue-dark);
+  transition: transform 0.2s var(--spring);
+}
+.teacharium-step-wrapper .tw-var-stepper__btn:hover:not(:disabled) { transform: translateY(-2px) scale(1.06); }
+.teacharium-step-wrapper .tw-var-stepper__btn:active:not(:disabled) { transform: translateY(3px); box-shadow: 0 1px 0 var(--blue-dark); }
+.teacharium-step-wrapper .tw-var-stepper__btn:disabled { background: #c4cdd5 !important; box-shadow: 0 4px 0 #919eab; }
+.teacharium-step-wrapper .tw-var-stepper__value { font: 900 30px/1 'Nunito', sans-serif !important; color: var(--ink) !important; min-width: 84px; text-align: center; }
+.teacharium-step-wrapper .tw-var-stepper__value::after { content: "%"; }
+
+.teacharium-step-wrapper .tw-var-switch__control { width: 64px !important; height: 36px !important; cursor: pointer; }
+.teacharium-step-wrapper .tw-var-switch__track {
+  width: 64px !important; height: 36px !important; border-radius: 999px !important; position: relative;
+  background: #c4cdd5 !important; box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.18); transition: background-color 0.2s ease;
+}
+.teacharium-step-wrapper .tw-var-switch__thumb {
+  width: 28px !important; height: 28px !important; top: 4px !important; left: 4px !important; position: absolute !important;
+  background: #fff !important; border-radius: 50% !important; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transform: none !important; transition: left 0.3s var(--spring) !important;
+}
+.teacharium-step-wrapper .tw-var-switch__control[aria-checked="true"] .tw-var-switch__track { background: #22c55e !important; }
+.teacharium-step-wrapper .tw-var-switch__control[aria-checked="true"] .tw-var-switch__thumb { left: 32px !important; }
+.teacharium-step-wrapper .tw-var-switch:has([aria-checked="true"]) { border-color: #22c55e !important; background: #d3fcd2 !important; }
+
+/* ---------- Numbers & meters on dark boards ---------- */
+.teacharium-step-wrapper .tw-var-numeric { background: transparent !important; border: 0 !important; box-shadow: none !important; padding: 2px 0 !important; margin: 0 0 6px !important; }
+.teacharium-step-wrapper .tw-var-numeric__label { font: 700 13px/1.3 'Montserrat', sans-serif !important; color: #c4cdd5 !important; text-transform: none; }
+.teacharium-step-wrapper .tw-var-numeric__value { font-family: 'Nunito', sans-serif !important; font-weight: 900 !important; color: #fff !important; line-height: 1.05 !important; }
+.teacharium-step-wrapper .tw-var-numeric__value--xl { font-size: clamp(48px, 5vw, 64px) !important; color: var(--gold) !important; animation: ms-badge-pop 1.1s var(--spring) both; text-shadow: 0 4px 0 rgba(0, 0, 0, 0.35); }
+.teacharium-step-wrapper .tw-var-numeric__value--lg { font-size: 40px !important; }
+.teacharium-step-wrapper .tw-var-numeric__value--md { font-size: 28px !important; }
+.teacharium-step-wrapper .tw-var-numeric__affix { color: inherit !important; opacity: 0.9; }
+
+.teacharium-step-wrapper .tw-var-progress { background: transparent !important; border: 0 !important; box-shadow: none !important; padding: 2px 0 !important; margin: 4px 0 10px !important; }
+.teacharium-step-wrapper .tw-var-progress__label { font: 700 13px/1.3 'Montserrat', sans-serif !important; color: #c4cdd5 !important; }
+.teacharium-step-wrapper .tw-var-progress__track { background: rgba(255, 255, 255, 0.16) !important; border-radius: 999px !important; height: 16px !important; overflow: hidden; }
+.teacharium-step-wrapper .tw-var-progress__fill { background: linear-gradient(170deg, #ffd666 0%, #ffab00 100%) !important; border-radius: 999px !important; transition: width 0.6s var(--spring) !important; }
+/* risk meter: green → gold → pink */
+.teacharium-step-wrapper .comp-ProgressBar-R06b64D0UP .tw-var-progress__fill { background: linear-gradient(90deg, #22c55e, #ffd100 55%, #ea1d76) !important; background-size: 240px 100% !important; }
+
+/* ---------- Status pills ---------- */
+.teacharium-step-wrapper .tw-var-badge { background: transparent !important; border: 0 !important; box-shadow: none !important; padding: 0 !important; margin: 2px 0 10px !important; }
+.teacharium-step-wrapper .tw-var-badge__pill {
+  display: inline-flex !important; align-items: center; gap: 6px; max-width: 100%; white-space: normal !important; text-align: left;
+  font: 800 15px/1.25 'Montserrat', sans-serif !important; padding: 9px 16px !important; border-radius: 999px !important;
+  border: 2px solid currentColor !important;
+  animation: ms-pill-in 0.6s var(--spring) both;
+}
+.teacharium-step-wrapper .tw-var-badge__pill--success { background: #d3fcd2 !important; color: var(--green) !important; }
+.teacharium-step-wrapper .tw-var-badge__pill--danger  { background: #fce3ee !important; color: var(--pink) !important; }
+.teacharium-step-wrapper .tw-var-badge__pill--warning { background: #fff5cc !important; color: #b76e00 !important; }
+.teacharium-step-wrapper .tw-var-badge__pill--primary { background: #cfe5f4 !important; color: var(--blue) !important; }
+.teacharium-step-wrapper .tw-var-badge__pill--neutral { background: #f4f6f8 !important; color: var(--muted) !important; }
+
+/* news cards: tighter rhythm between asset name + headline pill */
+.teacharium-step-wrapper [data-teacharium-cell="card-news"] .rich-text-display p { margin: 6px 0 2px; color: var(--ink); }
+.teacharium-step-wrapper [data-teacharium-cell="card-news"] .tw-var-badge { margin-bottom: 8px !important; text-align: left !important; }
+.teacharium-step-wrapper [data-teacharium-cell="card-news"] .tw-var-badge__inner { justify-content: flex-start !important; align-items: flex-start !important; text-align: left !important; }
+
+/* ---------- SVG risk map ---------- */
+.teacharium-step-wrapper [data-teacharium-cell="board-map"] svg { display: block; max-width: 420px; margin: 6px auto 4px; }
+
+/* ---------- Big 3D buttons (Play again) ---------- */
+.teacharium-step-wrapper [class*="comp-ActionButton"] button {
+  font: 800 18px/1 'Montserrat', sans-serif !important; min-height: 56px; padding: 0 28px !important; margin-top: 8px;
+  background: var(--blue) !important; color: #fff !important; border: 0 !important; border-radius: 10px !important;
+  box-shadow: 0 6px 0 var(--blue-dark); transition: transform 0.25s var(--spring), background-color 0.15s ease;
+}
+.teacharium-step-wrapper [class*="comp-ActionButton"] button:hover { background: #0570c4 !important; transform: translateY(-2px) scale(1.04); }
+.teacharium-step-wrapper [class*="comp-ActionButton"] button:active { transform: translateY(4px); box-shadow: 0 2px 0 var(--blue-dark); }
+
+/* ---------- Footer: dark board (no backdrop-filter: it traps fixed popups) ---------- */
+.teacharium-player .tp-footer-wrapper { background: rgba(30, 29, 27, 0.94) !important; border-top: 4px solid var(--gold); }
+.teacharium-player .tp-footer-wrapper .tp-footer,
+.teacharium-player .tp-footer-wrapper .tp-footer__content { background: transparent !important; }
+.teacharium-player .tp-footer__actions button:not(:disabled) {
+  font-family: 'Montserrat', sans-serif !important; font-weight: 800 !important; font-size: 16px !important;
+  min-height: 48px; padding: 0 22px !important; border-radius: 10px !important;
+  background: var(--blue) !important; color: #fff !important; border: 0 !important;
+  box-shadow: 0 5px 0 var(--blue-dark); transition: transform 0.25s var(--spring);
+}
+.teacharium-player .tp-footer__actions button:not(:disabled):hover { transform: translateY(-2px) scale(1.04); }
+.teacharium-player .tp-footer__actions button:disabled {
+  font-family: 'Montserrat', sans-serif !important; font-weight: 800 !important; min-height: 48px; border-radius: 10px !important;
+  background: rgba(255, 255, 255, 0.14) !important; color: rgba(255, 255, 255, 0.6) !important; border: 2px dashed rgba(255, 255, 255, 0.4) !important;
+}
+.teacharium-player .tp-footer__nav button {
+  color: #fff !important; background: rgba(255, 255, 255, 0.14) !important;
+  border: 2px solid rgba(255, 255, 255, 0.7) !important; border-radius: 8px !important;
+}
+.teacharium-player .tp-progress__step--current { background: var(--gold) !important; border-color: var(--gold) !important; }
+
+/* ---------- Motion ---------- */
+@keyframes ms-badge-pop {
+  0% { transform: scale(0.2) rotate(-18deg); filter: blur(6px); opacity: 0; }
+  55% { transform: scale(1.18) rotate(3deg); filter: blur(0); opacity: 1; }
+  75% { transform: scale(0.94); }
+  90% { transform: scale(1.06); }
+  100% { transform: scale(1) rotate(0); }
+}
+@keyframes ms-pill-in {
+  0% { transform: translateY(14px) scale(0.9); opacity: 0; }
+  100% { transform: none; opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .teacharium-step-wrapper *, .teacharium-step-wrapper *::before, .teacharium-step-wrapper *::after { animation: none !important; transition: none !important; }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .teacharium-player { background-attachment: scroll !important; }
+  .teacharium-player .teacharium-step-wrapper,
+  .teacharium-step-wrapper.teacharium-step-wrapper { padding: 14px 14px 28px !important; }
+  .teacharium-step-wrapper .teacharium-grid-layout { gap: 14px !important; grid-template-columns: minmax(0, 1fr) !important; }
+  .teacharium-step-wrapper [data-teacharium-cell^="board"],
+  .teacharium-step-wrapper [data-teacharium-cell^="card"] { padding: 16px !important; }
+  .teacharium-step-wrapper .rich-text-display h1 { font-size: 34px; }
+  .teacharium-step-wrapper .rich-text-display h2 { font-size: 24px; }
+  .teacharium-player .tp-footer__actions button:not(:disabled) { font-size: 14px !important; padding: 0 14px !important; }
+}

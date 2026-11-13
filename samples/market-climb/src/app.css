@@ -1,0 +1,18 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+.player {
+  height: 100%;
+}
+
+.status {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  font-family: system-ui, sans-serif;
+  color: #555;
+}

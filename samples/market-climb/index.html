@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="%BASE_URL%favicon.svg" type="image/svg+xml" />
+    <title>Market Climb · Teacharium sample lesson</title>
+    <!--
+      Exported widget bundles import "react" and "react-dom" as bare modules.
+      This import map points them at shims that re-export the app's own React
+      (set on window in src/main.tsx), so widgets and the player share one
+      React instance. It must come before any module script.
+    -->
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "%BASE_URL%react-shim.js",
+          "react-dom": "%BASE_URL%react-dom-shim.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

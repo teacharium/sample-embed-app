@@ -1,0 +1,2899 @@
+{
+  "lesson": {
+    "id": "adef27d2-07db-4c87-90cc-ffcfe897e99e",
+    "fonts": {},
+    "title": "Market Climb - Claude",
+    "custom_css": "@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Nunito:wght@700;800;900&display=swap');\n\n/* =====================================================================\n   Market Climb — H&L MIDDLE SCHOOL look (style-guides/middle-school-style-guide.md)\n   Illustrated \"market mountain\" world, dark boards with 4px #FFD100 borders,\n   white cards, Nunito display + Montserrat body, chunky pills, springy motion.\n   Cells: board-* = dark board · card-* = white card · board-head = top strip\n   Markdown roles: h6 = gold kicker pill · blockquote = callout\n   ===================================================================== */\n.teacharium-player { --blue: #078dee; --blue-dark: #0351ab; --gold: #ffd100; --spring: cubic-bezier(0.2, 0.9, 0.3, 1.2); }\n.teacharium-step-wrapper {\n  --ink: #1c252e;\n  --muted: #637381;\n  --blue: #078dee;\n  --blue-dark: #0351ab;\n  --gold: #ffd100;\n  --green: #118d57;\n  --pink: #ea1d76;\n  --board: rgba(30, 29, 27, 0.84);\n  --pop: 0 0 2px 0 rgba(0, 0, 0, 0.15), 0 18px 36px -10px rgba(13, 13, 13, 0.5);\n  --spring: cubic-bezier(0.2, 0.9, 0.3, 1.2);\n  font-family: 'Montserrat', Helvetica, sans-serif;\n  color: var(--ink);\n  background: transparent !important;\n  padding: 20px 24px 32px !important;\n}\n\n/* ---------- The world ---------- */\n.teacharium-player {\n  background:\n    linear-gradient(180deg, rgba(1, 41, 114, 0.15) 0%, rgba(13, 13, 13, 0.1) 60%, rgba(13, 13, 13, 0.35) 100%),\n    url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900' preserveAspectRatio='xMidYMid slice'%3E%3Cdefs%3E%3ClinearGradient id='s' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23012972'/%3E%3Cstop offset='.45' stop-color='%230570C4'/%3E%3Cstop offset='.78' stop-color='%2368CDF9'/%3E%3Cstop offset='1' stop-color='%23FFE9A8'/%3E%3C/linearGradient%3E%3CradialGradient id='g'%3E%3Cstop offset='0' stop-color='%23FFE680'/%3E%3Cstop offset='1' stop-color='%23FFE680' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='1600' height='900' fill='url(%23s)'/%3E%3Cg fill='%23fff'%3E%3Ccircle cx='120' cy='80' r='2'/%3E%3Ccircle cx='340' cy='140' r='1.5'/%3E%3Ccircle cx='560' cy='60' r='2'/%3E%3Ccircle cx='820' cy='110' r='1.5'/%3E%3Ccircle cx='1010' cy='50' r='2'/%3E%3Ccircle cx='1430' cy='90' r='1.5'/%3E%3Ccircle cx='240' cy='220' r='1.2'/%3E%3Ccircle cx='700' cy='200' r='1.2'/%3E%3C/g%3E%3Ccircle cx='1180' cy='560' r='320' fill='url(%23g)' opacity='.8'/%3E%3Ccircle cx='1180' cy='560' r='96' fill='%23FFD100'/%3E%3Cpath d='M0 700 L140 640 L230 668 L360 560 L470 610 L620 470 L730 525 L880 380 L990 430 L1150 260 L1260 310 L1420 150 L1600 120 V900 H0Z' fill='%230351AB' opacity='.75'/%3E%3Cpath d='M0 700 L140 640 L230 668 L360 560 L470 610 L620 470 L730 525 L880 380 L990 430 L1150 260 L1260 310 L1420 150 L1600 120' fill='none' stroke='%23FFD100' stroke-width='7' stroke-linejoin='round' stroke-linecap='round' stroke-dasharray='2 16'/%3E%3Cpath d='M1420 150 V70' stroke='%23fff' stroke-width='5'/%3E%3Cpath d='M1420 72 L1480 90 L1420 110Z' fill='%23EA1D76'/%3E%3Cpath d='M0 780 L180 720 L300 750 L450 660 L580 700 L760 600 L900 640 L1080 540 L1220 590 L1400 470 L1600 430 V900 H0Z' fill='%23012972' opacity='.85'/%3E%3Cg fill='%230D1B3E'%3E%3Crect x='40' y='760' width='70' height='140'/%3E%3Crect x='120' y='720' width='54' height='180'/%3E%3Crect x='185' y='790' width='80' height='110'/%3E%3Crect x='280' y='700' width='46' height='200'/%3E%3Crect x='336' y='750' width='90' height='150'/%3E%3Crect x='1120' y='740' width='60' height='160'/%3E%3Crect x='1190' y='690' width='70' height='210'/%3E%3Crect x='1270' y='770' width='90' height='130'/%3E%3Crect x='1370' y='720' width='50' height='180'/%3E%3Crect x='1430' y='760' width='80' height='140'/%3E%3Crect x='1520' y='700' width='60' height='200'/%3E%3Crect x='0' y='850' width='1600' height='50'/%3E%3C/g%3E%3Cg fill='%23FFD100' opacity='.8'%3E%3Crect x='132' y='740' width='8' height='10'/%3E%3Crect x='152' y='740' width='8' height='10'/%3E%3Crect x='132' y='770' width='8' height='10'/%3E%3Crect x='292' y='720' width='8' height='10'/%3E%3Crect x='308' y='750' width='8' height='10'/%3E%3Crect x='352' y='770' width='8' height='10'/%3E%3Crect x='388' y='800' width='8' height='10'/%3E%3Crect x='1204' y='710' width='8' height='10'/%3E%3Crect x='1228' y='740' width='8' height='10'/%3E%3Crect x='1204' y='770' width='8' height='10'/%3E%3Crect x='1382' y='740' width='8' height='10'/%3E%3Crect x='1534' y='720' width='8' height='10'/%3E%3Crect x='1556' y='760' width='8' height='10'/%3E%3Crect x='1140' y='770' width='8' height='10'/%3E%3C/g%3E%3Cg fill='%2377ED8B' opacity='.55'%3E%3Cpath d='M520 300 l14 -22 l14 22z'/%3E%3Cpath d='M260 420 l10 -16 l10 16z'/%3E%3Cpath d='M960 220 l12 -19 l12 19z'/%3E%3C/g%3E%3Cg fill='%23FF8FB8' opacity='.5'%3E%3Cpath d='M760 290 l12 19 l12 -19z'/%3E%3Cpath d='M80 520 l10 16 l10 -16z'/%3E%3C/g%3E%3C/svg%3E\") center bottom / cover no-repeat fixed,\n    #0570c4 !important;\n}\n.teacharium-player .tp-main,\n.teacharium-player .tp-content,\n.teacharium-player .teacharium-step-wrapper { background: transparent !important; }\n\n/* ---------- Surfaces ---------- */\n.teacharium-step-wrapper [data-teacharium-cell^=\"board\"],\n.teacharium-step-wrapper [data-teacharium-cell^=\"card\"] {\n  align-self: stretch;\n  border: 4px solid var(--gold) !important;\n  border-radius: 20px;\n  padding: 20px 24px 22px !important;\n  box-shadow: var(--pop);\n  min-width: 0;\n}\n.teacharium-step-wrapper [data-teacharium-cell^=\"board\"] { background: var(--board); color: #fff; }\n.teacharium-step-wrapper [data-teacharium-cell^=\"card\"] { background: #fff; color: var(--ink); border-radius: 24px; }\n.teacharium-step-wrapper [data-teacharium-cell=\"board-head\"] {\n  align-self: start;\n  padding: 14px 24px 12px !important;\n  background: linear-gradient(100deg, rgba(1, 41, 114, 0.92), rgba(30, 29, 27, 0.86));\n}\n\n/* ---------- Type ---------- */\n.teacharium-step-wrapper .rich-text-display { font-family: 'Montserrat', Helvetica, sans-serif; font-size: 16px; line-height: 1.55; }\n.teacharium-step-wrapper .rich-text-display h1,\n.teacharium-step-wrapper .rich-text-display h2,\n.teacharium-step-wrapper .rich-text-display h3 { font-family: 'Nunito', Helvetica, sans-serif; letter-spacing: -0.01em; }\n.teacharium-step-wrapper .rich-text-display h1 { font-size: clamp(36px, 4vw, 52px); font-weight: 900; line-height: 1.05; margin: 2px 0 14px; }\n.teacharium-step-wrapper .rich-text-display h1::after {\n  content: \"\"; display: block; width: 190px; height: 14px; margin: 8px 0 0;\n  background: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 14'%3E%3Cpath d='M3 9 C 25 2, 40 13, 62 6 S 100 2, 122 8 S 160 11, 177 4' fill='none' stroke='%23FFD100' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E\") no-repeat;\n}\n.teacharium-step-wrapper .rich-text-display h2 { font-size: clamp(26px, 2.6vw, 34px); font-weight: 900; line-height: 1.12; margin: 2px 0 6px; }\n.teacharium-step-wrapper .rich-text-display h3 { font-size: 21px; font-weight: 800; margin: 6px 0 4px; }\n.teacharium-step-wrapper .rich-text-display p { margin: 0 0 10px; }\n.teacharium-step-wrapper .rich-text-display ul { padding-left: 1.1em; margin: 4px 0 10px; }\n.teacharium-step-wrapper .rich-text-display li { margin: 6px 0; }\n\n/* on boards */\n.teacharium-step-wrapper [data-teacharium-cell^=\"board\"] .rich-text-display { color: #dfe3e8; }\n.teacharium-step-wrapper [data-teacharium-cell^=\"board\"] .rich-text-display :is(h1, h2, h3) { color: #fff; }\n.teacharium-step-wrapper [data-teacharium-cell^=\"board\"] .rich-text-display strong { color: var(--gold); font-weight: 800; }\n.teacharium-step-wrapper [data-teacharium-cell^=\"board\"] .rich-text-display em { color: #fff; }\n.teacharium-step-wrapper [data-teacharium-cell=\"board-head\"] .rich-text-display p { font-size: 17px; color: #fff; margin: 0 0 4px; }\n.teacharium-step-wrapper [data-teacharium-cell=\"board-head\"] .rich-text-display strong { color: var(--gold); }\n/* on cards */\n.teacharium-step-wrapper [data-teacharium-cell^=\"card\"] .rich-text-display { color: var(--muted); }\n.teacharium-step-wrapper [data-teacharium-cell^=\"card\"] .rich-text-display :is(h1, h2, h3, strong) { color: var(--ink); }\n.teacharium-step-wrapper [data-teacharium-cell^=\"card\"] .rich-text-display strong { font-weight: 800; }\n\n/* h6 = gold kicker pill */\n.teacharium-step-wrapper .rich-text-display h6 {\n  display: inline-block; margin: 0 0 8px;\n  font: 800 13px/1 'Montserrat', sans-serif; letter-spacing: 0.02em; color: var(--ink);\n  background: var(--gold); padding: 8px 14px; border-radius: 999px;\n  box-shadow: 0 6px 14px -6px rgba(183, 110, 0, 0.6);\n  animation: ms-badge-pop 1.1s var(--spring) both;\n}\n/* blockquote = callout */\n.teacharium-step-wrapper .rich-text-display blockquote {\n  margin: 10px 0 0; padding: 12px 16px; border-radius: 14px; font-style: normal;\n  border: 0; border-left: 6px solid var(--gold);\n}\n.teacharium-step-wrapper .rich-text-display blockquote p { margin: 0; }\n.teacharium-step-wrapper [data-teacharium-cell^=\"board\"] .rich-text-display blockquote { background: rgba(255, 209, 0, 0.12); color: #fff; }\n.teacharium-step-wrapper [data-teacharium-cell^=\"card\"] .rich-text-display blockquote { background: #fff6cc; color: var(--ink); }\n\n/* ---------- Sliders / stepper / switch: tiles on white cards ---------- */\n.teacharium-step-wrapper :is(.tw-var-slider, .tw-var-stepper, .tw-var-switch) {\n  background: #f4f6f8 !important; border: 2px solid #dfe3e8 !important; border-radius: 16px !important;\n  box-shadow: none !important; margin: 0 0 10px !important; font-family: 'Montserrat', sans-serif;\n  transition: border-color 0.2s ease, transform 0.25s var(--spring);\n}\n.teacharium-step-wrapper :is(.tw-var-slider, .tw-var-stepper, .tw-var-switch):hover { border-color: var(--blue) !important; }\n.teacharium-step-wrapper :is(.tw-var-slider__label, .tw-var-stepper__label, .tw-var-switch__label) {\n  font: 800 16px/1.3 'Montserrat', sans-serif !important; color: var(--ink) !important;\n}\n.teacharium-step-wrapper .tw-var-slider { --tw-var-muted: 210 18% 84%; --tw-var-primary: 206 94% 48%; }\n.teacharium-step-wrapper .tw-var-slider__input { accent-color: var(--blue); height: 10px; border-radius: 999px; cursor: pointer; }\n.teacharium-step-wrapper .tw-var-slider__input::-webkit-slider-thumb {\n  -webkit-appearance: none; appearance: none; width: 26px; height: 26px; border-radius: 50%;\n  background: var(--gold); border: 4px solid #fff; box-shadow: 0 0 0 2px var(--blue), 0 4px 10px rgba(0, 0, 0, 0.25);\n}\n.teacharium-step-wrapper .tw-var-slider__input::-moz-range-thumb {\n  width: 22px; height: 22px; border-radius: 50%; background: var(--gold); border: 4px solid #fff; box-shadow: 0 0 0 2px var(--blue);\n}\n.teacharium-step-wrapper .tw-var-slider__value {\n  min-width: 64px; text-align: center; font: 900 20px/1 'Nunito', sans-serif !important; color: #fff !important;\n  background: var(--blue); border-radius: 999px; padding: 6px 10px; box-shadow: 0 3px 0 var(--blue-dark);\n}\n.teacharium-step-wrapper .tw-var-slider__value::after { content: \"%\"; }\n.teacharium-step-wrapper .tw-var-slider__range { display: none !important; }\n\n.teacharium-step-wrapper .tw-var-stepper__btn {\n  width: 48px !important; height: 48px !important; border-radius: 50% !important;\n  font: 900 26px/1 'Nunito', sans-serif !important; color: #fff !important;\n  background: var(--blue) !important; border: 0 !important; box-shadow: 0 4px 0 var(--blue-dark);\n  transition: transform 0.2s var(--spring);\n}\n.teacharium-step-wrapper .tw-var-stepper__btn:hover:not(:disabled) { transform: translateY(-2px) scale(1.06); }\n.teacharium-step-wrapper .tw-var-stepper__btn:active:not(:disabled) { transform: translateY(3px); box-shadow: 0 1px 0 var(--blue-dark); }\n.teacharium-step-wrapper .tw-var-stepper__btn:disabled { background: #c4cdd5 !important; box-shadow: 0 4px 0 #919eab; }\n.teacharium-step-wrapper .tw-var-stepper__value { font: 900 30px/1 'Nunito', sans-serif !important; color: var(--ink) !important; min-width: 84px; text-align: center; }\n.teacharium-step-wrapper .tw-var-stepper__value::after { content: \"%\"; }\n\n.teacharium-step-wrapper .tw-var-switch__control { width: 64px !important; height: 36px !important; cursor: pointer; }\n.teacharium-step-wrapper .tw-var-switch__track {\n  width: 64px !important; height: 36px !important; border-radius: 999px !important; position: relative;\n  background: #c4cdd5 !important; box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.18); transition: background-color 0.2s ease;\n}\n.teacharium-step-wrapper .tw-var-switch__thumb {\n  width: 28px !important; height: 28px !important; top: 4px !important; left: 4px !important; position: absolute !important;\n  background: #fff !important; border-radius: 50% !important; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);\n  transform: none !important; transition: left 0.3s var(--spring) !important;\n}\n.teacharium-step-wrapper .tw-var-switch__control[aria-checked=\"true\"] .tw-var-switch__track { background: #22c55e !important; }\n.teacharium-step-wrapper .tw-var-switch__control[aria-checked=\"true\"] .tw-var-switch__thumb { left: 32px !important; }\n.teacharium-step-wrapper .tw-var-switch:has([aria-checked=\"true\"]) { border-color: #22c55e !important; background: #d3fcd2 !important; }\n\n/* ---------- Numbers & meters on dark boards ---------- */\n.teacharium-step-wrapper .tw-var-numeric { background: transparent !important; border: 0 !important; box-shadow: none !important; padding: 2px 0 !important; margin: 0 0 6px !important; }\n.teacharium-step-wrapper .tw-var-numeric__label { font: 700 13px/1.3 'Montserrat', sans-serif !important; color: #c4cdd5 !important; text-transform: none; }\n.teacharium-step-wrapper .tw-var-numeric__value { font-family: 'Nunito', sans-serif !important; font-weight: 900 !important; color: #fff !important; line-height: 1.05 !important; }\n.teacharium-step-wrapper .tw-var-numeric__value--xl { font-size: clamp(48px, 5vw, 64px) !important; color: var(--gold) !important; animation: ms-badge-pop 1.1s var(--spring) both; text-shadow: 0 4px 0 rgba(0, 0, 0, 0.35); }\n.teacharium-step-wrapper .tw-var-numeric__value--lg { font-size: 40px !important; }\n.teacharium-step-wrapper .tw-var-numeric__value--md { font-size: 28px !important; }\n.teacharium-step-wrapper .tw-var-numeric__affix { color: inherit !important; opacity: 0.9; }\n\n.teacharium-step-wrapper .tw-var-progress { background: transparent !important; border: 0 !important; box-shadow: none !important; padding: 2px 0 !important; margin: 4px 0 10px !important; }\n.teacharium-step-wrapper .tw-var-progress__label { font: 700 13px/1.3 'Montserrat', sans-serif !important; color: #c4cdd5 !important; }\n.teacharium-step-wrapper .tw-var-progress__track { background: rgba(255, 255, 255, 0.16) !important; border-radius: 999px !important; height: 16px !important; overflow: hidden; }\n.teacharium-step-wrapper .tw-var-progress__fill { background: linear-gradient(170deg, #ffd666 0%, #ffab00 100%) !important; border-radius: 999px !important; transition: width 0.6s var(--spring) !important; }\n/* risk meter: green → gold → pink */\n.teacharium-step-wrapper .comp-ProgressBar-R06b64D0UP .tw-var-progress__fill { background: linear-gradient(90deg, #22c55e, #ffd100 55%, #ea1d76) !important; background-size: 240px 100% !important; }\n\n/* ---------- Status pills ---------- */\n.teacharium-step-wrapper .tw-var-badge { background: transparent !important; border: 0 !important; box-shadow: none !important; padding: 0 !important; margin: 2px 0 10px !important; }\n.teacharium-step-wrapper .tw-var-badge__pill {\n  display: inline-flex !important; align-items: center; gap: 6px; max-width: 100%; white-space: normal !important; text-align: left;\n  font: 800 15px/1.25 'Montserrat', sans-serif !important; padding: 9px 16px !important; border-radius: 999px !important;\n  border: 2px solid currentColor !important;\n  animation: ms-pill-in 0.6s var(--spring) both;\n}\n.teacharium-step-wrapper .tw-var-badge__pill--success { background: #d3fcd2 !important; color: var(--green) !important; }\n.teacharium-step-wrapper .tw-var-badge__pill--danger  { background: #fce3ee !important; color: var(--pink) !important; }\n.teacharium-step-wrapper .tw-var-badge__pill--warning { background: #fff5cc !important; color: #b76e00 !important; }\n.teacharium-step-wrapper .tw-var-badge__pill--primary { background: #cfe5f4 !important; color: var(--blue) !important; }\n.teacharium-step-wrapper .tw-var-badge__pill--neutral { background: #f4f6f8 !important; color: var(--muted) !important; }\n\n/* news cards: tighter rhythm between asset name + headline pill */\n.teacharium-step-wrapper [data-teacharium-cell=\"card-news\"] .rich-text-display p { margin: 6px 0 2px; color: var(--ink); }\n.teacharium-step-wrapper [data-teacharium-cell=\"card-news\"] .tw-var-badge { margin-bottom: 8px !important; text-align: left !important; }\n.teacharium-step-wrapper [data-teacharium-cell=\"card-news\"] .tw-var-badge__inner { justify-content: flex-start !important; align-items: flex-start !important; text-align: left !important; }\n\n/* ---------- SVG risk map ---------- */\n.teacharium-step-wrapper [data-teacharium-cell=\"board-map\"] svg { display: block; max-width: 420px; margin: 6px auto 4px; }\n\n/* ---------- Big 3D buttons (Play again) ---------- */\n.teacharium-step-wrapper [class*=\"comp-ActionButton\"] button {\n  font: 800 18px/1 'Montserrat', sans-serif !important; min-height: 56px; padding: 0 28px !important; margin-top: 8px;\n  background: var(--blue) !important; color: #fff !important; border: 0 !important; border-radius: 10px !important;\n  box-shadow: 0 6px 0 var(--blue-dark); transition: transform 0.25s var(--spring), background-color 0.15s ease;\n}\n.teacharium-step-wrapper [class*=\"comp-ActionButton\"] button:hover { background: #0570c4 !important; transform: translateY(-2px) scale(1.04); }\n.teacharium-step-wrapper [class*=\"comp-ActionButton\"] button:active { transform: translateY(4px); box-shadow: 0 2px 0 var(--blue-dark); }\n\n/* ---------- Footer: dark board (no backdrop-filter: it traps fixed popups) ---------- */\n.teacharium-player .tp-footer-wrapper { background: rgba(30, 29, 27, 0.94) !important; border-top: 4px solid var(--gold); }\n.teacharium-player .tp-footer-wrapper .tp-footer,\n.teacharium-player .tp-footer-wrapper .tp-footer__content { background: transparent !important; }\n.teacharium-player .tp-footer__actions button:not(:disabled) {\n  font-family: 'Montserrat', sans-serif !important; font-weight: 800 !important; font-size: 16px !important;\n  min-height: 48px; padding: 0 22px !important; border-radius: 10px !important;\n  background: var(--blue) !important; color: #fff !important; border: 0 !important;\n  box-shadow: 0 5px 0 var(--blue-dark); transition: transform 0.25s var(--spring);\n}\n.teacharium-player .tp-footer__actions button:not(:disabled):hover { transform: translateY(-2px) scale(1.04); }\n.teacharium-player .tp-footer__actions button:disabled {\n  font-family: 'Montserrat', sans-serif !important; font-weight: 800 !important; min-height: 48px; border-radius: 10px !important;\n  background: rgba(255, 255, 255, 0.14) !important; color: rgba(255, 255, 255, 0.6) !important; border: 2px dashed rgba(255, 255, 255, 0.4) !important;\n}\n.teacharium-player .tp-footer__nav button {\n  color: #fff !important; background: rgba(255, 255, 255, 0.14) !important;\n  border: 2px solid rgba(255, 255, 255, 0.7) !important; border-radius: 8px !important;\n}\n.teacharium-player .tp-progress__step--current { background: var(--gold) !important; border-color: var(--gold) !important; }\n\n/* ---------- Motion ---------- */\n@keyframes ms-badge-pop {\n  0% { transform: scale(0.2) rotate(-18deg); filter: blur(6px); opacity: 0; }\n  55% { transform: scale(1.18) rotate(3deg); filter: blur(0); opacity: 1; }\n  75% { transform: scale(0.94); }\n  90% { transform: scale(1.06); }\n  100% { transform: scale(1) rotate(0); }\n}\n@keyframes ms-pill-in {\n  0% { transform: translateY(14px) scale(0.9); opacity: 0; }\n  100% { transform: none; opacity: 1; }\n}\n@media (prefers-reduced-motion: reduce) {\n  .teacharium-step-wrapper *, .teacharium-step-wrapper *::before, .teacharium-step-wrapper *::after { animation: none !important; transition: none !important; }\n}\n\n/* ---------- Mobile ---------- */\n@media (max-width: 768px) {\n  .teacharium-player { background-attachment: scroll !important; }\n  .teacharium-player .teacharium-step-wrapper,\n  .teacharium-step-wrapper.teacharium-step-wrapper { padding: 14px 14px 28px !important; }\n  .teacharium-step-wrapper .teacharium-grid-layout { gap: 14px !important; grid-template-columns: minmax(0, 1fr) !important; }\n  .teacharium-step-wrapper [data-teacharium-cell^=\"board\"],\n  .teacharium-step-wrapper [data-teacharium-cell^=\"card\"] { padding: 16px !important; }\n  .teacharium-step-wrapper .rich-text-display h1 { font-size: 34px; }\n  .teacharium-step-wrapper .rich-text-display h2 { font-size: 24px; }\n  .teacharium-player .tp-footer__actions button:not(:disabled) { font-size: 14px !important; padding: 0 14px !important; }\n}\n",
+    "show_navbar": true,
+    "history_mode": "truncate",
+    "step_transition": "fade",
+    "widget_settings": {
+      "overrides": {}
+    },
+    "color_palette_id": "default",
+    "start_image_media_id": null,
+    "variable_definitions": [
+      {
+        "name": "mC1",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 1
+      },
+      {
+        "name": "mP1",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 1
+      },
+      {
+        "name": "mR1",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 1
+      },
+      {
+        "name": "mC2",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 1
+      },
+      {
+        "name": "mP2",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 1
+      },
+      {
+        "name": "mR2",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 1
+      },
+      {
+        "name": "safety",
+        "type": "boolean",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": false
+      },
+      {
+        "name": "pS",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 0
+      },
+      {
+        "name": "pC",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 0
+      },
+      {
+        "name": "pP",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 0
+      },
+      {
+        "name": "pR",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 0
+      },
+      {
+        "name": "total",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 0
+      },
+      {
+        "name": "riskScore",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 0
+      },
+      {
+        "name": "best1",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 1000
+      },
+      {
+        "name": "worst1",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 1000
+      },
+      {
+        "name": "v1",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 1000
+      },
+      {
+        "name": "moveR",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 0
+      },
+      {
+        "name": "pS2",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 0
+      },
+      {
+        "name": "pC2",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 0
+      },
+      {
+        "name": "pP2",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 0
+      },
+      {
+        "name": "pR2",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 0
+      },
+      {
+        "name": "best2",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 1000
+      },
+      {
+        "name": "worst2",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 1000
+      },
+      {
+        "name": "effR2",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 1
+      },
+      {
+        "name": "v2",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 1000
+      },
+      {
+        "name": "cashPct",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 0
+      },
+      {
+        "name": "shortBy",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 0
+      },
+      {
+        "name": "best3",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 1000
+      },
+      {
+        "name": "worst3",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 1000
+      },
+      {
+        "name": "mC3",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 1
+      },
+      {
+        "name": "mP3",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 1
+      },
+      {
+        "name": "mR3",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 1
+      },
+      {
+        "name": "v3",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 1000
+      },
+      {
+        "name": "change1",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 0
+      },
+      {
+        "name": "change2",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 0
+      },
+      {
+        "name": "change3",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 0
+      },
+      {
+        "name": "vsSavings",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 0
+      },
+      {
+        "name": "lockedAmt",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 0
+      },
+      {
+        "name": "ridingAmt",
+        "type": "number",
+        "scope": "lesson",
+        "stepId": null,
+        "initialValue": 0
+      }
+    ],
+    "show_table_of_contents": false
+  },
+  "sections": [
+    {
+      "id": "8561a91f-39f0-4cb2-ad93-870faaac90bd",
+      "name": "Market Climb",
+      "steps": [
+        {
+          "id": "6a44d4f3-bf38-4f3e-8e3e-a336241dba24",
+          "name": "Welcome to Market Climb",
+          "puck_data": {
+            "root": {
+              "props": {
+                "gap": 16,
+                "cells": [
+                  {
+                    "id": "board-intro",
+                    "col": 1,
+                    "row": 1,
+                    "colSpan": 7,
+                    "rowSpan": 12
+                  },
+                  {
+                    "id": "board-map",
+                    "col": 8,
+                    "row": 1,
+                    "colSpan": 5,
+                    "rowSpan": 12
+                  }
+                ],
+                "items": [
+                  {
+                    "id": "board-intro",
+                    "content": [
+                      {
+                        "type": "RunAction",
+                        "props": {
+                          "id": "RunAction-kQkpLNB_UB",
+                          "actions": [
+                            {
+                              "actionType": "setNextButtonStatus",
+                              "parameters": {
+                                "status": "enabled"
+                              }
+                            },
+                            {
+                              "actionType": "setNextButtonLabel",
+                              "parameters": {
+                                "label": "Let's invest!"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-QsYpMfjBbd",
+                          "content": "###### ⚡ Game time · 3 big choices\n\n# Market Climb\n\nYou just got **\\$1,000** from birthday money and chores. 🎉\n\nYour goal: grow it to **\\$1,200** in **3 years** so you can go to *robotics camp*.\n\n### How to play\n\n- **Choose** where your money goes. There are four investments, from super safe to super wild.\n- **Watch** the market. Each year, news hits and prices go up or down. Luck plays a part, so *every game is different!*\n- **Decide** what to do when tips, surprises, and deadlines show up.\n\n> **Heads up:** Savings alone only gets you to about **\\$1,061**. To reach your goal, you'll need to take *some* risk. But how much?",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-4pxn-WckPM",
+                          "content": "### Your four choices\n\n- 🏦 **Piggy Bank Savings.** A bank account. Safe and slow.\n- 🥤 **SnackCo.** A big snack company that's been around forever.\n- 🎮 **PixelPlay Games.** A growing game studio. Hits *and* flops.\n- 🚀 **RocketPet.** A brand-new robot-pet startup. Could soar or crash.",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "board-map",
+                    "content": [
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-U5KTU_1cw2",
+                          "content": "###### 🗺️ Risk vs. reward\n\n## Meet your four investments\n\nThe taller the bar, the **wilder** the ride. Big wins and big losses come together.",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "Svg",
+                        "props": {
+                          "id": "Svg-PgJrCwjaqj",
+                          "alt": "Bar chart of what each investment can do in one year. Savings: always +2%. SnackCo: from −5% to +10%. PixelPlay: from −25% to +45%. RocketPet: from −70% to +160%.",
+                          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 410\" font-family=\"Montserrat, Helvetica, sans-serif\"><text x=\"200\" y=\"18\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"800\" fill=\"#FFD100\">What can happen in ONE year?</text><g stroke=\"#fff\" stroke-opacity=\".15\"><line x1=\"52\" x2=\"392\" y1=\"56\" y2=\"56\"/><line x1=\"52\" x2=\"392\" y1=\"116\" y2=\"116\"/><line x1=\"52\" x2=\"392\" y1=\"176\" y2=\"176\"/><line x1=\"52\" x2=\"392\" y1=\"296\" y2=\"296\"/></g><line x1=\"52\" x2=\"392\" y1=\"236\" y2=\"236\" stroke=\"#fff\" stroke-opacity=\".7\" stroke-dasharray=\"5 5\"/><g font-size=\"11\" fill=\"#C4CDD5\" text-anchor=\"end\"><text x=\"46\" y=\"60\">+150%</text><text x=\"46\" y=\"120\">+100%</text><text x=\"46\" y=\"180\">+50%</text><text x=\"46\" y=\"240\" fill=\"#fff\" font-weight=\"700\">0</text><text x=\"46\" y=\"300\">−50%</text></g><rect x=\"72\" y=\"230\" width=\"36\" height=\"8\" rx=\"4\" fill=\"#22C55E\" stroke=\"#fff\" stroke-width=\"2\"/><rect x=\"152\" y=\"224\" width=\"36\" height=\"18\" rx=\"6\" fill=\"#078DEE\" stroke=\"#fff\" stroke-width=\"2\"/><rect x=\"232\" y=\"182\" width=\"36\" height=\"84\" rx=\"10\" fill=\"#FFD100\" stroke=\"#fff\" stroke-width=\"2\"/><rect x=\"312\" y=\"44\" width=\"36\" height=\"276\" rx=\"12\" fill=\"#EA1D76\" stroke=\"#fff\" stroke-width=\"2\"/><g font-size=\"12\" font-weight=\"800\" text-anchor=\"middle\"><text x=\"90\" y=\"222\" fill=\"#77ED8B\">+2%</text><text x=\"170\" y=\"216\" fill=\"#77ED8B\">+10%</text><text x=\"170\" y=\"257\" fill=\"#FF8FB8\">−5%</text><text x=\"250\" y=\"174\" fill=\"#77ED8B\">+45%</text><text x=\"250\" y=\"281\" fill=\"#FF8FB8\">−25%</text><text x=\"330\" y=\"37\" fill=\"#77ED8B\">+160%</text><text x=\"330\" y=\"335\" fill=\"#FF8FB8\">−70%</text></g><g font-size=\"22\" text-anchor=\"middle\"><text x=\"90\" y=\"362\">🏦</text><text x=\"170\" y=\"362\">🥤</text><text x=\"250\" y=\"362\">🎮</text><text x=\"330\" y=\"362\">🚀</text></g><g font-size=\"11\" font-weight=\"700\" fill=\"#fff\" text-anchor=\"middle\"><text x=\"90\" y=\"380\">Savings</text><text x=\"170\" y=\"380\">SnackCo</text><text x=\"250\" y=\"380\">PixelPlay</text><text x=\"330\" y=\"380\">RocketPet</text></g><text x=\"221\" y=\"404\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"800\" fill=\"#FFD100\" letter-spacing=\".08em\">LOW RISK ─────────────▶ HIGH RISK</text></svg>"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "border": {
+                  "color": "#e5e7eb",
+                  "style": "none",
+                  "width": 1
+                },
+                "margin": 8,
+                "backgroundSize": "cover",
+                "backgroundColor": "#ffffff",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+              }
+            },
+            "content": []
+          },
+          "created_at": "2026-11-07T16:17:47.517924+00:00",
+          "section_id": "8561a91f-39f0-4cb2-ad93-870faaac90bd",
+          "updated_at": "2026-11-07T16:30:18.334387+00:00",
+          "order_index": 0
+        },
+        {
+          "id": "75dd6c9b-6aff-4ae6-8b7a-0fc2881bf98f",
+          "name": "Build Your Portfolio",
+          "puck_data": {
+            "root": {
+              "props": {
+                "gap": 16,
+                "cells": [
+                  {
+                    "id": "board-head",
+                    "col": 1,
+                    "row": 1,
+                    "colSpan": 12,
+                    "rowSpan": 2
+                  },
+                  {
+                    "id": "card-controls",
+                    "col": 1,
+                    "row": 3,
+                    "colSpan": 7,
+                    "rowSpan": 10
+                  },
+                  {
+                    "id": "board-meter",
+                    "col": 8,
+                    "row": 3,
+                    "colSpan": 5,
+                    "rowSpan": 10
+                  }
+                ],
+                "items": [
+                  {
+                    "id": "board-head",
+                    "content": [
+                      {
+                        "type": "RunAction",
+                        "props": {
+                          "id": "RunAction-OhyJOdWiFP",
+                          "actions": [
+                            {
+                              "actionType": "setNextButtonLabel",
+                              "parameters": {
+                                "label": "Lock it in: start Year 1"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "LogicGateway",
+                        "props": {
+                          "id": "LogicGateway-CkKqxRbbbC",
+                          "criteria": "custom-condition",
+                          "condition": {
+                            "expression": "{{total}} == 100"
+                          }
+                        }
+                      },
+                      {
+                        "type": "LogicFormula",
+                        "props": {
+                          "id": "LogicFormula-0r4lfzjbrc",
+                          "formula": "{{pS}} + {{pC}} + {{pP}} + {{pR}}",
+                          "decimals": 2,
+                          "roundMode": "round",
+                          "outputVariable": "total"
+                        }
+                      },
+                      {
+                        "type": "LogicFormula",
+                        "props": {
+                          "id": "LogicFormula-uWqi8hE6W-",
+                          "formula": "({{pC}} * 1 + {{pP}} * 2.5 + {{pR}} * 5) / 100",
+                          "decimals": 1,
+                          "roundMode": "fixed",
+                          "outputVariable": "riskScore"
+                        }
+                      },
+                      {
+                        "type": "LogicFormula",
+                        "props": {
+                          "id": "LogicFormula-OVLBVHKkK7",
+                          "formula": "10 * ({{pS}} * 1.02 + {{pC}} * 1.10 + {{pP}} * 1.45 + {{pR}} * 2.6) + 10 * max(0, 100 - ({{pS}} + {{pC}} + {{pP}} + {{pR}}))",
+                          "decimals": 2,
+                          "roundMode": "round",
+                          "outputVariable": "best1"
+                        }
+                      },
+                      {
+                        "type": "LogicFormula",
+                        "props": {
+                          "id": "LogicFormula-XJER0-kmFn",
+                          "formula": "10 * ({{pS}} * 1.02 + {{pC}} * 0.95 + {{pP}} * 0.75 + {{pR}} * 0.30) + 10 * max(0, 100 - ({{pS}} + {{pC}} + {{pP}} + {{pR}}))",
+                          "decimals": 2,
+                          "roundMode": "round",
+                          "outputVariable": "worst1"
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-JKrZjGXVJA",
+                          "content": "###### 🎯 Choice 1 of 3\n\n## Build your portfolio\n\nSplit your **\\$1,000** across the four investments. Each notch is **10%**, or \\$100. As you slide, watch how your **best case** and **worst case** change.",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "cached": false,
+                            "content": "###### 🎯 Choice 1 of 3\n\n## Build your portfolio\n\nSplit your **\\$1,000** across the four investments. Each notch is **10%**, or \\$100. As you slide, watch how your **best case** and **worst case** change.",
+                            "enabled": false,
+                            "contentHash": "8027dccc4f4997ae348541be400396c4d84ff2deb3603bf4a8ee14caefcaf2c2",
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "card-controls",
+                    "content": [
+                      {
+                        "type": "Slider",
+                        "props": {
+                          "id": "Slider-fXM2V-qMBZ",
+                          "name": "slider-savings",
+                          "label": "🏦 Piggy Bank Savings · always +2%",
+                          "maxValue": 100,
+                          "minValue": 0,
+                          "stepSize": 10,
+                          "showValue": true,
+                          "displayStyle": "card",
+                          "variableName": "pS"
+                        }
+                      },
+                      {
+                        "type": "Slider",
+                        "props": {
+                          "id": "Slider-Wgs2FgFiBt",
+                          "name": "slider-snack",
+                          "label": "🥤 SnackCo · −5% to +10%",
+                          "maxValue": 100,
+                          "minValue": 0,
+                          "stepSize": 10,
+                          "showValue": true,
+                          "displayStyle": "card",
+                          "variableName": "pC"
+                        }
+                      },
+                      {
+                        "type": "Slider",
+                        "props": {
+                          "id": "Slider-DC2G5dOQP3",
+                          "name": "slider-pixel",
+                          "label": "🎮 PixelPlay Games · −25% to +45%",
+                          "maxValue": 100,
+                          "minValue": 0,
+                          "stepSize": 10,
+                          "showValue": true,
+                          "displayStyle": "card",
+                          "variableName": "pP"
+                        }
+                      },
+                      {
+                        "type": "Slider",
+                        "props": {
+                          "id": "Slider-0k7ZIn_Ms7",
+                          "name": "slider-rocket",
+                          "label": "🚀 RocketPet · −70% to +160%",
+                          "maxValue": 100,
+                          "minValue": 0,
+                          "stepSize": 10,
+                          "showValue": true,
+                          "displayStyle": "card",
+                          "variableName": "pR"
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-HMilT43G62",
+                          "content": "> 💡 **Pro move:** Spreading money across different investments is called **diversifying**. When one has a bad year, the others can help balance it out.",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "cached": false,
+                            "content": "> 💡 **Pro move:** Spreading money across different investments is called **diversifying**. When one has a bad year, the others can help balance it out.",
+                            "enabled": false,
+                            "contentHash": "2f014d8b9b1293672a66f73bd4a9694d7bfdffd987b6fcbb2f0eaeecb2ca8ea6",
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "board-meter",
+                    "content": [
+                      {
+                        "type": "NumericDisplay",
+                        "props": {
+                          "id": "NumericDisplay-LTu87mIivN",
+                          "name": "total-placed",
+                          "size": "lg",
+                          "label": "Money placed",
+                          "prefix": "",
+                          "suffix": "%",
+                          "decimals": 0,
+                          "displayStyle": "minimal",
+                          "variableName": "total"
+                        }
+                      },
+                      {
+                        "type": "StatusBadge",
+                        "props": {
+                          "id": "StatusBadge-6vCpzQwu0x",
+                          "name": "total-badge",
+                          "rules": [
+                            {
+                              "id": "r1",
+                              "label": "Keep going! Place all 100%",
+                              "variant": "warning",
+                              "operator": "lt",
+                              "threshold": 100
+                            },
+                            {
+                              "id": "r2",
+                              "label": "Too much! Take some out",
+                              "variant": "danger",
+                              "operator": "gt",
+                              "threshold": 100
+                            }
+                          ],
+                          "defaultLabel": "✅ All $1,000 placed!",
+                          "displayStyle": "minimal",
+                          "variableName": "total",
+                          "defaultVariant": "success"
+                        }
+                      },
+                      {
+                        "type": "ProgressBar",
+                        "props": {
+                          "id": "ProgressBar-R06b64D0UP",
+                          "name": "risk-meter",
+                          "label": "Risk meter",
+                          "barSize": "thick",
+                          "maxValue": 5,
+                          "minValue": 0,
+                          "colorMode": "primary",
+                          "showRange": false,
+                          "showValue": false,
+                          "displayStyle": "minimal",
+                          "variableName": "riskScore"
+                        }
+                      },
+                      {
+                        "type": "StatusBadge",
+                        "props": {
+                          "id": "StatusBadge-beFp2V2oUM",
+                          "name": "risk-badge",
+                          "rules": [
+                            {
+                              "id": "k1",
+                              "label": "🐢 Super safe",
+                              "variant": "success",
+                              "operator": "lt",
+                              "threshold": 0.5
+                            },
+                            {
+                              "id": "k2",
+                              "label": "🙂 Careful",
+                              "variant": "success",
+                              "operator": "lt",
+                              "threshold": 1.5
+                            },
+                            {
+                              "id": "k3",
+                              "label": "⚖️ Balanced",
+                              "variant": "primary",
+                              "operator": "lt",
+                              "threshold": 2.5
+                            },
+                            {
+                              "id": "k4",
+                              "label": "🔥 Bold",
+                              "variant": "warning",
+                              "operator": "lt",
+                              "threshold": 3.5
+                            }
+                          ],
+                          "defaultLabel": "🚀 Daredevil",
+                          "displayStyle": "minimal",
+                          "variableName": "riskScore",
+                          "defaultVariant": "danger"
+                        }
+                      },
+                      {
+                        "type": "NumericDisplay",
+                        "props": {
+                          "id": "NumericDisplay-9rm_U6TyXY",
+                          "name": "best-case",
+                          "size": "md",
+                          "label": "😎 Best case after Year 1",
+                          "prefix": "$",
+                          "suffix": "",
+                          "decimals": 0,
+                          "displayStyle": "minimal",
+                          "variableName": "best1"
+                        }
+                      },
+                      {
+                        "type": "NumericDisplay",
+                        "props": {
+                          "id": "NumericDisplay-mWzX3U4z7a",
+                          "name": "worst-case",
+                          "size": "md",
+                          "label": "😬 Worst case after Year 1",
+                          "prefix": "$",
+                          "suffix": "",
+                          "decimals": 0,
+                          "displayStyle": "minimal",
+                          "variableName": "worst1"
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-wpc6CgYgLA",
+                          "content": "The **wider the gap** between best and worst, the more **risk** you're taking.",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "cached": false,
+                            "content": "The **wider the gap** between best and worst, the more **risk** you're taking.",
+                            "enabled": false,
+                            "contentHash": "822e9bd3519bb59fe4a9a014f5766c30282aa057ff5514e4906ffbf22ce08fd1",
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "border": {
+                  "color": "#e5e7eb",
+                  "style": "none",
+                  "width": 1
+                },
+                "frames": [],
+                "margin": 8,
+                "backgroundSize": "cover",
+                "backgroundColor": "#ffffff",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+              }
+            },
+            "zones": {},
+            "content": []
+          },
+          "created_at": "2026-11-07T16:20:33.395032+00:00",
+          "section_id": "8561a91f-39f0-4cb2-ad93-870faaac90bd",
+          "updated_at": "2026-11-07T16:36:42.98627+00:00",
+          "order_index": 1
+        },
+        {
+          "id": "9256a0c7-beb8-4331-b0ed-66ae690d54d4",
+          "name": "Year 1 Market News",
+          "puck_data": {
+            "root": {
+              "props": {
+                "gap": 16,
+                "cells": [
+                  {
+                    "id": "board-head",
+                    "col": 1,
+                    "row": 1,
+                    "colSpan": 12,
+                    "rowSpan": 2
+                  },
+                  {
+                    "id": "card-news",
+                    "col": 1,
+                    "row": 3,
+                    "colSpan": 7,
+                    "rowSpan": 10
+                  },
+                  {
+                    "id": "board-score",
+                    "col": 8,
+                    "row": 3,
+                    "colSpan": 5,
+                    "rowSpan": 10
+                  }
+                ],
+                "items": [
+                  {
+                    "id": "board-head",
+                    "content": [
+                      {
+                        "type": "RunAction",
+                        "props": {
+                          "id": "RunAction-G2O-uGyyu-",
+                          "actions": [
+                            {
+                              "actionType": "setVariable",
+                              "parameters": {
+                                "value": "pickRandom([0.95, 1.00, 1.04, 1.06, 1.08, 1.10])",
+                                "variableName": "mC1"
+                              }
+                            },
+                            {
+                              "actionType": "setVariable",
+                              "parameters": {
+                                "value": "pickRandom([0.75, 0.90, 1.05, 1.15, 1.30, 1.45])",
+                                "variableName": "mP1"
+                              }
+                            },
+                            {
+                              "actionType": "setVariable",
+                              "parameters": {
+                                "value": "pickRandom([0.30, 0.50, 0.80, 1.20, 1.80, 2.60])",
+                                "variableName": "mR1"
+                              }
+                            },
+                            {
+                              "actionType": "setVariable",
+                              "parameters": {
+                                "value": "round(10 * ({{pS}} * 1.02 + {{pC}} * {{mC1}} + {{pP}} * {{mP1}} + {{pR}} * {{mR1}}))",
+                                "variableName": "v1"
+                              }
+                            },
+                            {
+                              "actionType": "setVariable",
+                              "parameters": {
+                                "value": "{{v1}} - 1000",
+                                "variableName": "change1"
+                              }
+                            },
+                            {
+                              "actionType": "setNextButtonLabel",
+                              "parameters": {
+                                "label": "Uh oh, a hot tip..."
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-2xNT7PK8je",
+                          "content": "###### 📅 Year 1 of 3\n\n## The market has spoken!\n\nA whole year flew by. Here's what happened to each investment, and to *your* money.",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "cached": false,
+                            "content": "###### 📅 Year 1 of 3\n\n## The market has spoken!\n\nA whole year flew by. Here's what happened to each investment, and to *your* money.",
+                            "enabled": false,
+                            "contentHash": "48239243129c9aacdbea18c589b778ac37bebd0f6f526369c808197b85f9cebb",
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "card-news",
+                    "content": [
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-znU9KvL50Z",
+                          "content": "###### 📰 Year 1 headlines\n\n**🏦 Piggy Bank Savings** · you had <NumericExpression expression=\"round({{pS}})\" />%\n\n🏦 Interest paid · **+2%**, like always.",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "cached": false,
+                            "content": "###### 📰 Year 1 headlines\n\n**🏦 Piggy Bank Savings** · you had <NumericExpression expression=\"round({{pS}})\" />%\n\n🏦 Interest paid · **+2%**, like always.",
+                            "enabled": false,
+                            "contentHash": "03ab6be688d279408defac6167c229158cc47b073879f6d86702ef0e86418523",
+                            "showPlayButton": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-9vy_pG8JP8",
+                          "content": "**🥤 SnackCo** · you had <NumericExpression expression=\"round({{pC}})\" />%",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "cached": false,
+                            "content": "**🥤 SnackCo** · you had <NumericExpression expression=\"round({{pC}})\" />%",
+                            "enabled": false,
+                            "contentHash": "ea6d0b1cfbe901f5e91b1aff736a6e33b2153a3bfcf38e557f4f55c399d44271",
+                            "showPlayButton": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "StatusBadge",
+                        "props": {
+                          "id": "StatusBadge-lDMfYhtMlP",
+                          "name": "snack-y1",
+                          "rules": [
+                            {
+                              "id": "snack-y10",
+                              "label": "🧂 New snack tax · −5%",
+                              "variant": "danger",
+                              "operator": "lt",
+                              "threshold": 0.97
+                            },
+                            {
+                              "id": "snack-y11",
+                              "label": "😐 A quiet year · 0%",
+                              "variant": "neutral",
+                              "operator": "lt",
+                              "threshold": 1.02
+                            },
+                            {
+                              "id": "snack-y12",
+                              "label": "🥨 New pretzel flavor · +4%",
+                              "variant": "success",
+                              "operator": "lt",
+                              "threshold": 1.05
+                            },
+                            {
+                              "id": "snack-y13",
+                              "label": "🛒 Steady sales · +6%",
+                              "variant": "success",
+                              "operator": "lt",
+                              "threshold": 1.07
+                            },
+                            {
+                              "id": "snack-y14",
+                              "label": "🏪 50 new stores · +8%",
+                              "variant": "success",
+                              "operator": "lt",
+                              "threshold": 1.09
+                            }
+                          ],
+                          "defaultLabel": "🔥 Snack goes viral · +10%",
+                          "displayStyle": "minimal",
+                          "variableName": "mC1",
+                          "defaultVariant": "success"
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-ylG1vqVdsc",
+                          "content": "**🎮 PixelPlay Games** · you had <NumericExpression expression=\"round({{pP}})\" />%",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "cached": false,
+                            "content": "**🎮 PixelPlay Games** · you had <NumericExpression expression=\"round({{pP}})\" />%",
+                            "enabled": false,
+                            "contentHash": "4dbc788ab605a42926070cc8b14ea0a73b220208bf2cfaacfe64b8d7aab19d9a",
+                            "showPlayButton": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "StatusBadge",
+                        "props": {
+                          "id": "StatusBadge-ojj9D_hWTS",
+                          "name": "pixel-y1",
+                          "rules": [
+                            {
+                              "id": "pixel-y10",
+                              "label": "👾 Big game delayed · −25%",
+                              "variant": "danger",
+                              "operator": "lt",
+                              "threshold": 0.8
+                            },
+                            {
+                              "id": "pixel-y11",
+                              "label": "🐛 Buggy launch · −10%",
+                              "variant": "danger",
+                              "operator": "lt",
+                              "threshold": 0.95
+                            },
+                            {
+                              "id": "pixel-y12",
+                              "label": "🎮 Solid update · +5%",
+                              "variant": "success",
+                              "operator": "lt",
+                              "threshold": 1.1
+                            },
+                            {
+                              "id": "pixel-y13",
+                              "label": "🏆 Wins an award · +15%",
+                              "variant": "success",
+                              "operator": "lt",
+                              "threshold": 1.2
+                            },
+                            {
+                              "id": "pixel-y14",
+                              "label": "📈 Hit sequel · +30%",
+                              "variant": "success",
+                              "operator": "lt",
+                              "threshold": 1.4
+                            }
+                          ],
+                          "defaultLabel": "🌟 Game of the Year · +45%",
+                          "displayStyle": "minimal",
+                          "variableName": "mP1",
+                          "defaultVariant": "success"
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-Wzy9VYCzXF",
+                          "content": "**🚀 RocketPet** · you had <NumericExpression expression=\"round({{pR}})\" />%",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "cached": false,
+                            "content": "**🚀 RocketPet** · you had <NumericExpression expression=\"round({{pR}})\" />%",
+                            "enabled": false,
+                            "contentHash": "2940f503218bb335076154f3297d36cbc7126c10650e96547c5e3d3494420323",
+                            "showPlayButton": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "StatusBadge",
+                        "props": {
+                          "id": "StatusBadge-hsCEG7Tdv1",
+                          "name": "rocket-y1",
+                          "rules": [
+                            {
+                              "id": "rocket-y10",
+                              "label": "💥 Robot pets recalled · −70%",
+                              "variant": "danger",
+                              "operator": "lt",
+                              "threshold": 0.4
+                            },
+                            {
+                              "id": "rocket-y11",
+                              "label": "🔋 Battery trouble · −50%",
+                              "variant": "danger",
+                              "operator": "lt",
+                              "threshold": 0.6
+                            },
+                            {
+                              "id": "rocket-y12",
+                              "label": "😬 Missed sales goal · −20%",
+                              "variant": "warning",
+                              "operator": "lt",
+                              "threshold": 1
+                            },
+                            {
+                              "id": "rocket-y13",
+                              "label": "🐶 Great reviews · +20%",
+                              "variant": "success",
+                              "operator": "lt",
+                              "threshold": 1.5
+                            },
+                            {
+                              "id": "rocket-y14",
+                              "label": "🛍️ Big store deal · +80%",
+                              "variant": "success",
+                              "operator": "lt",
+                              "threshold": 2
+                            }
+                          ],
+                          "defaultLabel": "🤯 Celebrity buys one · +160%",
+                          "displayStyle": "minimal",
+                          "variableName": "mR1",
+                          "defaultVariant": "success"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "board-score",
+                    "content": [
+                      {
+                        "type": "NumericDisplay",
+                        "props": {
+                          "id": "NumericDisplay-PjqpIGiVmk",
+                          "name": "value-y1",
+                          "size": "xl",
+                          "label": "Your money now",
+                          "prefix": "$",
+                          "suffix": "",
+                          "decimals": 0,
+                          "displayStyle": "minimal",
+                          "variableName": "v1"
+                        }
+                      },
+                      {
+                        "type": "StatusBadge",
+                        "props": {
+                          "id": "StatusBadge-R0uIhMeV4p",
+                          "name": "change-badge-y1",
+                          "rules": [
+                            {
+                              "id": "c1",
+                              "label": "🚀 Huge year!",
+                              "variant": "success",
+                              "operator": "gte",
+                              "threshold": 200
+                            },
+                            {
+                              "id": "c2",
+                              "label": "📈 You made money",
+                              "variant": "success",
+                              "operator": "gt",
+                              "threshold": 0
+                            },
+                            {
+                              "id": "c3",
+                              "label": "😐 Even",
+                              "variant": "neutral",
+                              "operator": "eq",
+                              "threshold": 0
+                            },
+                            {
+                              "id": "c4",
+                              "label": "📉 A small loss",
+                              "variant": "warning",
+                              "operator": "gt",
+                              "threshold": -200
+                            }
+                          ],
+                          "defaultLabel": "💥 Ouch, a big loss",
+                          "displayStyle": "minimal",
+                          "variableName": "change1",
+                          "defaultVariant": "danger"
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-_SA7UGnBYu",
+                          "content": "You **gained $<NumericExpression expression=\"{{change1}}\" />** this year.",
+                          "visible": {
+                            "expression": "{{change1}} >= 0"
+                          },
+                          "voiceover": {
+                            "voice": "alloy",
+                            "cached": false,
+                            "content": "You **gained $<NumericExpression expression=\"{{change1}}\" />** this year.",
+                            "enabled": false,
+                            "contentHash": "cdc856a26e1bbf01dcbe311e300ec4e6a887294eb5fedda0584db44215652d41",
+                            "showPlayButton": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-A2zfi_vk6V",
+                          "content": "You **lost $<NumericExpression expression=\"abs({{change1}})\" />** this year.",
+                          "visible": {
+                            "expression": "{{change1}} < 0"
+                          },
+                          "voiceover": {
+                            "voice": "alloy",
+                            "cached": false,
+                            "content": "You **lost $<NumericExpression expression=\"abs({{change1}})\" />** this year.",
+                            "enabled": false,
+                            "contentHash": "be5ed773ee3747c40152179e0fd9f3b9f9e0ac59c211c09219784579bb7e464e",
+                            "showPlayButton": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "ProgressBar",
+                        "props": {
+                          "id": "ProgressBar-JsBm0OITLK",
+                          "name": "goal-y1",
+                          "label": "🤖 Robotics camp goal: $1,200",
+                          "barSize": "thick",
+                          "maxValue": 1200,
+                          "minValue": 0,
+                          "colorMode": "auto",
+                          "showRange": false,
+                          "showValue": false,
+                          "displayStyle": "minimal",
+                          "variableName": "v1"
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-ADcQeRurjw",
+                          "content": "> 🤔 **Skill or luck?** The same choices can turn out totally differently next game. Risky investments swing the most.",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "cached": false,
+                            "content": "> 🤔 **Skill or luck?** The same choices can turn out totally differently next game. Risky investments swing the most.",
+                            "enabled": false,
+                            "contentHash": "ecea57b18eccf7177fbf30ee26623ab18e2e4622c3041b00c2fd68c7e7c7001c",
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "border": {
+                  "color": "#e5e7eb",
+                  "style": "none",
+                  "width": 1
+                },
+                "frames": [],
+                "margin": 8,
+                "backgroundSize": "cover",
+                "backgroundColor": "#ffffff",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+              }
+            },
+            "zones": {},
+            "content": []
+          },
+          "created_at": "2026-11-07T16:20:34.177219+00:00",
+          "section_id": "8561a91f-39f0-4cb2-ad93-870faaac90bd",
+          "updated_at": "2026-11-13T17:55:27.36756+00:00",
+          "order_index": 2
+        },
+        {
+          "id": "314dcef9-305e-4c41-83c1-46326bb7f999",
+          "name": "The Hot Tip",
+          "puck_data": {
+            "root": {
+              "props": {
+                "gap": 16,
+                "cells": [
+                  {
+                    "id": "board-head",
+                    "col": 1,
+                    "row": 1,
+                    "colSpan": 12,
+                    "rowSpan": 2
+                  },
+                  {
+                    "id": "card-controls",
+                    "col": 1,
+                    "row": 3,
+                    "colSpan": 7,
+                    "rowSpan": 10
+                  },
+                  {
+                    "id": "board-meter",
+                    "col": 8,
+                    "row": 3,
+                    "colSpan": 5,
+                    "rowSpan": 10
+                  }
+                ],
+                "items": [
+                  {
+                    "id": "board-head",
+                    "content": [
+                      {
+                        "type": "RunAction",
+                        "props": {
+                          "id": "RunAction-bHJX78Ni4w",
+                          "actions": [
+                            {
+                              "actionType": "setNextButtonLabel",
+                              "parameters": {
+                                "label": "Ring in Year 2"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "LogicFormula",
+                        "props": {
+                          "id": "LogicFormula-sA0YE8uCUb",
+                          "formula": "min(100, {{pR}} + {{moveR}})",
+                          "decimals": 2,
+                          "roundMode": "none",
+                          "outputVariable": "pR2"
+                        }
+                      },
+                      {
+                        "type": "LogicFormula",
+                        "props": {
+                          "id": "LogicFormula-ZPRV8-FcS9",
+                          "formula": "{{pS}} * (100 - min(100, {{pR}} + {{moveR}})) / max(1, 100 - {{pR}})",
+                          "decimals": 2,
+                          "roundMode": "none",
+                          "outputVariable": "pS2"
+                        }
+                      },
+                      {
+                        "type": "LogicFormula",
+                        "props": {
+                          "id": "LogicFormula-iZ6zANEHog",
+                          "formula": "{{pC}} * (100 - min(100, {{pR}} + {{moveR}})) / max(1, 100 - {{pR}})",
+                          "decimals": 2,
+                          "roundMode": "none",
+                          "outputVariable": "pC2"
+                        }
+                      },
+                      {
+                        "type": "LogicFormula",
+                        "props": {
+                          "id": "LogicFormula-3Rd9mZH5_r",
+                          "formula": "{{pP}} * (100 - min(100, {{pR}} + {{moveR}})) / max(1, 100 - {{pR}})",
+                          "decimals": 2,
+                          "roundMode": "none",
+                          "outputVariable": "pP2"
+                        }
+                      },
+                      {
+                        "type": "LogicFormula",
+                        "props": {
+                          "id": "LogicFormula-bu1X7D4RvS",
+                          "formula": "{{v1}} / 100 * ({{pS2}} * 1.02 + {{pC2}} * 1.10 + {{pP2}} * 1.45 + {{pR2}} * 2.6) - 25 * {{safety}}",
+                          "decimals": 2,
+                          "roundMode": "round",
+                          "outputVariable": "best2"
+                        }
+                      },
+                      {
+                        "type": "LogicFormula",
+                        "props": {
+                          "id": "LogicFormula-bCQSSjXOV3",
+                          "formula": "{{v1}} / 100 * ({{pS2}} * 1.02 + {{pC2}} * 0.95 + {{pP2}} * 0.75 + {{pR2}} * max(0.3, 0.8 * {{safety}})) - 25 * {{safety}}",
+                          "decimals": 2,
+                          "roundMode": "round",
+                          "outputVariable": "worst2"
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-EOMz6JV2t-",
+                          "content": "###### 🎯 Choice 2 of 3\n\n## The hot tip 📱",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "cached": false,
+                            "content": "###### 🎯 Choice 2 of 3\n\n## The hot tip 📱",
+                            "enabled": false,
+                            "contentHash": "6a2014021ae8b452a13c557a6e486b541ab931f81c583657644aecffaa10710b",
+                            "showPlayButton": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-iyimy-wH6d",
+                          "content": "Your cousin Jay texts you: **\"RocketPet just went UP! It's going to the moon 🚀🚀🚀 Put everything in!\"**",
+                          "visible": {
+                            "expression": "{{mR1}} >= 1.2"
+                          },
+                          "voiceover": {
+                            "voice": "alloy",
+                            "cached": false,
+                            "content": "Your cousin Jay texts you: **\"RocketPet just went UP! It's going to the moon 🚀🚀🚀 Put everything in!\"**",
+                            "enabled": false,
+                            "contentHash": "0f0928a9126d846ddec3b04ff9764ffdcb5a66bb3d306140176325c261e5d469",
+                            "showPlayButton": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-tvCKa6iVdO",
+                          "content": "Your cousin Jay texts you: **\"RocketPet just dropped, so it's ON SALE! It'll bounce right back. Put everything in!\"**",
+                          "visible": {
+                            "expression": "{{mR1}} < 1.2"
+                          },
+                          "voiceover": {
+                            "voice": "alloy",
+                            "cached": false,
+                            "content": "Your cousin Jay texts you: **\"RocketPet just dropped, so it's ON SALE! It'll bounce right back. Put everything in!\"**",
+                            "enabled": false,
+                            "contentHash": "133eb7dc86028d1cb59eb31438fea29f81ac574851f39ddbfaa061198d129ea3",
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "card-controls",
+                    "content": [
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-54XRhxrh3P",
+                          "content": "### 1. Do you follow the tip?\n\nMove more of your money into RocketPet. It comes evenly out of your other investments. Jay isn't an expert, and every year is a **new roll of the dice**.",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "cached": false,
+                            "content": "### 1. Do you follow the tip?\n\nMove more of your money into RocketPet. It comes evenly out of your other investments. Jay isn't an expert, and every year is a **new roll of the dice**.",
+                            "enabled": false,
+                            "contentHash": "af274a05fc857344e491470a8f3bb10e0ee42bcca708eb71d8e4034130c0defc",
+                            "showPlayButton": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "Stepper",
+                        "props": {
+                          "id": "Stepper-ATepbZDidh",
+                          "name": "stepper-move",
+                          "label": "➕ Extra % into RocketPet",
+                          "maxValue": 100,
+                          "minValue": 0,
+                          "stepSize": 10,
+                          "displayStyle": "card",
+                          "variableName": "moveR"
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-po3RAI6eXL",
+                          "content": "### 2. Buy a Safety Net? 🛟\n\nFor **\\$25**, if RocketPet drops, your shares get sold before you lose more than **20%** on them. You pay the \\$25 even if nothing goes wrong, just like insurance. It only covers next year.",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "cached": false,
+                            "content": "### 2. Buy a Safety Net? 🛟\n\nFor **\\$25**, if RocketPet drops, your shares get sold before you lose more than **20%** on them. You pay the \\$25 even if nothing goes wrong, just like insurance. It only covers next year.",
+                            "enabled": false,
+                            "contentHash": "4b461ae243528d25be112161297a6de7c306d863c7208726b4099262b373d70c",
+                            "showPlayButton": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "Switch",
+                        "props": {
+                          "id": "Switch-wQ1gqr1evf",
+                          "name": "switch-safety",
+                          "label": "Buy the $25 Safety Net",
+                          "defaultValue": false,
+                          "displayStyle": "card",
+                          "variableName": "safety"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "board-meter",
+                    "content": [
+                      {
+                        "type": "NumericDisplay",
+                        "props": {
+                          "id": "NumericDisplay-T9RV8nBAHx",
+                          "name": "value-now-tip",
+                          "size": "lg",
+                          "label": "Your money now",
+                          "prefix": "$",
+                          "suffix": "",
+                          "decimals": 0,
+                          "displayStyle": "minimal",
+                          "variableName": "v1"
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-mYBzUZLEvz",
+                          "content": "###### 🔎 Your new mix\n\n🏦 <NumericExpression expression=\"round({{pS2}})\" />% · 🥤 <NumericExpression expression=\"round({{pC2}})\" />% · 🎮 <NumericExpression expression=\"round({{pP2}})\" />% · 🚀 <NumericExpression expression=\"round({{pR2}})\" />%\n",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "cached": false,
+                            "content": "###### 🔎 Your new mix\n\n🏦 <NumericExpression expression=\"round({{pS2}})\" />% · 🥤 <NumericExpression expression=\"round({{pC2}})\" />% · 🎮 <NumericExpression expression=\"round({{pP2}})\" />% · 🚀 <NumericExpression expression=\"round({{pR2}})\" />%\n",
+                            "enabled": false,
+                            "contentHash": "1339e1d0aa5822d33ffface81c6623abbb9efd91018c1d7b5d6f18a241a6d83c",
+                            "showPlayButton": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "StatusBadge",
+                        "props": {
+                          "id": "StatusBadge-44S7mezqHr",
+                          "name": "bet-badge",
+                          "rules": [
+                            {
+                              "id": "b1",
+                              "label": "🎰 Most of your money rides on ONE company!",
+                              "variant": "danger",
+                              "operator": "gte",
+                              "threshold": 70
+                            },
+                            {
+                              "id": "b2",
+                              "label": "🔥 A big bet on RocketPet",
+                              "variant": "warning",
+                              "operator": "gte",
+                              "threshold": 40
+                            }
+                          ],
+                          "defaultLabel": "⚖️ Still nicely spread out",
+                          "displayStyle": "minimal",
+                          "variableName": "pR2",
+                          "defaultVariant": "success"
+                        }
+                      },
+                      {
+                        "type": "NumericDisplay",
+                        "props": {
+                          "id": "NumericDisplay-2amM_HEX_o",
+                          "name": "best-case-2",
+                          "size": "md",
+                          "label": "😎 Best case after Year 2",
+                          "prefix": "$",
+                          "suffix": "",
+                          "decimals": 0,
+                          "displayStyle": "minimal",
+                          "variableName": "best2"
+                        }
+                      },
+                      {
+                        "type": "NumericDisplay",
+                        "props": {
+                          "id": "NumericDisplay-mAokpn4zob",
+                          "name": "worst-case-2",
+                          "size": "md",
+                          "label": "😬 Worst case after Year 2",
+                          "prefix": "$",
+                          "suffix": "",
+                          "decimals": 0,
+                          "displayStyle": "minimal",
+                          "variableName": "worst2"
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-WmDIglaEEE",
+                          "content": "Try flipping the Safety Net on and off. Watch which number moves: the **best** case or the **worst** case?",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "cached": false,
+                            "content": "Try flipping the Safety Net on and off. Watch which number moves: the **best** case or the **worst** case?",
+                            "enabled": false,
+                            "contentHash": "5a15bbc9c9cc2f2e2ad8937e1b0d2eab762d49443576428084c0e4bdf9303da8",
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "border": {
+                  "color": "#e5e7eb",
+                  "style": "none",
+                  "width": 1
+                },
+                "frames": [],
+                "margin": 8,
+                "backgroundSize": "cover",
+                "backgroundColor": "#ffffff",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+              }
+            },
+            "zones": {},
+            "content": []
+          },
+          "created_at": "2026-11-07T16:20:34.84249+00:00",
+          "section_id": "8561a91f-39f0-4cb2-ad93-870faaac90bd",
+          "updated_at": "2026-11-13T17:56:25.831113+00:00",
+          "order_index": 3
+        },
+        {
+          "id": "3e13d92d-5b52-46d1-9341-29f37a506a10",
+          "name": "Year 2 Market News",
+          "puck_data": {
+            "root": {
+              "props": {
+                "gap": 16,
+                "cells": [
+                  {
+                    "id": "board-head",
+                    "col": 1,
+                    "row": 1,
+                    "colSpan": 12,
+                    "rowSpan": 2
+                  },
+                  {
+                    "id": "card-news",
+                    "col": 1,
+                    "row": 3,
+                    "colSpan": 7,
+                    "rowSpan": 10
+                  },
+                  {
+                    "id": "board-score",
+                    "col": 8,
+                    "row": 3,
+                    "colSpan": 5,
+                    "rowSpan": 10
+                  }
+                ],
+                "items": [
+                  {
+                    "id": "board-head",
+                    "content": [
+                      {
+                        "type": "RunAction",
+                        "props": {
+                          "id": "RunAction-ODhQReRgtH",
+                          "actions": [
+                            {
+                              "actionType": "setVariable",
+                              "parameters": {
+                                "value": "pickRandom([0.95, 1.00, 1.04, 1.06, 1.08, 1.10])",
+                                "variableName": "mC2"
+                              }
+                            },
+                            {
+                              "actionType": "setVariable",
+                              "parameters": {
+                                "value": "pickRandom([0.75, 0.90, 1.05, 1.15, 1.30, 1.45])",
+                                "variableName": "mP2"
+                              }
+                            },
+                            {
+                              "actionType": "setVariable",
+                              "parameters": {
+                                "value": "pickRandom([0.30, 0.50, 0.80, 1.20, 1.80, 2.60])",
+                                "variableName": "mR2"
+                              }
+                            },
+                            {
+                              "actionType": "setVariable",
+                              "parameters": {
+                                "value": "max({{mR2}}, 0.8 * {{safety}})",
+                                "variableName": "effR2"
+                              }
+                            },
+                            {
+                              "actionType": "setVariable",
+                              "parameters": {
+                                "value": "round({{v1}} / 100 * ({{pS2}} * 1.02 + {{pC2}} * {{mC2}} + {{pP2}} * {{mP2}} + {{pR2}} * {{effR2}}) - 25 * {{safety}})",
+                                "variableName": "v2"
+                              }
+                            },
+                            {
+                              "actionType": "setVariable",
+                              "parameters": {
+                                "value": "{{v2}} - {{v1}}",
+                                "variableName": "change2"
+                              }
+                            },
+                            {
+                              "actionType": "setNextButtonLabel",
+                              "parameters": {
+                                "label": "The final bell..."
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-D8eKbXzn5q",
+                          "content": "###### 📅 Year 2 of 3\n\n## Another year, another surprise\n\nDid following (or ignoring) the tip pay off? Let's see.",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "card-news",
+                    "content": [
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-RPQTzVrWQz",
+                          "content": "###### 📰 Year 2 headlines\n\n**🏦 Piggy Bank Savings** · you had <NumericExpression expression=\"round({{pS2}})\" />%\n\n🏦 Interest paid · **+2%**, like always.",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-E4ybq4Me19",
+                          "content": "**🥤 SnackCo** · you had <NumericExpression expression=\"round({{pC2}})\" />%",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "StatusBadge",
+                        "props": {
+                          "id": "StatusBadge-_e1T57vdBh",
+                          "name": "snack-y2",
+                          "rules": [
+                            {
+                              "id": "snack-y20",
+                              "label": "🧂 New snack tax · −5%",
+                              "variant": "danger",
+                              "operator": "lt",
+                              "threshold": 0.97
+                            },
+                            {
+                              "id": "snack-y21",
+                              "label": "😐 A quiet year · 0%",
+                              "variant": "neutral",
+                              "operator": "lt",
+                              "threshold": 1.02
+                            },
+                            {
+                              "id": "snack-y22",
+                              "label": "🥨 New pretzel flavor · +4%",
+                              "variant": "success",
+                              "operator": "lt",
+                              "threshold": 1.05
+                            },
+                            {
+                              "id": "snack-y23",
+                              "label": "🛒 Steady sales · +6%",
+                              "variant": "success",
+                              "operator": "lt",
+                              "threshold": 1.07
+                            },
+                            {
+                              "id": "snack-y24",
+                              "label": "🏪 50 new stores · +8%",
+                              "variant": "success",
+                              "operator": "lt",
+                              "threshold": 1.09
+                            }
+                          ],
+                          "defaultLabel": "🔥 Snack goes viral · +10%",
+                          "displayStyle": "minimal",
+                          "variableName": "mC2",
+                          "defaultVariant": "success"
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-jJUj_NCAp4",
+                          "content": "**🎮 PixelPlay Games** · you had <NumericExpression expression=\"round({{pP2}})\" />%",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "StatusBadge",
+                        "props": {
+                          "id": "StatusBadge-r-M-t6dEQe",
+                          "name": "pixel-y2",
+                          "rules": [
+                            {
+                              "id": "pixel-y20",
+                              "label": "👾 Big game delayed · −25%",
+                              "variant": "danger",
+                              "operator": "lt",
+                              "threshold": 0.8
+                            },
+                            {
+                              "id": "pixel-y21",
+                              "label": "🐛 Buggy launch · −10%",
+                              "variant": "danger",
+                              "operator": "lt",
+                              "threshold": 0.95
+                            },
+                            {
+                              "id": "pixel-y22",
+                              "label": "🎮 Solid update · +5%",
+                              "variant": "success",
+                              "operator": "lt",
+                              "threshold": 1.1
+                            },
+                            {
+                              "id": "pixel-y23",
+                              "label": "🏆 Wins an award · +15%",
+                              "variant": "success",
+                              "operator": "lt",
+                              "threshold": 1.2
+                            },
+                            {
+                              "id": "pixel-y24",
+                              "label": "📈 Hit sequel · +30%",
+                              "variant": "success",
+                              "operator": "lt",
+                              "threshold": 1.4
+                            }
+                          ],
+                          "defaultLabel": "🌟 Game of the Year · +45%",
+                          "displayStyle": "minimal",
+                          "variableName": "mP2",
+                          "defaultVariant": "success"
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-1mo-mvBBEu",
+                          "content": "**🚀 RocketPet** · you had <NumericExpression expression=\"round({{pR2}})\" />%",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "StatusBadge",
+                        "props": {
+                          "id": "StatusBadge-JNhb8RGgki",
+                          "name": "rocket-y2",
+                          "rules": [
+                            {
+                              "id": "rocket-y20",
+                              "label": "💥 Robot pets recalled · −70%",
+                              "variant": "danger",
+                              "operator": "lt",
+                              "threshold": 0.4
+                            },
+                            {
+                              "id": "rocket-y21",
+                              "label": "🔋 Battery trouble · −50%",
+                              "variant": "danger",
+                              "operator": "lt",
+                              "threshold": 0.6
+                            },
+                            {
+                              "id": "rocket-y22",
+                              "label": "😬 Missed sales goal · −20%",
+                              "variant": "warning",
+                              "operator": "lt",
+                              "threshold": 1
+                            },
+                            {
+                              "id": "rocket-y23",
+                              "label": "🐶 Great reviews · +20%",
+                              "variant": "success",
+                              "operator": "lt",
+                              "threshold": 1.5
+                            },
+                            {
+                              "id": "rocket-y24",
+                              "label": "🛍️ Big store deal · +80%",
+                              "variant": "success",
+                              "operator": "lt",
+                              "threshold": 2
+                            }
+                          ],
+                          "defaultLabel": "🤯 Celebrity buys one · +160%",
+                          "displayStyle": "minimal",
+                          "variableName": "mR2",
+                          "defaultVariant": "success"
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-zxsR9K4ss4",
+                          "content": "> 🛟 **Your Safety Net kicked in!** RocketPet got sold at −20% instead of falling all the way.",
+                          "visible": {
+                            "expression": "{{safety}} == true and {{mR2}} < 0.8 and {{pR2}} > 0"
+                          },
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-C7Xfew8Lga",
+                          "content": "> 🛟 Your Safety Net wasn't needed this time. That $25 was the price of feeling protected.",
+                          "visible": {
+                            "expression": "{{safety}} == true and ({{mR2}} >= 0.8 or {{pR2}} == 0)"
+                          },
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "board-score",
+                    "content": [
+                      {
+                        "type": "NumericDisplay",
+                        "props": {
+                          "id": "NumericDisplay-pb29X-ZCC9",
+                          "name": "value-y2",
+                          "size": "xl",
+                          "label": "Your money now",
+                          "prefix": "$",
+                          "suffix": "",
+                          "decimals": 0,
+                          "displayStyle": "minimal",
+                          "variableName": "v2"
+                        }
+                      },
+                      {
+                        "type": "StatusBadge",
+                        "props": {
+                          "id": "StatusBadge-_qlAb9Ctzf",
+                          "name": "change-badge-y2",
+                          "rules": [
+                            {
+                              "id": "c1",
+                              "label": "🚀 Huge year!",
+                              "variant": "success",
+                              "operator": "gte",
+                              "threshold": 200
+                            },
+                            {
+                              "id": "c2",
+                              "label": "📈 You made money",
+                              "variant": "success",
+                              "operator": "gt",
+                              "threshold": 0
+                            },
+                            {
+                              "id": "c3",
+                              "label": "😐 Even",
+                              "variant": "neutral",
+                              "operator": "eq",
+                              "threshold": 0
+                            },
+                            {
+                              "id": "c4",
+                              "label": "📉 A small loss",
+                              "variant": "warning",
+                              "operator": "gt",
+                              "threshold": -200
+                            }
+                          ],
+                          "defaultLabel": "💥 Ouch, a big loss",
+                          "displayStyle": "minimal",
+                          "variableName": "change2",
+                          "defaultVariant": "danger"
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-x0jqnv5KgP",
+                          "content": "You **gained $<NumericExpression expression=\"{{change2}}\" />** this year.",
+                          "visible": {
+                            "expression": "{{change2}} >= 0"
+                          },
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-rZNOqbubM1",
+                          "content": "You **lost $<NumericExpression expression=\"abs({{change2}})\" />** this year.",
+                          "visible": {
+                            "expression": "{{change2}} < 0"
+                          },
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "ProgressBar",
+                        "props": {
+                          "id": "ProgressBar-JozJ78hcbw",
+                          "name": "goal-y2",
+                          "label": "🤖 Robotics camp goal: $1,200",
+                          "barSize": "thick",
+                          "maxValue": 1200,
+                          "minValue": 0,
+                          "colorMode": "auto",
+                          "showRange": false,
+                          "showValue": false,
+                          "displayStyle": "minimal",
+                          "variableName": "v2"
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-MLRIrxWXrn",
+                          "content": "> 🎲 **Remember:** Last year's winner isn't more likely to win again. Each year is a fresh roll.",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "border": {
+                  "color": "#e5e7eb",
+                  "style": "none",
+                  "width": 1
+                },
+                "margin": 8,
+                "backgroundSize": "cover",
+                "backgroundColor": "#ffffff",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+              }
+            },
+            "content": []
+          },
+          "created_at": "2026-11-07T16:20:35.593621+00:00",
+          "section_id": "8561a91f-39f0-4cb2-ad93-870faaac90bd",
+          "updated_at": "2026-11-07T16:23:54.318156+00:00",
+          "order_index": 4
+        },
+        {
+          "id": "e7fe59ff-fa71-4a58-b981-fb6ef102d952",
+          "name": "Final Bell",
+          "puck_data": {
+            "root": {
+              "props": {
+                "gap": 16,
+                "cells": [
+                  {
+                    "id": "board-head",
+                    "col": 1,
+                    "row": 1,
+                    "colSpan": 12,
+                    "rowSpan": 2
+                  },
+                  {
+                    "id": "card-controls",
+                    "col": 1,
+                    "row": 3,
+                    "colSpan": 7,
+                    "rowSpan": 10
+                  },
+                  {
+                    "id": "board-meter",
+                    "col": 8,
+                    "row": 3,
+                    "colSpan": 5,
+                    "rowSpan": 10
+                  }
+                ],
+                "items": [
+                  {
+                    "id": "board-head",
+                    "content": [
+                      {
+                        "type": "RunAction",
+                        "props": {
+                          "id": "RunAction-hhmvAz6fq-",
+                          "actions": [
+                            {
+                              "actionType": "setNextButtonLabel",
+                              "parameters": {
+                                "label": "Ring the final bell"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "LogicFormula",
+                        "props": {
+                          "id": "LogicFormula-Ley7UqK8r-",
+                          "formula": "max(0, 1200 - {{v2}})",
+                          "decimals": 2,
+                          "roundMode": "round",
+                          "outputVariable": "shortBy"
+                        }
+                      },
+                      {
+                        "type": "LogicFormula",
+                        "props": {
+                          "id": "LogicFormula-Y07Qrf_ri5",
+                          "formula": "{{v2}} * {{cashPct}} / 100",
+                          "decimals": 2,
+                          "roundMode": "round",
+                          "outputVariable": "lockedAmt"
+                        }
+                      },
+                      {
+                        "type": "LogicFormula",
+                        "props": {
+                          "id": "LogicFormula-zWDKHRSPFA",
+                          "formula": "{{v2}} - round({{v2}} * {{cashPct}} / 100)",
+                          "decimals": 2,
+                          "roundMode": "round",
+                          "outputVariable": "ridingAmt"
+                        }
+                      },
+                      {
+                        "type": "LogicFormula",
+                        "props": {
+                          "id": "LogicFormula-vIRMuHD4Bu",
+                          "formula": "round({{v2}} * {{cashPct}} / 100) + ({{v2}} - round({{v2}} * {{cashPct}} / 100)) * ({{pS2}} * 1.02 + {{pC2}} * 1.10 + {{pP2}} * 1.45 + {{pR2}} * 2.6) / 100",
+                          "decimals": 2,
+                          "roundMode": "round",
+                          "outputVariable": "best3"
+                        }
+                      },
+                      {
+                        "type": "LogicFormula",
+                        "props": {
+                          "id": "LogicFormula-Z_UXYxfDJd",
+                          "formula": "round({{v2}} * {{cashPct}} / 100) + ({{v2}} - round({{v2}} * {{cashPct}} / 100)) * ({{pS2}} * 1.02 + {{pC2}} * 0.95 + {{pP2}} * 0.75 + {{pR2}} * 0.30) / 100",
+                          "decimals": 2,
+                          "roundMode": "round",
+                          "outputVariable": "worst3"
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-t5E0nHBZH8",
+                          "content": "###### 🎯 Choice 3 of 3\n\n## The final bell 🔔",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-ersIZ9hzAm",
+                          "content": "🎉 **You already have $<NumericExpression expression=\"{{v2}}\" />!** That's enough for camp. Cash out everything and camp is guaranteed. Or will you risk it to win even more?",
+                          "visible": {
+                            "expression": "{{v2}} >= 1200"
+                          },
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-ulxFtmGQ1r",
+                          "content": "😬 **You're \\$<NumericExpression expression=\"{{shortBy}}\" /> short** of \\$1,200. If you cash out everything, you'll miss camp for sure. How much risk will you take to catch up?",
+                          "visible": {
+                            "expression": "{{v2}} < 1200"
+                          },
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "card-controls",
+                    "content": [
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-6BQqL-n3vS",
+                          "content": "### Cash out or let it ride?\n\nOne year until camp sign-ups. Money you **cash out** is locked in and 100% safe. The rest **rides** for one more year in your current mix:\n\n🏦 <NumericExpression expression=\"round({{pS2}})\" />% · 🥤 <NumericExpression expression=\"round({{pC2}})\" />% · 🎮 <NumericExpression expression=\"round({{pP2}})\" />% · 🚀 <NumericExpression expression=\"round({{pR2}})\" />%",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "Slider",
+                        "props": {
+                          "id": "Slider-5ZMUI8p7Ni",
+                          "name": "slider-cashout",
+                          "label": "🔒 How much do you cash out? (%)",
+                          "maxValue": 100,
+                          "minValue": 0,
+                          "stepSize": 10,
+                          "showValue": true,
+                          "displayStyle": "card",
+                          "variableName": "cashPct"
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-GgAlLnKwXJ",
+                          "content": "> ⏰ **Time matters.** Grown-ups saving for something far away (like retirement) can take more risk, because they have time to recover from a bad year. When you need the money *soon*, a crash can wreck your plans.",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "board-meter",
+                    "content": [
+                      {
+                        "type": "NumericDisplay",
+                        "props": {
+                          "id": "NumericDisplay-em9VDf1fqM",
+                          "name": "locked",
+                          "size": "md",
+                          "label": "🔒 Locked in (safe)",
+                          "prefix": "$",
+                          "suffix": "",
+                          "decimals": 0,
+                          "displayStyle": "minimal",
+                          "variableName": "lockedAmt"
+                        }
+                      },
+                      {
+                        "type": "NumericDisplay",
+                        "props": {
+                          "id": "NumericDisplay-N-kPypmqIZ",
+                          "name": "riding",
+                          "size": "md",
+                          "label": "🎢 Still riding",
+                          "prefix": "$",
+                          "suffix": "",
+                          "decimals": 0,
+                          "displayStyle": "minimal",
+                          "variableName": "ridingAmt"
+                        }
+                      },
+                      {
+                        "type": "NumericDisplay",
+                        "props": {
+                          "id": "NumericDisplay-6eqAUGo2y8",
+                          "name": "best-case-3",
+                          "size": "md",
+                          "label": "😎 Best case at the end",
+                          "prefix": "$",
+                          "suffix": "",
+                          "decimals": 0,
+                          "displayStyle": "minimal",
+                          "variableName": "best3"
+                        }
+                      },
+                      {
+                        "type": "NumericDisplay",
+                        "props": {
+                          "id": "NumericDisplay-Chk5OX57-l",
+                          "name": "worst-case-3",
+                          "size": "md",
+                          "label": "😬 Worst case at the end",
+                          "prefix": "$",
+                          "suffix": "",
+                          "decimals": 0,
+                          "displayStyle": "minimal",
+                          "variableName": "worst3"
+                        }
+                      },
+                      {
+                        "type": "StatusBadge",
+                        "props": {
+                          "id": "StatusBadge-o-L0CqRpFd",
+                          "name": "camp-safe",
+                          "rules": [
+                            {
+                              "id": "g1",
+                              "label": "✅ Camp is guaranteed!",
+                              "variant": "success",
+                              "operator": "gte",
+                              "threshold": 1200
+                            }
+                          ],
+                          "defaultLabel": "⚠️ Camp is NOT guaranteed",
+                          "displayStyle": "minimal",
+                          "variableName": "worst3",
+                          "defaultVariant": "warning"
+                        }
+                      },
+                      {
+                        "type": "StatusBadge",
+                        "props": {
+                          "id": "StatusBadge-1pLpBPD-fZ",
+                          "name": "camp-possible",
+                          "rules": [
+                            {
+                              "id": "g2",
+                              "label": "❌ Even the best case misses camp",
+                              "variant": "danger",
+                              "operator": "lt",
+                              "threshold": 1200
+                            }
+                          ],
+                          "visible": {
+                            "expression": "{{worst3}} < 1200"
+                          },
+                          "defaultLabel": "🤞 Camp is possible",
+                          "displayStyle": "minimal",
+                          "variableName": "best3",
+                          "defaultVariant": "primary"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "border": {
+                  "color": "#e5e7eb",
+                  "style": "none",
+                  "width": 1
+                },
+                "margin": 8,
+                "backgroundSize": "cover",
+                "backgroundColor": "#ffffff",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+              }
+            },
+            "content": []
+          },
+          "created_at": "2026-11-07T16:20:36.237568+00:00",
+          "section_id": "8561a91f-39f0-4cb2-ad93-870faaac90bd",
+          "updated_at": "2026-11-07T16:27:11.033487+00:00",
+          "order_index": 5
+        },
+        {
+          "id": "314df90e-5798-4c07-8fbc-c8e4dd98d266",
+          "name": "Year 3 and Your Results",
+          "puck_data": {
+            "root": {
+              "props": {
+                "gap": 16,
+                "cells": [
+                  {
+                    "id": "board-head",
+                    "col": 1,
+                    "row": 1,
+                    "colSpan": 12,
+                    "rowSpan": 2
+                  },
+                  {
+                    "id": "card-news",
+                    "col": 1,
+                    "row": 3,
+                    "colSpan": 6,
+                    "rowSpan": 10
+                  },
+                  {
+                    "id": "board-score",
+                    "col": 7,
+                    "row": 3,
+                    "colSpan": 6,
+                    "rowSpan": 10
+                  }
+                ],
+                "items": [
+                  {
+                    "id": "board-head",
+                    "content": [
+                      {
+                        "type": "RunAction",
+                        "props": {
+                          "id": "RunAction-bilX5kii85",
+                          "actions": [
+                            {
+                              "actionType": "setVariable",
+                              "parameters": {
+                                "value": "pickRandom([0.95, 1.00, 1.04, 1.06, 1.08, 1.10])",
+                                "variableName": "mC3"
+                              }
+                            },
+                            {
+                              "actionType": "setVariable",
+                              "parameters": {
+                                "value": "pickRandom([0.75, 0.90, 1.05, 1.15, 1.30, 1.45])",
+                                "variableName": "mP3"
+                              }
+                            },
+                            {
+                              "actionType": "setVariable",
+                              "parameters": {
+                                "value": "pickRandom([0.30, 0.50, 0.80, 1.20, 1.80, 2.60])",
+                                "variableName": "mR3"
+                              }
+                            },
+                            {
+                              "actionType": "setVariable",
+                              "parameters": {
+                                "value": "round({{lockedAmt}} + {{ridingAmt}} / 100 * ({{pS2}} * 1.02 + {{pC2}} * {{mC3}} + {{pP2}} * {{mP3}} + {{pR2}} * {{mR3}}))",
+                                "variableName": "v3"
+                              }
+                            },
+                            {
+                              "actionType": "setVariable",
+                              "parameters": {
+                                "value": "{{v3}} - {{v2}}",
+                                "variableName": "change3"
+                              }
+                            },
+                            {
+                              "actionType": "setVariable",
+                              "parameters": {
+                                "value": "{{v3}} - 1061",
+                                "variableName": "vsSavings"
+                              }
+                            },
+                            {
+                              "actionType": "setNextButtonStatus",
+                              "parameters": {
+                                "status": "enabled"
+                              }
+                            },
+                            {
+                              "actionType": "setNextButtonLabel",
+                              "parameters": {
+                                "label": "Finish"
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-5UBA2dZddD",
+                          "content": "###### 📅 Year 3 of 3 · Game over\n\n## The final results are in!",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "card-news",
+                    "content": [
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-VgMd3ECsJV",
+                          "content": "###### 📰 Year 3 headlines\n\nOnly your **\\$<NumericExpression expression=\"{{ridingAmt}}\" />** of riding money felt these. Your **\\$<NumericExpression expression=\"{{lockedAmt}}\" />** of locked-in money stayed safe.",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "StatusBadge",
+                        "props": {
+                          "id": "StatusBadge-Zzs0hXdFES",
+                          "name": "snack-y3",
+                          "rules": [
+                            {
+                              "id": "snack-y30",
+                              "label": "🥤 SnackCo: 🧂 New snack tax · −5%",
+                              "variant": "danger",
+                              "operator": "lt",
+                              "threshold": 0.97
+                            },
+                            {
+                              "id": "snack-y31",
+                              "label": "🥤 SnackCo: 😐 A quiet year · 0%",
+                              "variant": "neutral",
+                              "operator": "lt",
+                              "threshold": 1.02
+                            },
+                            {
+                              "id": "snack-y32",
+                              "label": "🥤 SnackCo: 🥨 New pretzel flavor · +4%",
+                              "variant": "success",
+                              "operator": "lt",
+                              "threshold": 1.05
+                            },
+                            {
+                              "id": "snack-y33",
+                              "label": "🥤 SnackCo: 🛒 Steady sales · +6%",
+                              "variant": "success",
+                              "operator": "lt",
+                              "threshold": 1.07
+                            },
+                            {
+                              "id": "snack-y34",
+                              "label": "🥤 SnackCo: 🏪 50 new stores · +8%",
+                              "variant": "success",
+                              "operator": "lt",
+                              "threshold": 1.09
+                            }
+                          ],
+                          "defaultLabel": "🥤 SnackCo: 🔥 Snack goes viral · +10%",
+                          "displayStyle": "minimal",
+                          "variableName": "mC3",
+                          "defaultVariant": "success"
+                        }
+                      },
+                      {
+                        "type": "StatusBadge",
+                        "props": {
+                          "id": "StatusBadge-BlSKG_oe9C",
+                          "name": "pixel-y3",
+                          "rules": [
+                            {
+                              "id": "pixel-y30",
+                              "label": "🎮 PixelPlay: 👾 Big game delayed · −25%",
+                              "variant": "danger",
+                              "operator": "lt",
+                              "threshold": 0.8
+                            },
+                            {
+                              "id": "pixel-y31",
+                              "label": "🎮 PixelPlay: 🐛 Buggy launch · −10%",
+                              "variant": "danger",
+                              "operator": "lt",
+                              "threshold": 0.95
+                            },
+                            {
+                              "id": "pixel-y32",
+                              "label": "🎮 PixelPlay: Solid update · +5%",
+                              "variant": "success",
+                              "operator": "lt",
+                              "threshold": 1.1
+                            },
+                            {
+                              "id": "pixel-y33",
+                              "label": "🎮 PixelPlay: 🏆 Wins an award · +15%",
+                              "variant": "success",
+                              "operator": "lt",
+                              "threshold": 1.2
+                            },
+                            {
+                              "id": "pixel-y34",
+                              "label": "🎮 PixelPlay: 📈 Hit sequel · +30%",
+                              "variant": "success",
+                              "operator": "lt",
+                              "threshold": 1.4
+                            }
+                          ],
+                          "defaultLabel": "🎮 PixelPlay: 🌟 Game of the Year · +45%",
+                          "displayStyle": "minimal",
+                          "variableName": "mP3",
+                          "defaultVariant": "success"
+                        }
+                      },
+                      {
+                        "type": "StatusBadge",
+                        "props": {
+                          "id": "StatusBadge-XJ-iJ8XnH9",
+                          "name": "rocket-y3",
+                          "rules": [
+                            {
+                              "id": "rocket-y30",
+                              "label": "🚀 RocketPet: 💥 Robot pets recalled · −70%",
+                              "variant": "danger",
+                              "operator": "lt",
+                              "threshold": 0.4
+                            },
+                            {
+                              "id": "rocket-y31",
+                              "label": "🚀 RocketPet: 🔋 Battery trouble · −50%",
+                              "variant": "danger",
+                              "operator": "lt",
+                              "threshold": 0.6
+                            },
+                            {
+                              "id": "rocket-y32",
+                              "label": "🚀 RocketPet: 😬 Missed sales goal · −20%",
+                              "variant": "warning",
+                              "operator": "lt",
+                              "threshold": 1
+                            },
+                            {
+                              "id": "rocket-y33",
+                              "label": "🚀 RocketPet: 🐶 Great reviews · +20%",
+                              "variant": "success",
+                              "operator": "lt",
+                              "threshold": 1.5
+                            },
+                            {
+                              "id": "rocket-y34",
+                              "label": "🚀 RocketPet: 🛍️ Big store deal · +80%",
+                              "variant": "success",
+                              "operator": "lt",
+                              "threshold": 2
+                            }
+                          ],
+                          "defaultLabel": "🚀 RocketPet: 🤯 Celebrity buys one · +160%",
+                          "displayStyle": "minimal",
+                          "variableName": "mR3",
+                          "defaultVariant": "success"
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-ruRI9UXZWH",
+                          "content": "### What did you learn?\n\n- **Bigger reward = bigger risk.** The investments that *can* grow the most can also crash the hardest.\n- **Diversify.** Spreading your money out smooths the bumps.\n- **Hot tips are risky.** Last year's results don't predict next year.\n- **Time matters.** Take less risk when you need the money soon.",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "ActionButton",
+                        "props": {
+                          "id": "ActionButton-alKQ2_7UE-",
+                          "name": "play-again",
+                          "size": "lg",
+                          "label": "🔄 Play again with a new strategy",
+                          "actions": [
+                            {
+                              "actionType": "setVariable",
+                              "parameters": {
+                                "value": 0,
+                                "variableName": "pS"
+                              }
+                            },
+                            {
+                              "actionType": "setVariable",
+                              "parameters": {
+                                "value": 0,
+                                "variableName": "pC"
+                              }
+                            },
+                            {
+                              "actionType": "setVariable",
+                              "parameters": {
+                                "value": 0,
+                                "variableName": "pP"
+                              }
+                            },
+                            {
+                              "actionType": "setVariable",
+                              "parameters": {
+                                "value": 0,
+                                "variableName": "pR"
+                              }
+                            },
+                            {
+                              "actionType": "setVariable",
+                              "parameters": {
+                                "value": 0,
+                                "variableName": "moveR"
+                              }
+                            },
+                            {
+                              "actionType": "setVariable",
+                              "parameters": {
+                                "value": false,
+                                "variableName": "safety"
+                              }
+                            },
+                            {
+                              "actionType": "setVariable",
+                              "parameters": {
+                                "value": 0,
+                                "variableName": "cashPct"
+                              }
+                            },
+                            {
+                              "actionType": "goToStep",
+                              "parameters": {
+                                "targetStepId": "75dd6c9b-6aff-4ae6-8b7a-0fc2881bf98f"
+                              }
+                            }
+                          ],
+                          "variant": "default",
+                          "disabled": false
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "board-score",
+                    "content": [
+                      {
+                        "type": "NumericDisplay",
+                        "props": {
+                          "id": "NumericDisplay-xiU5ilwGAU",
+                          "name": "value-final",
+                          "size": "xl",
+                          "label": "Your final money",
+                          "prefix": "$",
+                          "suffix": "",
+                          "decimals": 0,
+                          "displayStyle": "minimal",
+                          "variableName": "v3"
+                        }
+                      },
+                      {
+                        "type": "StatusBadge",
+                        "props": {
+                          "id": "StatusBadge-V13Yr8sbkO",
+                          "name": "camp-result",
+                          "rules": [
+                            {
+                              "id": "f1",
+                              "label": "🤖 Robotics camp: YOU'RE IN!",
+                              "variant": "success",
+                              "operator": "gte",
+                              "threshold": 1200
+                            }
+                          ],
+                          "defaultLabel": "😢 Not enough for camp this time",
+                          "displayStyle": "minimal",
+                          "variableName": "v3",
+                          "defaultVariant": "danger"
+                        }
+                      },
+                      {
+                        "type": "ProgressBar",
+                        "props": {
+                          "id": "ProgressBar-UMmkr3APrL",
+                          "name": "goal-final",
+                          "label": "🤖 Robotics camp goal: $1,200",
+                          "barSize": "thick",
+                          "maxValue": 1200,
+                          "minValue": 0,
+                          "colorMode": "auto",
+                          "showRange": false,
+                          "showValue": false,
+                          "displayStyle": "minimal",
+                          "variableName": "v3"
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-qEXRgeJuRX",
+                          "content": "**Your climb:** \\$1,000 → \\$<NumericExpression expression=\"{{v1}}\" /> → \\$<NumericExpression expression=\"{{v2}}\" /> → **\\$<NumericExpression expression=\"{{v3}}\" />**",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-vb_8LRlVJ0",
+                          "content": "That's **\\$<NumericExpression expression=\"{{vsSavings}}\" /> more** than keeping it all in savings (\\$1,061).",
+                          "visible": {
+                            "expression": "{{vsSavings}} >= 0"
+                          },
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-2EGcABZ6jO",
+                          "content": "That's **\\$<NumericExpression expression=\"abs({{vsSavings}})\" /> less** than keeping it all in savings (\\$1,061).",
+                          "visible": {
+                            "expression": "{{vsSavings}} < 0"
+                          },
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-sKoJygzwaq",
+                          "content": "###### 🎩 Your investor style",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      },
+                      {
+                        "type": "StatusBadge",
+                        "props": {
+                          "id": "StatusBadge-4j5vPcoi-Z",
+                          "name": "investor-style",
+                          "rules": [
+                            {
+                              "id": "s1",
+                              "label": "🐢 The Turtle · slow and safe",
+                              "variant": "success",
+                              "operator": "lt",
+                              "threshold": 0.5
+                            },
+                            {
+                              "id": "s2",
+                              "label": "🦉 The Owl · careful and wise",
+                              "variant": "success",
+                              "operator": "lt",
+                              "threshold": 1.5
+                            },
+                            {
+                              "id": "s3",
+                              "label": "⚖️ The Balancer · a bit of everything",
+                              "variant": "primary",
+                              "operator": "lt",
+                              "threshold": 2.5
+                            },
+                            {
+                              "id": "s4",
+                              "label": "🦁 The Lion · bold moves",
+                              "variant": "warning",
+                              "operator": "lt",
+                              "threshold": 3.5
+                            }
+                          ],
+                          "defaultLabel": "🚀 The Rocket Rider · all gas, no brakes",
+                          "displayStyle": "minimal",
+                          "variableName": "riskScore",
+                          "defaultVariant": "danger"
+                        }
+                      },
+                      {
+                        "type": "Text",
+                        "props": {
+                          "id": "Text-p_agIWS_fa",
+                          "content": "> 🎲 **Play again!** The market rolls new dice every game. Try a totally different strategy and see if it holds up.",
+                          "voiceover": {
+                            "voice": "alloy",
+                            "enabled": false,
+                            "showPlayButton": false
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "border": {
+                  "color": "#e5e7eb",
+                  "style": "none",
+                  "width": 1
+                },
+                "margin": 8,
+                "backgroundSize": "cover",
+                "backgroundColor": "#ffffff",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+              }
+            },
+            "content": []
+          },
+          "created_at": "2026-11-07T16:20:36.903725+00:00",
+          "section_id": "8561a91f-39f0-4cb2-ad93-870faaac90bd",
+          "updated_at": "2026-11-07T16:27:13.636901+00:00",
+          "order_index": 6
+        }
+      ],
+      "lesson_id": "adef27d2-07db-4c87-90cc-ffcfe897e99e",
+      "created_at": "2026-11-07T16:17:47.466534+00:00",
+      "updated_at": "2026-11-07T16:20:32.040831+00:00",
+      "order_index": 0,
+      "data_driven_config": null
+    }
+  ],
+  "totalSteps": 7,
+  "totalSections": 1
+}

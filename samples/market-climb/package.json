@@ -1,0 +1,28 @@
+{
+  "name": "@teacharium-samples/market-climb",
+  "private": true,
+  "version": "1.0.0",
+  "description": "The smallest host for an exported Teacharium lesson: one full-page @teacharium/player with its built-in start screen and footer",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@measured/puck": "^0.20.2",
+    "@teacharium/player": "^0.2.4",
+    "@teacharium/widget": "^0.6.4",
+    "react": "^19.1.2",
+    "react-dom": "^19.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.2",
+    "typescript": "~5.8.3",
+    "vite": "^7.1.5"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "lessonId": "adef27d2-07db-4c87-90cc-ffcfe897e99e",
+  "title": "Market Climb - Claude",
+  "versionNumber": 2,
+  "versionId": "e00ce4a8-c882-44ca-84ca-3f6c05a0e657",
+  "publishedAt": "2026-11-13T18:45:10.455136+00:00",
+  "exportedAt": "2026-11-13T18:45:17.615Z",
+  "formatVersion": "1.0.0",
+  "files": {
+    "lesson": "./lesson.json",
+    "media": [],
+    "videos": [],
+    "voiceovers": [],
+    "widgets": [
+      {
+        "widgetType": "Interactive Widgets",
+        "localPath": "./widgets/751c6714-c8db-4d42-8f1c-d659a3115c5c.js",
+        "cssLocalPath": "./widgets/751c6714-c8db-4d42-8f1c-d659a3115c5c.css"
+      },
+      {
+        "widgetType": "Math Widgets",
+        "localPath": "./widgets/fcf6ba96-005c-423b-b881-09aa64c06d6d.js",
+        "cssLocalPath": "./widgets/fcf6ba96-005c-423b-b881-09aa64c06d6d.css"
+      },
+      {
+        "widgetType": "Default Widgets",
+        "localPath": "./widgets/1638f0f3-e8e2-41c9-87ee-db234579d486.js",
+        "cssLocalPath": "./widgets/1638f0f3-e8e2-41c9-87ee-db234579d486.css"
+      },
+      {
+        "widgetType": "Charting Widgets",
+        "localPath": "./widgets/8e5d2604-f098-49df-b56c-39268c77ffb8.js",
+        "cssLocalPath": "./widgets/8e5d2604-f098-49df-b56c-39268c77ffb8.css"
+      }
+    ],
+    "customCss": {
+      "localPath": "./styles/custom.css",
+      "contentLength": 21009
+    }
+  },
+  "failedMedia": [],
+  "failedVideos": [],
+  "failedVoiceovers": [],
+  "failedWidgets": [],
+  "attributions": []
+}

@@ -10,6 +10,7 @@
     "dev:orbit-academy": "npm run dev --workspace samples/orbit-academy",
     "dev:lumen": "npm run dev --workspace samples/lumen",
     "dev:meridian": "npm run dev --workspace samples/meridian",
+    "dev:market-climb": "npm run dev --workspace samples/market-climb",
     "build": "npm run build --workspaces",
     "type-check": "npm run type-check --workspaces",
     "build:site": "node scripts/build-site.mjs"

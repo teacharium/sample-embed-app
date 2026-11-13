@@ -27,7 +27,9 @@ Three versions of the same integration, each with its own lesson and a design fo
 | [Lumen](samples/lumen) | High school | Atomic Structure & the Periodic Table | A dark-mode study app: focus-mode frame, segmented progress bar, arrow-key navigation, streaks and an accuracy ring. | [Open](https://docs.teacharium.io/samples/lumen/) |
 | [Meridian](samples/meridian) | College | Supply, Demand & Market Equilibrium | A university course portal: assignment overview, attempts table, question pager and a gradebook-style submission receipt. | [Open](https://docs.teacharium.io/samples/meridian/) |
 
-Every sample has the same integration features: it loads an exported lesson, shares React with the exported widgets, renders its own footer through `renderFooter`, shows its own start and end screens, saves progress and results to `localStorage`, offers play new / resume / review, and includes a saved-data viewer and a reset button.
+[Market Climb](samples/market-climb) is the opposite: the smallest possible host, one full-page player with its built-in start screen and footer and no app around it. It plays an investing game for kids that uses custom widgets. [Open](https://docs.teacharium.io/samples/market-climb/)
+
+The three branded samples have the same integration features: it loads an exported lesson, shares React with the exported widgets, renders its own footer through `renderFooter`, shows its own start and end screens, saves progress and results to `localStorage`, offers play new / resume / review, and includes a saved-data viewer and a reset button.
 
 ## Run a sample
 
@@ -38,6 +40,7 @@ npm install
 npm run dev:orbit-academy   # http://localhost:5175
 npm run dev:lumen           # http://localhost:5176
 npm run dev:meridian        # http://localhost:5177
+npm run dev:market-climb    # http://localhost:5178
 ```
 
 Or work inside the sample's own folder:
